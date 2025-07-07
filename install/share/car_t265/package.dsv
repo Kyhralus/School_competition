@@ -1,0 +1,12 @@
+source;share/car_t265/hook/cmake_prefix_path.ps1
+source;share/car_t265/hook/cmake_prefix_path.dsv
+source;share/car_t265/hook/cmake_prefix_path.sh
+source;share/car_t265/hook/ld_library_path_lib.ps1
+source;share/car_t265/hook/ld_library_path_lib.dsv
+source;share/car_t265/hook/ld_library_path_lib.sh
+source;share/car_t265/hook/pythonpath.ps1
+source;share/car_t265/hook/pythonpath.dsv
+source;share/car_t265/hook/pythonpath.sh
+source;share/car_t265/hook/ament_prefix_path.ps1
+source;share/car_t265/hook/ament_prefix_path.dsv
+source;share/car_t265/hook/ament_prefix_path.sh

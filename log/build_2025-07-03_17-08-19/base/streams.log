@@ -1,0 +1,151 @@
+[0.682s] Invoking command in '/home/orangepi/ros2_workspace/school_competition/build/base': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/root/lanhailidar_ros_ws/install/scan_subscriber:/opt/ros/humble /usr/bin/cmake --build /home/orangepi/ros2_workspace/school_competition/build/base -- -j8 -l8
+[1.551s] [  3%] Built target ament_cmake_python_copy_base
+[1.553s] [  3%] Built target base__cpp
+[1.554s] [ 12%] Built target base__rosidl_generator_c
+[1.555s] [ 22%] Built target base__rosidl_typesupport_fastrtps_c
+[1.555s] [ 32%] Built target base__rosidl_typesupport_cpp
+[1.555s] [ 41%] Built target base__rosidl_typesupport_introspection_cpp
+[1.556s] [ 51%] Built target base__rosidl_typesupport_c
+[1.556s] [ 61%] Built target base__rosidl_typesupport_introspection_c
+[1.557s] [ 70%] Built target base__rosidl_typesupport_fastrtps_cpp
+[1.557s] [ 70%] Built target base
+[1.558s] running egg_info
+[1.558s] writing base.egg-info/PKG-INFO
+[1.559s] writing dependency_links to base.egg-info/dependency_links.txt
+[1.559s] [ 74%] Built target base__py
+[1.560s] writing top-level names to base.egg-info/top_level.txt
+[1.560s] reading manifest file 'base.egg-info/SOURCES.txt'
+[1.561s] writing manifest file 'base.egg-info/SOURCES.txt'
+[1.597s] [ 80%] Built target base__rosidl_generator_py
+[1.618s] [ 80%] Built target ament_cmake_python_build_base_egg
+[1.630s] [ 87%] Built target base__rosidl_typesupport_c__pyext
+[1.636s] [ 93%] Built target base__rosidl_typesupport_introspection_c__pyext
+[2.044s] [100%] Built target base__rosidl_typesupport_fastrtps_c__pyext
+[2.078s] Invoked command in '/home/orangepi/ros2_workspace/school_competition/build/base' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/root/lanhailidar_ros_ws/install/scan_subscriber:/opt/ros/humble /usr/bin/cmake --build /home/orangepi/ros2_workspace/school_competition/build/base -- -j8 -l8
+[2.092s] Invoking command in '/home/orangepi/ros2_workspace/school_competition/build/base': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/root/lanhailidar_ros_ws/install/scan_subscriber:/opt/ros/humble /usr/bin/cmake --install /home/orangepi/ros2_workspace/school_competition/build/base
+[2.102s] -- Install configuration: ""
+[2.103s] -- Up-to-date: /home/orangepi/ros2_workspace/school_competition/install/share/ament_index/resource_index/rosidl_interfaces/base
+[2.103s] -- Up-to-date: /home/orangepi/ros2_workspace/school_competition/install/include/base/base
+[2.104s] -- Up-to-date: /home/orangepi/ros2_workspace/school_competition/install/include/base/base/msg
+[2.104s] -- Up-to-date: /home/orangepi/ros2_workspace/school_competition/install/include/base/base/msg/rosidl_generator_c__visibility_control.h
+[2.104s] -- Up-to-date: /home/orangepi/ros2_workspace/school_competition/install/include/base/base/srv
+[2.104s] -- Up-to-date: /home/orangepi/ros2_workspace/school_competition/install/include/base/base/srv/detail
+[2.104s] -- Up-to-date: /home/orangepi/ros2_workspace/school_competition/install/include/base/base/srv/detail/control__type_support.h
+[2.104s] -- Up-to-date: /home/orangepi/ros2_workspace/school_competition/install/include/base/base/srv/detail/control__struct.h
+[2.104s] -- Up-to-date: /home/orangepi/ros2_workspace/school_competition/install/include/base/base/srv/detail/control__functions.c
+[2.104s] -- Up-to-date: /home/orangepi/ros2_workspace/school_competition/install/include/base/base/srv/detail/control__functions.h
+[2.104s] -- Up-to-date: /home/orangepi/ros2_workspace/school_competition/install/include/base/base/srv/control.h
+[2.104s] -- Up-to-date: /home/orangepi/ros2_workspace/school_competition/install/share/base/environment/library_path.sh
+[2.105s] -- Up-to-date: /home/orangepi/ros2_workspace/school_competition/install/share/base/environment/library_path.dsv
+[2.105s] -- Up-to-date: /home/orangepi/ros2_workspace/school_competition/install/lib/libbase__rosidl_generator_c.so
+[2.105s] -- Up-to-date: /home/orangepi/ros2_workspace/school_competition/install/include/base/base
+[2.105s] -- Up-to-date: /home/orangepi/ros2_workspace/school_competition/install/include/base/base/msg
+[2.106s] -- Up-to-date: /home/orangepi/ros2_workspace/school_competition/install/include/base/base/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[2.106s] -- Up-to-date: /home/orangepi/ros2_workspace/school_competition/install/include/base/base/srv
+[2.106s] -- Up-to-date: /home/orangepi/ros2_workspace/school_competition/install/include/base/base/srv/detail
+[2.106s] -- Up-to-date: /home/orangepi/ros2_workspace/school_competition/install/include/base/base/srv/detail/control__rosidl_typesupport_fastrtps_c.h
+[2.107s] -- Up-to-date: /home/orangepi/ros2_workspace/school_competition/install/lib/libbase__rosidl_typesupport_fastrtps_c.so
+[2.107s] -- Up-to-date: /home/orangepi/ros2_workspace/school_competition/install/include/base/base
+[2.107s] -- Up-to-date: /home/orangepi/ros2_workspace/school_competition/install/include/base/base/msg
+[2.107s] -- Up-to-date: /home/orangepi/ros2_workspace/school_competition/install/include/base/base/msg/rosidl_generator_cpp__visibility_control.hpp
+[2.107s] -- Up-to-date: /home/orangepi/ros2_workspace/school_competition/install/include/base/base/srv
+[2.107s] -- Up-to-date: /home/orangepi/ros2_workspace/school_competition/install/include/base/base/srv/detail
+[2.107s] -- Up-to-date: /home/orangepi/ros2_workspace/school_competition/install/include/base/base/srv/detail/control__traits.hpp
+[2.107s] -- Up-to-date: /home/orangepi/ros2_workspace/school_competition/install/include/base/base/srv/detail/control__builder.hpp
+[2.108s] -- Up-to-date: /home/orangepi/ros2_workspace/school_competition/install/include/base/base/srv/detail/control__struct.hpp
+[2.108s] -- Up-to-date: /home/orangepi/ros2_workspace/school_competition/install/include/base/base/srv/detail/control__type_support.hpp
+[2.108s] -- Up-to-date: /home/orangepi/ros2_workspace/school_competition/install/include/base/base/srv/control.hpp
+[2.108s] -- Up-to-date: /home/orangepi/ros2_workspace/school_competition/install/include/base/base
+[2.108s] -- Up-to-date: /home/orangepi/ros2_workspace/school_competition/install/include/base/base/msg
+[2.108s] -- Up-to-date: /home/orangepi/ros2_workspace/school_competition/install/include/base/base/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[2.108s] -- Up-to-date: /home/orangepi/ros2_workspace/school_competition/install/include/base/base/srv
+[2.108s] -- Up-to-date: /home/orangepi/ros2_workspace/school_competition/install/include/base/base/srv/detail
+[2.108s] -- Up-to-date: /home/orangepi/ros2_workspace/school_competition/install/include/base/base/srv/detail/control__rosidl_typesupport_fastrtps_cpp.hpp
+[2.109s] -- Up-to-date: /home/orangepi/ros2_workspace/school_competition/install/include/base/base/srv/detail/dds_fastrtps
+[2.109s] -- Up-to-date: /home/orangepi/ros2_workspace/school_competition/install/lib/libbase__rosidl_typesupport_fastrtps_cpp.so
+[2.109s] -- Up-to-date: /home/orangepi/ros2_workspace/school_competition/install/include/base/base
+[2.109s] -- Up-to-date: /home/orangepi/ros2_workspace/school_competition/install/include/base/base/msg
+[2.109s] -- Up-to-date: /home/orangepi/ros2_workspace/school_competition/install/include/base/base/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[2.109s] -- Up-to-date: /home/orangepi/ros2_workspace/school_competition/install/include/base/base/srv
+[2.109s] -- Up-to-date: /home/orangepi/ros2_workspace/school_competition/install/include/base/base/srv/detail
+[2.109s] -- Up-to-date: /home/orangepi/ros2_workspace/school_competition/install/include/base/base/srv/detail/control__type_support.c
+[2.110s] -- Up-to-date: /home/orangepi/ros2_workspace/school_competition/install/include/base/base/srv/detail/control__rosidl_typesupport_introspection_c.h
+[2.110s] -- Up-to-date: /home/orangepi/ros2_workspace/school_competition/install/lib/libbase__rosidl_typesupport_introspection_c.so
+[2.110s] -- Up-to-date: /home/orangepi/ros2_workspace/school_competition/install/lib/libbase__rosidl_typesupport_c.so
+[2.110s] -- Up-to-date: /home/orangepi/ros2_workspace/school_competition/install/include/base/base
+[2.110s] -- Up-to-date: /home/orangepi/ros2_workspace/school_competition/install/include/base/base/srv
+[2.110s] -- Up-to-date: /home/orangepi/ros2_workspace/school_competition/install/include/base/base/srv/detail
+[2.110s] -- Up-to-date: /home/orangepi/ros2_workspace/school_competition/install/include/base/base/srv/detail/control__type_support.cpp
+[2.110s] -- Up-to-date: /home/orangepi/ros2_workspace/school_competition/install/include/base/base/srv/detail/control__rosidl_typesupport_introspection_cpp.hpp
+[2.110s] -- Up-to-date: /home/orangepi/ros2_workspace/school_competition/install/lib/libbase__rosidl_typesupport_introspection_cpp.so
+[2.111s] -- Up-to-date: /home/orangepi/ros2_workspace/school_competition/install/lib/libbase__rosidl_typesupport_cpp.so
+[2.111s] -- Up-to-date: /home/orangepi/ros2_workspace/school_competition/install/share/base/environment/pythonpath.sh
+[2.111s] -- Up-to-date: /home/orangepi/ros2_workspace/school_competition/install/share/base/environment/pythonpath.dsv
+[2.111s] -- Up-to-date: /home/orangepi/ros2_workspace/school_competition/install/local/lib/python3.10/dist-packages/base-0.0.0-py3.10.egg-info
+[2.111s] -- Installing: /home/orangepi/ros2_workspace/school_competition/install/local/lib/python3.10/dist-packages/base-0.0.0-py3.10.egg-info/PKG-INFO
+[2.111s] -- Installing: /home/orangepi/ros2_workspace/school_competition/install/local/lib/python3.10/dist-packages/base-0.0.0-py3.10.egg-info/dependency_links.txt
+[2.111s] -- Installing: /home/orangepi/ros2_workspace/school_competition/install/local/lib/python3.10/dist-packages/base-0.0.0-py3.10.egg-info/SOURCES.txt
+[2.112s] -- Installing: /home/orangepi/ros2_workspace/school_competition/install/local/lib/python3.10/dist-packages/base-0.0.0-py3.10.egg-info/top_level.txt
+[2.112s] -- Up-to-date: /home/orangepi/ros2_workspace/school_competition/install/local/lib/python3.10/dist-packages/base
+[2.112s] -- Up-to-date: /home/orangepi/ros2_workspace/school_competition/install/local/lib/python3.10/dist-packages/base/srv
+[2.112s] -- Up-to-date: /home/orangepi/ros2_workspace/school_competition/install/local/lib/python3.10/dist-packages/base/srv/_control.py
+[2.112s] -- Up-to-date: /home/orangepi/ros2_workspace/school_competition/install/local/lib/python3.10/dist-packages/base/srv/_control_s.c
+[2.112s] -- Up-to-date: /home/orangepi/ros2_workspace/school_competition/install/local/lib/python3.10/dist-packages/base/srv/__init__.py
+[2.112s] -- Up-to-date: /home/orangepi/ros2_workspace/school_competition/install/local/lib/python3.10/dist-packages/base/base_s__rosidl_typesupport_fastrtps_c.cpython-310-aarch64-linux-gnu.so
+[2.112s] -- Up-to-date: /home/orangepi/ros2_workspace/school_competition/install/local/lib/python3.10/dist-packages/base/__init__.py
+[2.112s] -- Up-to-date: /home/orangepi/ros2_workspace/school_competition/install/local/lib/python3.10/dist-packages/base/_base_s.ep.rosidl_typesupport_fastrtps_c.c
+[2.113s] -- Up-to-date: /home/orangepi/ros2_workspace/school_competition/install/local/lib/python3.10/dist-packages/base/libbase__rosidl_generator_py.so
+[2.113s] -- Up-to-date: /home/orangepi/ros2_workspace/school_competition/install/local/lib/python3.10/dist-packages/base/base_s__rosidl_typesupport_introspection_c.cpython-310-aarch64-linux-gnu.so
+[2.113s] -- Up-to-date: /home/orangepi/ros2_workspace/school_competition/install/local/lib/python3.10/dist-packages/base/_base_s.ep.rosidl_typesupport_c.c
+[2.113s] -- Up-to-date: /home/orangepi/ros2_workspace/school_competition/install/local/lib/python3.10/dist-packages/base/base_s__rosidl_typesupport_c.cpython-310-aarch64-linux-gnu.so
+[2.113s] -- Up-to-date: /home/orangepi/ros2_workspace/school_competition/install/local/lib/python3.10/dist-packages/base/_base_s.ep.rosidl_typesupport_introspection_c.c
+[2.223s] Listing '/home/orangepi/ros2_workspace/school_competition/install/local/lib/python3.10/dist-packages/base'...
+[2.224s] Listing '/home/orangepi/ros2_workspace/school_competition/install/local/lib/python3.10/dist-packages/base/srv'...
+[2.235s] -- Up-to-date: /home/orangepi/ros2_workspace/school_competition/install/local/lib/python3.10/dist-packages/base/base_s__rosidl_typesupport_fastrtps_c.cpython-310-aarch64-linux-gnu.so
+[2.236s] -- Up-to-date: /home/orangepi/ros2_workspace/school_competition/install/local/lib/python3.10/dist-packages/base/base_s__rosidl_typesupport_introspection_c.cpython-310-aarch64-linux-gnu.so
+[2.237s] -- Up-to-date: /home/orangepi/ros2_workspace/school_competition/install/local/lib/python3.10/dist-packages/base/base_s__rosidl_typesupport_c.cpython-310-aarch64-linux-gnu.so
+[2.238s] -- Up-to-date: /home/orangepi/ros2_workspace/school_competition/install/lib/libbase__rosidl_generator_py.so
+[2.238s] -- Up-to-date: /home/orangepi/ros2_workspace/school_competition/install/share/base/srv/Control.idl
+[2.239s] -- Up-to-date: /home/orangepi/ros2_workspace/school_competition/install/share/base/srv/Control.srv
+[2.240s] -- Up-to-date: /home/orangepi/ros2_workspace/school_competition/install/share/base/srv/Control_Request.msg
+[2.240s] -- Up-to-date: /home/orangepi/ros2_workspace/school_competition/install/share/base/srv/Control_Response.msg
+[2.243s] -- Up-to-date: /home/orangepi/ros2_workspace/school_competition/install/share/ament_index/resource_index/package_run_dependencies/base
+[2.245s] -- Up-to-date: /home/orangepi/ros2_workspace/school_competition/install/share/ament_index/resource_index/parent_prefix_path/base
+[2.246s] -- Up-to-date: /home/orangepi/ros2_workspace/school_competition/install/share/base/environment/ament_prefix_path.sh
+[2.246s] -- Up-to-date: /home/orangepi/ros2_workspace/school_competition/install/share/base/environment/ament_prefix_path.dsv
+[2.247s] -- Up-to-date: /home/orangepi/ros2_workspace/school_competition/install/share/base/environment/path.sh
+[2.248s] -- Up-to-date: /home/orangepi/ros2_workspace/school_competition/install/share/base/environment/path.dsv
+[2.252s] -- Up-to-date: /home/orangepi/ros2_workspace/school_competition/install/share/base/local_setup.bash
+[2.268s] -- Up-to-date: /home/orangepi/ros2_workspace/school_competition/install/share/base/local_setup.sh
+[2.269s] -- Up-to-date: /home/orangepi/ros2_workspace/school_competition/install/share/base/local_setup.zsh
+[2.269s] -- Up-to-date: /home/orangepi/ros2_workspace/school_competition/install/share/base/local_setup.dsv
+[2.270s] -- Installing: /home/orangepi/ros2_workspace/school_competition/install/share/base/package.dsv
+[2.271s] -- Up-to-date: /home/orangepi/ros2_workspace/school_competition/install/share/ament_index/resource_index/packages/base
+[2.271s] -- Up-to-date: /home/orangepi/ros2_workspace/school_competition/install/share/base/cmake/export_base__rosidl_generator_cExport.cmake
+[2.272s] -- Up-to-date: /home/orangepi/ros2_workspace/school_competition/install/share/base/cmake/export_base__rosidl_generator_cExport-noconfig.cmake
+[2.272s] -- Up-to-date: /home/orangepi/ros2_workspace/school_competition/install/share/base/cmake/export_base__rosidl_typesupport_fastrtps_cExport.cmake
+[2.276s] -- Up-to-date: /home/orangepi/ros2_workspace/school_competition/install/share/base/cmake/export_base__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+[2.277s] -- Up-to-date: /home/orangepi/ros2_workspace/school_competition/install/share/base/cmake/export_base__rosidl_generator_cppExport.cmake
+[2.277s] -- Up-to-date: /home/orangepi/ros2_workspace/school_competition/install/share/base/cmake/export_base__rosidl_typesupport_fastrtps_cppExport.cmake
+[2.278s] -- Up-to-date: /home/orangepi/ros2_workspace/school_competition/install/share/base/cmake/export_base__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+[2.279s] -- Up-to-date: /home/orangepi/ros2_workspace/school_competition/install/share/base/cmake/base__rosidl_typesupport_introspection_cExport.cmake
+[2.280s] -- Up-to-date: /home/orangepi/ros2_workspace/school_competition/install/share/base/cmake/base__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[2.282s] -- Up-to-date: /home/orangepi/ros2_workspace/school_competition/install/share/base/cmake/base__rosidl_typesupport_cExport.cmake
+[2.283s] -- Up-to-date: /home/orangepi/ros2_workspace/school_competition/install/share/base/cmake/base__rosidl_typesupport_cExport-noconfig.cmake
+[2.283s] -- Up-to-date: /home/orangepi/ros2_workspace/school_competition/install/share/base/cmake/base__rosidl_typesupport_introspection_cppExport.cmake
+[2.288s] -- Up-to-date: /home/orangepi/ros2_workspace/school_competition/install/share/base/cmake/base__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[2.295s] -- Up-to-date: /home/orangepi/ros2_workspace/school_competition/install/share/base/cmake/base__rosidl_typesupport_cppExport.cmake
+[2.297s] -- Up-to-date: /home/orangepi/ros2_workspace/school_competition/install/share/base/cmake/base__rosidl_typesupport_cppExport-noconfig.cmake
+[2.298s] -- Up-to-date: /home/orangepi/ros2_workspace/school_competition/install/share/base/cmake/export_base__rosidl_generator_pyExport.cmake
+[2.300s] -- Up-to-date: /home/orangepi/ros2_workspace/school_competition/install/share/base/cmake/export_base__rosidl_generator_pyExport-noconfig.cmake
+[2.303s] -- Up-to-date: /home/orangepi/ros2_workspace/school_competition/install/share/base/cmake/rosidl_cmake-extras.cmake
+[2.308s] -- Up-to-date: /home/orangepi/ros2_workspace/school_competition/install/share/base/cmake/ament_cmake_export_include_directories-extras.cmake
+[2.310s] -- Up-to-date: /home/orangepi/ros2_workspace/school_competition/install/share/base/cmake/ament_cmake_export_libraries-extras.cmake
+[2.311s] -- Up-to-date: /home/orangepi/ros2_workspace/school_competition/install/share/base/cmake/ament_cmake_export_targets-extras.cmake
+[2.312s] -- Up-to-date: /home/orangepi/ros2_workspace/school_competition/install/share/base/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[2.312s] -- Up-to-date: /home/orangepi/ros2_workspace/school_competition/install/share/base/cmake/ament_cmake_export_dependencies-extras.cmake
+[2.313s] -- Up-to-date: /home/orangepi/ros2_workspace/school_competition/install/share/base/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[2.314s] -- Up-to-date: /home/orangepi/ros2_workspace/school_competition/install/share/base/cmake/baseConfig.cmake
+[2.315s] -- Up-to-date: /home/orangepi/ros2_workspace/school_competition/install/share/base/cmake/baseConfig-version.cmake
+[2.315s] -- Up-to-date: /home/orangepi/ros2_workspace/school_competition/install/share/base/package.xml
+[2.316s] Invoked command in '/home/orangepi/ros2_workspace/school_competition/build/base' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/root/lanhailidar_ros_ws/install/scan_subscriber:/opt/ros/humble /usr/bin/cmake --install /home/orangepi/ros2_workspace/school_competition/build/base

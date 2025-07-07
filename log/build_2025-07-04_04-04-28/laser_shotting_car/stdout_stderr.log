@@ -1,0 +1,26 @@
+running egg_info
+writing ../../build/laser_shotting_car/laser_shotting_car.egg-info/PKG-INFO
+writing dependency_links to ../../build/laser_shotting_car/laser_shotting_car.egg-info/dependency_links.txt
+writing entry points to ../../build/laser_shotting_car/laser_shotting_car.egg-info/entry_points.txt
+writing requirements to ../../build/laser_shotting_car/laser_shotting_car.egg-info/requires.txt
+writing top-level names to ../../build/laser_shotting_car/laser_shotting_car.egg-info/top_level.txt
+reading manifest file '../../build/laser_shotting_car/laser_shotting_car.egg-info/SOURCES.txt'
+writing manifest file '../../build/laser_shotting_car/laser_shotting_car.egg-info/SOURCES.txt'
+running build
+running build_py
+copying laser_shotting_car/circle_laser_detector.py -> /home/orangepi/ros2_workspace/school_competition/build/laser_shotting_car/build/lib/laser_shotting_car
+running install
+running install_lib
+copying /home/orangepi/ros2_workspace/school_competition/build/laser_shotting_car/build/lib/laser_shotting_car/circle_laser_detector.py -> /home/orangepi/ros2_workspace/school_competition/install/lib/python3.10/site-packages/laser_shotting_car
+byte-compiling /home/orangepi/ros2_workspace/school_competition/install/lib/python3.10/site-packages/laser_shotting_car/circle_laser_detector.py to circle_laser_detector.cpython-310.pyc
+running install_data
+running install_egg_info
+removing '/home/orangepi/ros2_workspace/school_competition/install/lib/python3.10/site-packages/laser_shotting_car-0.0.0-py3.10.egg-info' (and everything under it)
+Copying ../../build/laser_shotting_car/laser_shotting_car.egg-info to /home/orangepi/ros2_workspace/school_competition/install/lib/python3.10/site-packages/laser_shotting_car-0.0.0-py3.10.egg-info
+running install_scripts
+Installing camera_publisher script to /home/orangepi/ros2_workspace/school_competition/install/lib/laser_shotting_car
+Installing circle_laser_detector script to /home/orangepi/ros2_workspace/school_competition/install/lib/laser_shotting_car
+Installing lidar_processor script to /home/orangepi/ros2_workspace/school_competition/install/lib/laser_shotting_car
+Installing main_controller script to /home/orangepi/ros2_workspace/school_competition/install/lib/laser_shotting_car
+Installing yolov8_detector script to /home/orangepi/ros2_workspace/school_competition/install/lib/laser_shotting_car
+writing list of installed files to '/home/orangepi/ros2_workspace/school_competition/build/laser_shotting_car/install.log'

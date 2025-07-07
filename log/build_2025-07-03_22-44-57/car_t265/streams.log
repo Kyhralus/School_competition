@@ -1,0 +1,27 @@
+[1.614s] Invoking command in '/home/orangepi/ros2_workspace/school_competition/src/car_t265': PYTHONPATH=/home/orangepi/ros2_workspace/school_competition/build/car_t265/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/orangepi/ros2_workspace/school_competition/install/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/car_t265 build --build-base /home/orangepi/ros2_workspace/school_competition/build/car_t265/build install --record /home/orangepi/ros2_workspace/school_competition/build/car_t265/install.log --single-version-externally-managed install_data
+[2.025s] running egg_info
+[2.026s] writing ../../build/car_t265/car_t265.egg-info/PKG-INFO
+[2.027s] writing dependency_links to ../../build/car_t265/car_t265.egg-info/dependency_links.txt
+[2.046s] writing entry points to ../../build/car_t265/car_t265.egg-info/entry_points.txt
+[2.046s] writing requirements to ../../build/car_t265/car_t265.egg-info/requires.txt
+[2.047s] writing top-level names to ../../build/car_t265/car_t265.egg-info/top_level.txt
+[2.052s] reading manifest file '../../build/car_t265/car_t265.egg-info/SOURCES.txt'
+[2.054s] writing manifest file '../../build/car_t265/car_t265.egg-info/SOURCES.txt'
+[2.055s] running build
+[2.056s] running build_py
+[2.056s] running install
+[2.057s] running install_lib
+[2.058s] running install_data
+[2.061s] running install_egg_info
+[2.062s] removing '/home/orangepi/ros2_workspace/school_competition/install/lib/python3.10/site-packages/car_t265-0.0.0-py3.10.egg-info' (and everything under it)
+[2.071s] Copying ../../build/car_t265/car_t265.egg-info to /home/orangepi/ros2_workspace/school_competition/install/lib/python3.10/site-packages/car_t265-0.0.0-py3.10.egg-info
+[2.143s] running install_scripts
+[2.155s] Installing linear_test script to /home/orangepi/ros2_workspace/school_competition/install/lib/car_t265
+[2.156s] Installing motor_controller script to /home/orangepi/ros2_workspace/school_competition/install/lib/car_t265
+[2.157s] Installing navigation_controller script to /home/orangepi/ros2_workspace/school_competition/install/lib/car_t265
+[2.157s] Installing t265_Imu_pub script to /home/orangepi/ros2_workspace/school_competition/install/lib/car_t265
+[2.158s] Installing t265_publisher script to /home/orangepi/ros2_workspace/school_competition/install/lib/car_t265
+[2.159s] Installing target_publisher script to /home/orangepi/ros2_workspace/school_competition/install/lib/car_t265
+[2.160s] Installing uart_driver script to /home/orangepi/ros2_workspace/school_competition/install/lib/car_t265
+[2.160s] writing list of installed files to '/home/orangepi/ros2_workspace/school_competition/build/car_t265/install.log'
+[2.206s] Invoked command in '/home/orangepi/ros2_workspace/school_competition/src/car_t265' returned '0': PYTHONPATH=/home/orangepi/ros2_workspace/school_competition/build/car_t265/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/orangepi/ros2_workspace/school_competition/install/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/car_t265 build --build-base /home/orangepi/ros2_workspace/school_competition/build/car_t265/build install --record /home/orangepi/ros2_workspace/school_competition/build/car_t265/install.log --single-version-externally-managed install_data

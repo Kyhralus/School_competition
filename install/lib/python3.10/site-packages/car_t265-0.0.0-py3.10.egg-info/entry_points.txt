@@ -1,0 +1,9 @@
+[console_scripts]
+linear_test = car_t265.linear_test:main
+motor_controller = car_t265.motor_controller:main
+navigation_controller = car_t265.navigation_controller:main
+t265_Imu_pub = car_t265.t265_Imu_pub:main
+t265_publisher = car_t265.t265_publisher:main
+target_publisher = car_t265.target_publisher:main
+uart_driver = car_t265.uart_driver:main
+

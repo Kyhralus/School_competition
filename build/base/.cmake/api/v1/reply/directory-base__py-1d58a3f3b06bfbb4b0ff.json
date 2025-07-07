@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "base__py",
+		"source" : "/home/orangepi/ros2_workspace/school_competition/build/base/base__py"
+	}
+}

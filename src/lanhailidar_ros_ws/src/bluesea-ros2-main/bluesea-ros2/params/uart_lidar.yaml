@@ -1,0 +1,42 @@
+bluesea_node:
+  ros__parameters:
+  #ROS2#
+    frame_id: "laser_link"
+    scan_topic: "scan"
+    cloud_topic: "cloud"
+  #DATA#
+    dev_id: -1
+    raw_bytes: 3
+    output_360: true
+    output_scan: true
+    output_cloud2: false        # 启动点云
+    with_angle_filter: false    # 角度过滤
+    min_angle: 0.0  # default: -3.1415926
+    max_angle: 6.2831853  # 之和必须为 360
+    mask1: "0,3.1415926"  # 反装，屏蔽 135-180
+    # mask1: "2.35619449,4.3.1415926"  # 反装，屏蔽 135-180
+    # mask2: "-3,-2"               # 反装，屏蔽 -180 - -135
+    hard_resample: false
+    soft_resample: false
+    with_checksum: true
+    reversed: false    # 反装 false, 正装 true
+    min_dist: 0.01
+    max_dist: 3.0      # 最大点云距离(m)
+    error_circle: 3    # 判断距离为0的点的比重      连续三圈
+    error_scale: 0.9   # 每圈距离为0的点占据90%  则报错
+#CONNECT#
+    type: "uart"
+    port: "/dev/ttyUSB0" 
+    baud_rate: -1
+  #GET#
+    uuid:  -1
+  #SET#
+    resample_res: -1.0
+    with_confidence: -1
+    with_smooth: -1
+    with_deshadow: -1
+    alarm_msg: -1
+    rpm: -1
+
+
+# 

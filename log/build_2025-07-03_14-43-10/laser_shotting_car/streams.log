@@ -1,0 +1,34 @@
+[1.417s] Invoking command in '/home/orangepi/ros2_workspace/school_competition/src/laser_shotting_car': PYTHONPATH=/home/orangepi/ros2_workspace/school_competition/build/laser_shotting_car/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/orangepi/ros2_workspace/school_competition/install/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/laser_shotting_car build --build-base /home/orangepi/ros2_workspace/school_competition/build/laser_shotting_car/build install --record /home/orangepi/ros2_workspace/school_competition/build/laser_shotting_car/install.log --single-version-externally-managed install_data
+[1.756s] running egg_info
+[1.757s] writing ../../build/laser_shotting_car/laser_shotting_car.egg-info/PKG-INFO
+[1.758s] writing dependency_links to ../../build/laser_shotting_car/laser_shotting_car.egg-info/dependency_links.txt
+[1.765s] writing entry points to ../../build/laser_shotting_car/laser_shotting_car.egg-info/entry_points.txt
+[1.765s] writing requirements to ../../build/laser_shotting_car/laser_shotting_car.egg-info/requires.txt
+[1.766s] writing top-level names to ../../build/laser_shotting_car/laser_shotting_car.egg-info/top_level.txt
+[1.768s] reading manifest file '../../build/laser_shotting_car/laser_shotting_car.egg-info/SOURCES.txt'
+[1.770s] writing manifest file '../../build/laser_shotting_car/laser_shotting_car.egg-info/SOURCES.txt'
+[1.770s] running build
+[1.770s] running build_py
+[1.771s] copying laser_shotting_car/circle_laser_detector.py -> /home/orangepi/ros2_workspace/school_competition/build/laser_shotting_car/build/lib/laser_shotting_car
+[1.771s] copying laser_shotting_car/gray_thred.py -> /home/orangepi/ros2_workspace/school_competition/build/laser_shotting_car/build/lib/laser_shotting_car
+[1.771s] copying laser_shotting_car/main_controller.py -> /home/orangepi/ros2_workspace/school_competition/build/laser_shotting_car/build/lib/laser_shotting_car
+[1.771s] running install
+[1.772s] running install_lib
+[1.773s] copying /home/orangepi/ros2_workspace/school_competition/build/laser_shotting_car/build/lib/laser_shotting_car/circle_laser_detector.py -> /home/orangepi/ros2_workspace/school_competition/install/lib/python3.10/site-packages/laser_shotting_car
+[1.774s] copying /home/orangepi/ros2_workspace/school_competition/build/laser_shotting_car/build/lib/laser_shotting_car/gray_thred.py -> /home/orangepi/ros2_workspace/school_competition/install/lib/python3.10/site-packages/laser_shotting_car
+[1.774s] copying /home/orangepi/ros2_workspace/school_competition/build/laser_shotting_car/build/lib/laser_shotting_car/main_controller.py -> /home/orangepi/ros2_workspace/school_competition/install/lib/python3.10/site-packages/laser_shotting_car
+[1.775s] byte-compiling /home/orangepi/ros2_workspace/school_competition/install/lib/python3.10/site-packages/laser_shotting_car/circle_laser_detector.py to circle_laser_detector.cpython-310.pyc
+[1.778s] byte-compiling /home/orangepi/ros2_workspace/school_competition/install/lib/python3.10/site-packages/laser_shotting_car/gray_thred.py to gray_thred.cpython-310.pyc
+[1.778s] byte-compiling /home/orangepi/ros2_workspace/school_competition/install/lib/python3.10/site-packages/laser_shotting_car/main_controller.py to main_controller.cpython-310.pyc
+[1.780s] running install_data
+[1.780s] running install_egg_info
+[1.782s] removing '/home/orangepi/ros2_workspace/school_competition/install/lib/python3.10/site-packages/laser_shotting_car-0.0.0-py3.10.egg-info' (and everything under it)
+[1.783s] Copying ../../build/laser_shotting_car/laser_shotting_car.egg-info to /home/orangepi/ros2_workspace/school_competition/install/lib/python3.10/site-packages/laser_shotting_car-0.0.0-py3.10.egg-info
+[1.784s] running install_scripts
+[1.813s] Installing camera_publisher script to /home/orangepi/ros2_workspace/school_competition/install/lib/laser_shotting_car
+[1.813s] Installing circle_laser_detector script to /home/orangepi/ros2_workspace/school_competition/install/lib/laser_shotting_car
+[1.813s] Installing lidar_processor script to /home/orangepi/ros2_workspace/school_competition/install/lib/laser_shotting_car
+[1.813s] Installing main_controller script to /home/orangepi/ros2_workspace/school_competition/install/lib/laser_shotting_car
+[1.816s] Installing yolov8_detector script to /home/orangepi/ros2_workspace/school_competition/install/lib/laser_shotting_car
+[1.816s] writing list of installed files to '/home/orangepi/ros2_workspace/school_competition/build/laser_shotting_car/install.log'
+[1.932s] Invoked command in '/home/orangepi/ros2_workspace/school_competition/src/laser_shotting_car' returned '0': PYTHONPATH=/home/orangepi/ros2_workspace/school_competition/build/laser_shotting_car/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/orangepi/ros2_workspace/school_competition/install/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/laser_shotting_car build --build-base /home/orangepi/ros2_workspace/school_competition/build/laser_shotting_car/build install --record /home/orangepi/ros2_workspace/school_competition/build/laser_shotting_car/install.log --single-version-externally-managed install_data

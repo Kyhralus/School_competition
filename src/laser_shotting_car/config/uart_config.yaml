@@ -1,0 +1,13 @@
+uart_node:
+  ros__parameters:
+    enabled: true
+    device_path: "/dev/ttyS0"
+    baud_rate: 115200
+    data_bits: 8
+    parity: "none"
+    stop_bits: 1
+    timeout_ms: 100
+    receive_format: "ascii"
+    send_format: "ascii"
+    frame_delimiter: "\r\n"
+    encoding: "utf-8"

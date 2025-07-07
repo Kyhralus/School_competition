@@ -1,0 +1,25 @@
+[1.488s] Invoking command in '/home/orangepi/ros2_workspace/school_competition/src/laser_shotting_car': PYTHONPATH=/home/orangepi/ros2_workspace/school_competition/build/laser_shotting_car/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/orangepi/ros2_workspace/school_competition/install/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/laser_shotting_car build --build-base /home/orangepi/ros2_workspace/school_competition/build/laser_shotting_car/build install --record /home/orangepi/ros2_workspace/school_competition/build/laser_shotting_car/install.log --single-version-externally-managed install_data
+[1.882s] running egg_info
+[1.885s] writing ../../build/laser_shotting_car/laser_shotting_car.egg-info/PKG-INFO
+[1.887s] writing dependency_links to ../../build/laser_shotting_car/laser_shotting_car.egg-info/dependency_links.txt
+[1.894s] writing entry points to ../../build/laser_shotting_car/laser_shotting_car.egg-info/entry_points.txt
+[1.894s] writing requirements to ../../build/laser_shotting_car/laser_shotting_car.egg-info/requires.txt
+[1.894s] writing top-level names to ../../build/laser_shotting_car/laser_shotting_car.egg-info/top_level.txt
+[1.908s] reading manifest file '../../build/laser_shotting_car/laser_shotting_car.egg-info/SOURCES.txt'
+[1.910s] writing manifest file '../../build/laser_shotting_car/laser_shotting_car.egg-info/SOURCES.txt'
+[1.911s] running build
+[1.912s] running build_py
+[1.913s] running install
+[1.913s] running install_lib
+[1.915s] running install_data
+[1.916s] running install_egg_info
+[1.920s] removing '/home/orangepi/ros2_workspace/school_competition/install/lib/python3.10/site-packages/laser_shotting_car-0.0.0-py3.10.egg-info' (and everything under it)
+[1.927s] Copying ../../build/laser_shotting_car/laser_shotting_car.egg-info to /home/orangepi/ros2_workspace/school_competition/install/lib/python3.10/site-packages/laser_shotting_car-0.0.0-py3.10.egg-info
+[1.928s] running install_scripts
+[2.075s] Installing camera_publisher script to /home/orangepi/ros2_workspace/school_competition/install/lib/laser_shotting_car
+[2.075s] Installing circle_laser_detector script to /home/orangepi/ros2_workspace/school_competition/install/lib/laser_shotting_car
+[2.075s] Installing lidar_processor script to /home/orangepi/ros2_workspace/school_competition/install/lib/laser_shotting_car
+[2.075s] Installing main_controller script to /home/orangepi/ros2_workspace/school_competition/install/lib/laser_shotting_car
+[2.075s] Installing yolov8_detector script to /home/orangepi/ros2_workspace/school_competition/install/lib/laser_shotting_car
+[2.075s] writing list of installed files to '/home/orangepi/ros2_workspace/school_competition/build/laser_shotting_car/install.log'
+[2.169s] Invoked command in '/home/orangepi/ros2_workspace/school_competition/src/laser_shotting_car' returned '0': PYTHONPATH=/home/orangepi/ros2_workspace/school_competition/build/laser_shotting_car/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/orangepi/ros2_workspace/school_competition/install/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/laser_shotting_car build --build-base /home/orangepi/ros2_workspace/school_competition/build/laser_shotting_car/build install --record /home/orangepi/ros2_workspace/school_competition/build/laser_shotting_car/install.log --single-version-externally-managed install_data

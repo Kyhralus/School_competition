@@ -1,0 +1,4 @@
+  File "/home/orangepi/ros2_workspace/school_competition/install/lib/python3.10/site-packages/laser_shotting_car/circle_laser_detector.py", line 87
+    def detect_circles_from_image(self, image, min_radius=50, max_radius=400, canny_thresh1=15, canny_thresh2=50, area_thresh=30):
+SyntaxError: expected 'except' or 'finally' block
+

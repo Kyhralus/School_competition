@@ -1,0 +1,619 @@
+[0.000000] (-) TimerEvent: {}
+[0.021288] (base) JobQueued: {'identifier': 'base', 'dependencies': OrderedDict()}
+[0.021523] (car_t265) JobQueued: {'identifier': 'car_t265', 'dependencies': OrderedDict()}
+[0.021694] (laser_shotting_car) JobQueued: {'identifier': 'laser_shotting_car', 'dependencies': OrderedDict()}
+[0.021828] (bluesea2) JobQueued: {'identifier': 'bluesea2', 'dependencies': OrderedDict([('base', '/home/orangepi/ros2_workspace/school_competition/install')])}
+[0.023944] (base) JobStarted: {'identifier': 'base'}
+[0.045817] (car_t265) JobStarted: {'identifier': 'car_t265'}
+[0.076095] (laser_shotting_car) JobStarted: {'identifier': 'laser_shotting_car'}
+[0.094503] (base) JobProgress: {'identifier': 'base', 'progress': 'cmake'}
+[0.095667] (base) JobProgress: {'identifier': 'base', 'progress': 'build'}
+[0.096704] (base) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/orangepi/ros2_workspace/school_competition/build/base', '--', '-j8', '-l8'], 'cwd': '/home/orangepi/ros2_workspace/school_competition/build/base', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('UMS_MOUNTPOINT', '/mnt/ums'), ('GST_V4L2_PREFERRED_FOURCC', 'NV12:YU12:NV16:YUY2'), ('LANGUAGE', 'en_US.UTF-8'), ('USER', 'root'), ('SSH_CLIENT', '192.168.61.141 53295 22'), ('XDG_SESSION_TYPE', 'tty'), ('GIT_ASKPASS', '/root/.vscode-server/cli/servers/Stable-2901c5ac6db8a986a5666c3af51ff804d05af0d4/server/extensions/git/dist/askpass.sh'), ('SHLVL', '1'), ('USB_FUNCS', 'adb'), ('LD_LIBRARY_PATH', '/root/lanhailidar_ros_ws/install/base/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('BROWSER', '/root/.vscode-server/cli/servers/Stable-2901c5ac6db8a986a5666c3af51ff804d05af0d4/server/bin/helpers/browser.sh'), ('MOTD_SHOWN', 'pam'), ('HOME', '/root'), ('TERM_PROGRAM_VERSION', '1.101.2'), ('VSCODE_IPC_HOOK_CLI', '/run/user/0/vscode-ipc-a46e235a-142f-4ae8-ad91-8a603a2fbffe.sock'), ('GST_INSPECT_NO_COLORS', '1'), ('GST_MPP_NO_RGA', '1'), ('ROS_PYTHON_VERSION', '3'), ('COGL_DRIVER', 'gles2'), ('VSCODE_GIT_ASKPASS_MAIN', '/root/.vscode-server/cli/servers/Stable-2901c5ac6db8a986a5666c3af51ff804d05af0d4/server/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/root/.vscode-server/cli/servers/Stable-2901c5ac6db8a986a5666c3af51ff804d05af0d4/server/node'), ('SSL_CERT_FILE', '/usr/lib/ssl/certs/ca-certificates.crt'), ('PYDEVD_DISABLE_FILE_VALIDATION', '1'), ('BUNDLED_DEBUGPY_PATH', '/root/.vscode-server/extensions/ms-python.debugpy-2025.8.0-linux-arm64/bundled/libs/debugpy'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/0/bus'), ('COLORTERM', 'truecolor'), ('COLCON_PREFIX_PATH', '/root/lanhailidar_ros_ws/install'), ('GST_V4L2SRC_MAX_RESOLUTION', '3840x2160'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'root'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('GST_GL_API', 'gles2'), ('XDG_SESSION_ID', '11'), ('GST_VIDEO_CONVERT_PREFERRED_FORMAT', 'NV12:NV16:I420:YUY2'), ('GST_V4L2SRC_RK_DEVICES', '_mainpath:_selfpath:_bypass:_scale'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/root/.vscode-server/cli/servers/Stable-2901c5ac6db8a986a5666c3af51ff804d05af0d4/server/bin/remote-cli:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/root/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand:/root/.vscode-server/extensions/ms-python.debugpy-2025.8.0-linux-arm64/bundled/scripts/noConfigScripts'), ('XDG_RUNTIME_DIR', '/run/user/0'), ('GST_GL_PLATFORM', 'egl'), ('GST_DEBUG_NO_COLOR', '1'), ('SSL_CERT_DIR', '/usr/lib/ssl/certs'), ('GST_V4L2SRC_DEFAULT_DEVICE', '/dev/video-camera0'), ('DISPLAY', ':0'), ('VSCODE_DEBUGPY_ADAPTER_ENDPOINTS', '/root/.vscode-server/extensions/ms-python.debugpy-2025.8.0-linux-arm64/.noConfigDebugAdapterEndpoints/endpoint-8abbe1c87ebc2a8c.txt'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/0/vscode-git-d3227a1384.sock'), ('TERM_PROGRAM', 'vscode'), ('GST_V4L2_USE_LIBV4L2', '1'), ('UMS_SIZE', '256M'), ('AMENT_PREFIX_PATH', '/root/lanhailidar_ros_ws/install/scan_subscriber:/root/lanhailidar_ros_ws/install/bluesea2:/root/lanhailidar_ros_ws/install/base:/opt/ros/humble'), ('LC_MESSAGES', 'en_US.UTF-8'), ('SHELL', '/bin/bash'), ('UMS_RO', '0'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('UMS_FSTYPE', 'vfat'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/home/orangepi/ros2_workspace/school_competition/build/base'), ('LC_ALL', 'en_US.UTF-8'), ('SSH_CONNECTION', '192.168.61.141 53295 192.168.61.126 22'), ('PYTHONPATH', '/root/lanhailidar_ros_ws/install/scan_subscriber/lib/python3.10/site-packages:/root/lanhailidar_ros_ws/install/base/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('UMS_MOUNT', '0'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/root/lanhailidar_ros_ws/install/bluesea2:/root/lanhailidar_ros_ws/install/base:/root/lanhailidar_ros_ws/install/scan_subscriber:/opt/ros/humble'), ('UMS_FILE', '/userdata/ums_shared.img')]), 'shell': False}
+[0.100589] (-) TimerEvent: {}
+[0.201505] (-) TimerEvent: {}
+[0.302257] (-) TimerEvent: {}
+[0.402993] (-) TimerEvent: {}
+[0.503900] (-) TimerEvent: {}
+[0.530187] (base) StdoutLine: {'line': b'[  3%] \x1b[34m\x1b[1mGenerating C code for ROS interfaces\x1b[0m\n'}
+[0.530860] (base) StdoutLine: {'line': b'[  6%] \x1b[34m\x1b[1mGenerating C++ code for ROS interfaces\x1b[0m\n'}
+[0.531300] (base) StdoutLine: {'line': b'[  6%] Built target ament_cmake_python_copy_base\n'}
+[0.604169] (-) TimerEvent: {}
+[0.608052] (base) StdoutLine: {'line': b'running egg_info\n'}
+[0.609357] (base) StdoutLine: {'line': b'creating base.egg-info\n'}
+[0.610241] (base) StdoutLine: {'line': b'writing base.egg-info/PKG-INFO\n'}
+[0.610938] (base) StdoutLine: {'line': b'writing dependency_links to base.egg-info/dependency_links.txt\n'}
+[0.611526] (base) StdoutLine: {'line': b'writing top-level names to base.egg-info/top_level.txt\n'}
+[0.612100] (base) StdoutLine: {'line': b"writing manifest file 'base.egg-info/SOURCES.txt'\n"}
+[0.615048] (base) StdoutLine: {'line': b"reading manifest file 'base.egg-info/SOURCES.txt'\n"}
+[0.616049] (base) StdoutLine: {'line': b"writing manifest file 'base.egg-info/SOURCES.txt'\n"}
+[0.680052] (base) StdoutLine: {'line': b'[  6%] Built target ament_cmake_python_build_base_egg\n'}
+[0.696050] (base) StdoutLine: {'line': b'[  6%] Built target base__cpp\n'}
+[0.704346] (-) TimerEvent: {}
+[0.709788] (base) StdoutLine: {'line': b'[  9%] \x1b[32mBuilding C object CMakeFiles/base__rosidl_generator_c.dir/rosidl_generator_c/base/srv/detail/control__functions.c.o\x1b[0m\n'}
+[0.723249] (base) StdoutLine: {'line': b'[ 16%] \x1b[34m\x1b[1mGenerating C++ type support dispatch for ROS interfaces\x1b[0m\n'}
+[0.723503] (base) StdoutLine: {'line': b'[ 16%] \x1b[34m\x1b[1mGenerating C++ introspection for ROS interfaces\x1b[0m\n'}
+[0.723636] (base) StdoutLine: {'line': b'[ 19%] \x1b[34m\x1b[1mGenerating C++ type support for eProsima Fast-RTPS\x1b[0m\n'}
+[0.804585] (-) TimerEvent: {}
+[0.855132] (base) StdoutLine: {'line': b'[ 22%] \x1b[32m\x1b[1mLinking C shared library libbase__rosidl_generator_c.so\x1b[0m\n'}
+[0.904804] (-) TimerEvent: {}
+[0.975043] (base) StdoutLine: {'line': b'[ 22%] Built target base__rosidl_generator_c\n'}
+[0.994207] (base) StdoutLine: {'line': b'[ 25%] \x1b[34m\x1b[1mGenerating C type support for eProsima Fast-RTPS\x1b[0m\n'}
+[1.004974] (-) TimerEvent: {}
+[1.006849] (base) StdoutLine: {'line': b'[ 29%] \x1b[34m\x1b[1mGenerating C introspection for ROS interfaces\x1b[0m\n'}
+[1.010050] (base) StdoutLine: {'line': b'[ 32%] \x1b[34m\x1b[1mGenerating C type support dispatch for ROS interfaces\x1b[0m\n'}
+[1.091909] (base) StdoutLine: {'line': b'[ 35%] \x1b[32mBuilding CXX object CMakeFiles/base__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/base/srv/control__type_support.cpp.o\x1b[0m\n'}
+[1.105253] (-) TimerEvent: {}
+[1.124556] (base) StdoutLine: {'line': b'[ 38%] \x1b[32mBuilding CXX object CMakeFiles/base__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/base/srv/detail/control__type_support.cpp.o\x1b[0m\n'}
+[1.174622] (base) StdoutLine: {'line': b'[ 41%] \x1b[32mBuilding CXX object CMakeFiles/base__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/base/srv/detail/dds_fastrtps/control__type_support.cpp.o\x1b[0m\n'}
+[1.205418] (-) TimerEvent: {}
+[1.306174] (-) TimerEvent: {}
+[1.406971] (-) TimerEvent: {}
+[1.473139] (base) StdoutLine: {'line': b'[ 45%] \x1b[32mBuilding CXX object CMakeFiles/base__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/base/srv/detail/control__type_support_c.cpp.o\x1b[0m\n'}
+[1.475668] (base) StdoutLine: {'line': b'[ 48%] \x1b[32mBuilding CXX object CMakeFiles/base__rosidl_typesupport_c.dir/rosidl_typesupport_c/base/srv/control__type_support.cpp.o\x1b[0m\n'}
+[1.483435] (base) StdoutLine: {'line': b'[ 51%] \x1b[32m\x1b[1mLinking CXX shared library libbase__rosidl_typesupport_cpp.so\x1b[0m\n'}
+[1.508505] (-) TimerEvent: {}
+[1.519921] (base) StdoutLine: {'line': b'[ 54%] \x1b[32m\x1b[1mLinking CXX shared library libbase__rosidl_typesupport_c.so\x1b[0m\n'}
+[1.555177] (base) StdoutLine: {'line': b'[ 54%] Built target base__rosidl_typesupport_cpp\n'}
+[1.586021] (base) StdoutLine: {'line': b'[ 54%] Built target base__rosidl_typesupport_c\n'}
+[1.608679] (-) TimerEvent: {}
+[1.709439] (-) TimerEvent: {}
+[1.810330] (-) TimerEvent: {}
+[1.908088] (base) StdoutLine: {'line': b'[ 58%] \x1b[32mBuilding C object CMakeFiles/base__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/base/srv/detail/control__type_support.c.o\x1b[0m\n'}
+[1.910545] (-) TimerEvent: {}
+[1.934674] (base) StdoutLine: {'line': b'[ 61%] \x1b[32m\x1b[1mLinking CXX shared library libbase__rosidl_typesupport_introspection_cpp.so\x1b[0m\n'}
+[1.955376] (laser_shotting_car) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'egg_info', '--egg-base', '../../build/laser_shotting_car', 'build', '--build-base', '/home/orangepi/ros2_workspace/school_competition/build/laser_shotting_car/build', 'install', '--record', '/home/orangepi/ros2_workspace/school_competition/build/laser_shotting_car/install.log', '--single-version-externally-managed', 'install_data'], 'cwd': '/home/orangepi/ros2_workspace/school_competition/src/laser_shotting_car', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'UMS_MOUNTPOINT': '/mnt/ums', 'GST_V4L2_PREFERRED_FOURCC': 'NV12:YU12:NV16:YUY2', 'LANGUAGE': 'en_US.UTF-8', 'USER': 'root', 'SSH_CLIENT': '192.168.61.141 53295 22', 'XDG_SESSION_TYPE': 'tty', 'GIT_ASKPASS': '/root/.vscode-server/cli/servers/Stable-2901c5ac6db8a986a5666c3af51ff804d05af0d4/server/extensions/git/dist/askpass.sh', 'SHLVL': '1', 'USB_FUNCS': 'adb', 'LD_LIBRARY_PATH': '/root/lanhailidar_ros_ws/install/base/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib', 'BROWSER': '/root/.vscode-server/cli/servers/Stable-2901c5ac6db8a986a5666c3af51ff804d05af0d4/server/bin/helpers/browser.sh', 'MOTD_SHOWN': 'pam', 'HOME': '/root', 'TERM_PROGRAM_VERSION': '1.101.2', 'VSCODE_IPC_HOOK_CLI': '/run/user/0/vscode-ipc-a46e235a-142f-4ae8-ad91-8a603a2fbffe.sock', 'GST_INSPECT_NO_COLORS': '1', 'GST_MPP_NO_RGA': '1', 'ROS_PYTHON_VERSION': '3', 'COGL_DRIVER': 'gles2', 'VSCODE_GIT_ASKPASS_MAIN': '/root/.vscode-server/cli/servers/Stable-2901c5ac6db8a986a5666c3af51ff804d05af0d4/server/extensions/git/dist/askpass-main.js', 'VSCODE_GIT_ASKPASS_NODE': '/root/.vscode-server/cli/servers/Stable-2901c5ac6db8a986a5666c3af51ff804d05af0d4/server/node', 'SSL_CERT_FILE': '/usr/lib/ssl/certs/ca-certificates.crt', 'PYDEVD_DISABLE_FILE_VALIDATION': '1', 'BUNDLED_DEBUGPY_PATH': '/root/.vscode-server/extensions/ms-python.debugpy-2025.8.0-linux-arm64/bundled/libs/debugpy', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/0/bus', 'COLORTERM': 'truecolor', 'COLCON_PREFIX_PATH': '/root/lanhailidar_ros_ws/install', 'GST_V4L2SRC_MAX_RESOLUTION': '3840x2160', 'ROS_DISTRO': 'humble', 'LOGNAME': 'root', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'TERM': 'xterm-256color', 'GST_GL_API': 'gles2', 'XDG_SESSION_ID': '11', 'GST_VIDEO_CONVERT_PREFERRED_FORMAT': 'NV12:NV16:I420:YUY2', 'GST_V4L2SRC_RK_DEVICES': '_mainpath:_selfpath:_bypass:_scale', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/opt/ros/humble/bin:/root/.vscode-server/cli/servers/Stable-2901c5ac6db8a986a5666c3af51ff804d05af0d4/server/bin/remote-cli:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/root/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand:/root/.vscode-server/extensions/ms-python.debugpy-2025.8.0-linux-arm64/bundled/scripts/noConfigScripts', 'XDG_RUNTIME_DIR': '/run/user/0', 'GST_GL_PLATFORM': 'egl', 'GST_DEBUG_NO_COLOR': '1', 'SSL_CERT_DIR': '/usr/lib/ssl/certs', 'GST_V4L2SRC_DEFAULT_DEVICE': '/dev/video-camera0', 'DISPLAY': ':0', 'VSCODE_DEBUGPY_ADAPTER_ENDPOINTS': '/root/.vscode-server/extensions/ms-python.debugpy-2025.8.0-linux-arm64/.noConfigDebugAdapterEndpoints/endpoint-8abbe1c87ebc2a8c.txt', 'LANG': 'en_US.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'VSCODE_GIT_IPC_HANDLE': '/run/user/0/vscode-git-d3227a1384.sock', 'TERM_PROGRAM': 'vscode', 'GST_V4L2_USE_LIBV4L2': '1', 'UMS_SIZE': '256M', 'AMENT_PREFIX_PATH': '/root/lanhailidar_ros_ws/install/scan_subscriber:/root/lanhailidar_ros_ws/install/bluesea2:/root/lanhailidar_ros_ws/install/base:/opt/ros/humble', 'LC_MESSAGES': 'en_US.UTF-8', 'SHELL': '/bin/bash', 'UMS_RO': '0', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'UMS_FSTYPE': 'vfat', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '', 'PWD': '/home/orangepi/ros2_workspace/school_competition/build/laser_shotting_car', 'LC_ALL': 'en_US.UTF-8', 'SSH_CONNECTION': '192.168.61.141 53295 192.168.61.126 22', 'PYTHONPATH': '/home/orangepi/ros2_workspace/school_competition/build/laser_shotting_car/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/orangepi/ros2_workspace/school_competition/install/lib/python3.10/site-packages:/root/lanhailidar_ros_ws/install/scan_subscriber/lib/python3.10/site-packages:/root/lanhailidar_ros_ws/install/base/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'UMS_MOUNT': '0', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/root/lanhailidar_ros_ws/install/bluesea2:/root/lanhailidar_ros_ws/install/base', 'UMS_FILE': '/userdata/ums_shared.img'}, 'shell': False}
+[1.972537] (base) StdoutLine: {'line': b'[ 64%] \x1b[32m\x1b[1mLinking C shared library libbase__rosidl_typesupport_introspection_c.so\x1b[0m\n'}
+[2.010729] (-) TimerEvent: {}
+[2.027043] (base) StdoutLine: {'line': b'[ 64%] Built target base__rosidl_typesupport_introspection_c\n'}
+[2.070067] (base) StdoutLine: {'line': b'[ 64%] Built target base__rosidl_typesupport_introspection_cpp\n'}
+[2.110910] (-) TimerEvent: {}
+[2.167506] (car_t265) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'egg_info', '--egg-base', '../../build/car_t265', 'build', '--build-base', '/home/orangepi/ros2_workspace/school_competition/build/car_t265/build', 'install', '--record', '/home/orangepi/ros2_workspace/school_competition/build/car_t265/install.log', '--single-version-externally-managed', 'install_data'], 'cwd': '/home/orangepi/ros2_workspace/school_competition/src/car_t265', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'UMS_MOUNTPOINT': '/mnt/ums', 'GST_V4L2_PREFERRED_FOURCC': 'NV12:YU12:NV16:YUY2', 'LANGUAGE': 'en_US.UTF-8', 'USER': 'root', 'SSH_CLIENT': '192.168.61.141 53295 22', 'XDG_SESSION_TYPE': 'tty', 'GIT_ASKPASS': '/root/.vscode-server/cli/servers/Stable-2901c5ac6db8a986a5666c3af51ff804d05af0d4/server/extensions/git/dist/askpass.sh', 'SHLVL': '1', 'USB_FUNCS': 'adb', 'LD_LIBRARY_PATH': '/root/lanhailidar_ros_ws/install/base/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib', 'BROWSER': '/root/.vscode-server/cli/servers/Stable-2901c5ac6db8a986a5666c3af51ff804d05af0d4/server/bin/helpers/browser.sh', 'MOTD_SHOWN': 'pam', 'HOME': '/root', 'TERM_PROGRAM_VERSION': '1.101.2', 'VSCODE_IPC_HOOK_CLI': '/run/user/0/vscode-ipc-a46e235a-142f-4ae8-ad91-8a603a2fbffe.sock', 'GST_INSPECT_NO_COLORS': '1', 'GST_MPP_NO_RGA': '1', 'ROS_PYTHON_VERSION': '3', 'COGL_DRIVER': 'gles2', 'VSCODE_GIT_ASKPASS_MAIN': '/root/.vscode-server/cli/servers/Stable-2901c5ac6db8a986a5666c3af51ff804d05af0d4/server/extensions/git/dist/askpass-main.js', 'VSCODE_GIT_ASKPASS_NODE': '/root/.vscode-server/cli/servers/Stable-2901c5ac6db8a986a5666c3af51ff804d05af0d4/server/node', 'SSL_CERT_FILE': '/usr/lib/ssl/certs/ca-certificates.crt', 'PYDEVD_DISABLE_FILE_VALIDATION': '1', 'BUNDLED_DEBUGPY_PATH': '/root/.vscode-server/extensions/ms-python.debugpy-2025.8.0-linux-arm64/bundled/libs/debugpy', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/0/bus', 'COLORTERM': 'truecolor', 'COLCON_PREFIX_PATH': '/root/lanhailidar_ros_ws/install', 'GST_V4L2SRC_MAX_RESOLUTION': '3840x2160', 'ROS_DISTRO': 'humble', 'LOGNAME': 'root', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'TERM': 'xterm-256color', 'GST_GL_API': 'gles2', 'XDG_SESSION_ID': '11', 'GST_VIDEO_CONVERT_PREFERRED_FORMAT': 'NV12:NV16:I420:YUY2', 'GST_V4L2SRC_RK_DEVICES': '_mainpath:_selfpath:_bypass:_scale', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/opt/ros/humble/bin:/root/.vscode-server/cli/servers/Stable-2901c5ac6db8a986a5666c3af51ff804d05af0d4/server/bin/remote-cli:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/root/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand:/root/.vscode-server/extensions/ms-python.debugpy-2025.8.0-linux-arm64/bundled/scripts/noConfigScripts', 'XDG_RUNTIME_DIR': '/run/user/0', 'GST_GL_PLATFORM': 'egl', 'GST_DEBUG_NO_COLOR': '1', 'SSL_CERT_DIR': '/usr/lib/ssl/certs', 'GST_V4L2SRC_DEFAULT_DEVICE': '/dev/video-camera0', 'DISPLAY': ':0', 'VSCODE_DEBUGPY_ADAPTER_ENDPOINTS': '/root/.vscode-server/extensions/ms-python.debugpy-2025.8.0-linux-arm64/.noConfigDebugAdapterEndpoints/endpoint-8abbe1c87ebc2a8c.txt', 'LANG': 'en_US.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'VSCODE_GIT_IPC_HANDLE': '/run/user/0/vscode-git-d3227a1384.sock', 'TERM_PROGRAM': 'vscode', 'GST_V4L2_USE_LIBV4L2': '1', 'UMS_SIZE': '256M', 'AMENT_PREFIX_PATH': '/root/lanhailidar_ros_ws/install/scan_subscriber:/root/lanhailidar_ros_ws/install/bluesea2:/root/lanhailidar_ros_ws/install/base:/opt/ros/humble', 'LC_MESSAGES': 'en_US.UTF-8', 'SHELL': '/bin/bash', 'UMS_RO': '0', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'UMS_FSTYPE': 'vfat', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '', 'PWD': '/home/orangepi/ros2_workspace/school_competition/build/car_t265', 'LC_ALL': 'en_US.UTF-8', 'SSH_CONNECTION': '192.168.61.141 53295 192.168.61.126 22', 'PYTHONPATH': '/home/orangepi/ros2_workspace/school_competition/build/car_t265/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/orangepi/ros2_workspace/school_competition/install/lib/python3.10/site-packages:/root/lanhailidar_ros_ws/install/scan_subscriber/lib/python3.10/site-packages:/root/lanhailidar_ros_ws/install/base/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'UMS_MOUNT': '0', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/root/lanhailidar_ros_ws/install/bluesea2:/root/lanhailidar_ros_ws/install/base', 'UMS_FILE': '/userdata/ums_shared.img'}, 'shell': False}
+[2.211170] (-) TimerEvent: {}
+[2.312011] (-) TimerEvent: {}
+[2.356671] (base) StdoutLine: {'line': b'[ 67%] \x1b[32m\x1b[1mLinking CXX shared library libbase__rosidl_typesupport_fastrtps_cpp.so\x1b[0m\n'}
+[2.373922] (laser_shotting_car) StdoutLine: {'line': b'running egg_info\n'}
+[2.375267] (laser_shotting_car) StdoutLine: {'line': b'creating ../../build/laser_shotting_car/laser_shotting_car.egg-info\n'}
+[2.376459] (laser_shotting_car) StdoutLine: {'line': b'writing ../../build/laser_shotting_car/laser_shotting_car.egg-info/PKG-INFO\n'}
+[2.377102] (laser_shotting_car) StdoutLine: {'line': b'writing dependency_links to ../../build/laser_shotting_car/laser_shotting_car.egg-info/dependency_links.txt\n'}
+[2.377695] (laser_shotting_car) StdoutLine: {'line': b'writing entry points to ../../build/laser_shotting_car/laser_shotting_car.egg-info/entry_points.txt\n'}
+[2.378216] (laser_shotting_car) StdoutLine: {'line': b'writing requirements to ../../build/laser_shotting_car/laser_shotting_car.egg-info/requires.txt\n'}
+[2.378753] (laser_shotting_car) StdoutLine: {'line': b'writing top-level names to ../../build/laser_shotting_car/laser_shotting_car.egg-info/top_level.txt\n'}
+[2.379209] (laser_shotting_car) StdoutLine: {'line': b"writing manifest file '../../build/laser_shotting_car/laser_shotting_car.egg-info/SOURCES.txt'\n"}
+[2.380044] (laser_shotting_car) StdoutLine: {'line': b"reading manifest file '../../build/laser_shotting_car/laser_shotting_car.egg-info/SOURCES.txt'\n"}
+[2.381806] (laser_shotting_car) StdoutLine: {'line': b"writing manifest file '../../build/laser_shotting_car/laser_shotting_car.egg-info/SOURCES.txt'\n"}
+[2.383332] (laser_shotting_car) StdoutLine: {'line': b'running build\n'}
+[2.384269] (laser_shotting_car) StdoutLine: {'line': b'running build_py\n'}
+[2.384808] (laser_shotting_car) StdoutLine: {'line': b'creating /home/orangepi/ros2_workspace/school_competition/build/laser_shotting_car/build\n'}
+[2.386559] (laser_shotting_car) StdoutLine: {'line': b'creating /home/orangepi/ros2_workspace/school_competition/build/laser_shotting_car/build/lib\n'}
+[2.387407] (laser_shotting_car) StdoutLine: {'line': b'creating /home/orangepi/ros2_workspace/school_competition/build/laser_shotting_car/build/lib/laser_shotting_car\n'}
+[2.388291] (laser_shotting_car) StdoutLine: {'line': b'copying laser_shotting_car/camera_publisher.py -> /home/orangepi/ros2_workspace/school_competition/build/laser_shotting_car/build/lib/laser_shotting_car\n'}
+[2.388826] (laser_shotting_car) StdoutLine: {'line': b'copying laser_shotting_car/func.py -> /home/orangepi/ros2_workspace/school_competition/build/laser_shotting_car/build/lib/laser_shotting_car\n'}
+[2.389437] (laser_shotting_car) StdoutLine: {'line': b'copying laser_shotting_car/__init__.py -> /home/orangepi/ros2_workspace/school_competition/build/laser_shotting_car/build/lib/laser_shotting_car\n'}
+[2.389857] (laser_shotting_car) StdoutLine: {'line': b'copying laser_shotting_car/circle_laser_detector.py -> /home/orangepi/ros2_workspace/school_competition/build/laser_shotting_car/build/lib/laser_shotting_car\n'}
+[2.390512] (laser_shotting_car) StdoutLine: {'line': b'copying laser_shotting_car/lidar_processor.py -> /home/orangepi/ros2_workspace/school_competition/build/laser_shotting_car/build/lib/laser_shotting_car\n'}
+[2.391168] (laser_shotting_car) StdoutLine: {'line': b'copying laser_shotting_car/rknnpool.py -> /home/orangepi/ros2_workspace/school_competition/build/laser_shotting_car/build/lib/laser_shotting_car\n'}
+[2.391762] (laser_shotting_car) StdoutLine: {'line': b'copying laser_shotting_car/main_controller.py -> /home/orangepi/ros2_workspace/school_competition/build/laser_shotting_car/build/lib/laser_shotting_car\n'}
+[2.392194] (laser_shotting_car) StdoutLine: {'line': b'copying laser_shotting_car/yolov8_detector.py -> /home/orangepi/ros2_workspace/school_competition/build/laser_shotting_car/build/lib/laser_shotting_car\n'}
+[2.392588] (laser_shotting_car) StdoutLine: {'line': b'running install\n'}
+[2.393008] (laser_shotting_car) StdoutLine: {'line': b'running install_lib\n'}
+[2.393427] (laser_shotting_car) StdoutLine: {'line': b'creating /home/orangepi/ros2_workspace/school_competition/install/lib/python3.10/site-packages/laser_shotting_car\n'}
+[2.394040] (laser_shotting_car) StdoutLine: {'line': b'copying /home/orangepi/ros2_workspace/school_competition/build/laser_shotting_car/build/lib/laser_shotting_car/camera_publisher.py -> /home/orangepi/ros2_workspace/school_competition/install/lib/python3.10/site-packages/laser_shotting_car\n'}
+[2.394504] (laser_shotting_car) StdoutLine: {'line': b'copying /home/orangepi/ros2_workspace/school_competition/build/laser_shotting_car/build/lib/laser_shotting_car/func.py -> /home/orangepi/ros2_workspace/school_competition/install/lib/python3.10/site-packages/laser_shotting_car\n'}
+[2.394917] (laser_shotting_car) StdoutLine: {'line': b'copying /home/orangepi/ros2_workspace/school_competition/build/laser_shotting_car/build/lib/laser_shotting_car/__init__.py -> /home/orangepi/ros2_workspace/school_competition/install/lib/python3.10/site-packages/laser_shotting_car\n'}
+[2.395936] (laser_shotting_car) StdoutLine: {'line': b'copying /home/orangepi/ros2_workspace/school_competition/build/laser_shotting_car/build/lib/laser_shotting_car/circle_laser_detector.py -> /home/orangepi/ros2_workspace/school_competition/install/lib/python3.10/site-packages/laser_shotting_car\n'}
+[2.396592] (laser_shotting_car) StdoutLine: {'line': b'copying /home/orangepi/ros2_workspace/school_competition/build/laser_shotting_car/build/lib/laser_shotting_car/lidar_processor.py -> /home/orangepi/ros2_workspace/school_competition/install/lib/python3.10/site-packages/laser_shotting_car\n'}
+[2.397022] (laser_shotting_car) StdoutLine: {'line': b'copying /home/orangepi/ros2_workspace/school_competition/build/laser_shotting_car/build/lib/laser_shotting_car/rknnpool.py -> /home/orangepi/ros2_workspace/school_competition/install/lib/python3.10/site-packages/laser_shotting_car\n'}
+[2.397435] (laser_shotting_car) StdoutLine: {'line': b'copying /home/orangepi/ros2_workspace/school_competition/build/laser_shotting_car/build/lib/laser_shotting_car/main_controller.py -> /home/orangepi/ros2_workspace/school_competition/install/lib/python3.10/site-packages/laser_shotting_car\n'}
+[2.398067] (laser_shotting_car) StdoutLine: {'line': b'copying /home/orangepi/ros2_workspace/school_competition/build/laser_shotting_car/build/lib/laser_shotting_car/yolov8_detector.py -> /home/orangepi/ros2_workspace/school_competition/install/lib/python3.10/site-packages/laser_shotting_car\n'}
+[2.398523] (laser_shotting_car) StdoutLine: {'line': b'byte-compiling /home/orangepi/ros2_workspace/school_competition/install/lib/python3.10/site-packages/laser_shotting_car/camera_publisher.py to camera_publisher.cpython-310.pyc\n'}
+[2.399617] (laser_shotting_car) StdoutLine: {'line': b'byte-compiling /home/orangepi/ros2_workspace/school_competition/install/lib/python3.10/site-packages/laser_shotting_car/func.py to func.cpython-310.pyc\n'}
+[2.400243] (laser_shotting_car) StdoutLine: {'line': b'byte-compiling /home/orangepi/ros2_workspace/school_competition/install/lib/python3.10/site-packages/laser_shotting_car/__init__.py to __init__.cpython-310.pyc\n'}
+[2.400727] (laser_shotting_car) StdoutLine: {'line': b'byte-compiling /home/orangepi/ros2_workspace/school_competition/install/lib/python3.10/site-packages/laser_shotting_car/circle_laser_detector.py to circle_laser_detector.cpython-310.pyc\n'}
+[2.401172] (laser_shotting_car) StdoutLine: {'line': b'byte-compiling /home/orangepi/ros2_workspace/school_competition/install/lib/python3.10/site-packages/laser_shotting_car/lidar_processor.py to lidar_processor.cpython-310.pyc\n'}
+[2.401581] (laser_shotting_car) StdoutLine: {'line': b'byte-compiling /home/orangepi/ros2_workspace/school_competition/install/lib/python3.10/site-packages/laser_shotting_car/rknnpool.py to rknnpool.cpython-310.pyc\n'}
+[2.402024] (laser_shotting_car) StdoutLine: {'line': b'byte-compiling /home/orangepi/ros2_workspace/school_competition/install/lib/python3.10/site-packages/laser_shotting_car/main_controller.py to main_controller.cpython-310.pyc\n'}
+[2.402651] (laser_shotting_car) StdoutLine: {'line': b'byte-compiling /home/orangepi/ros2_workspace/school_competition/install/lib/python3.10/site-packages/laser_shotting_car/yolov8_detector.py to yolov8_detector.cpython-310.pyc\n'}
+[2.403082] (laser_shotting_car) StdoutLine: {'line': b'running install_data\n'}
+[2.403714] (laser_shotting_car) StdoutLine: {'line': b'creating /home/orangepi/ros2_workspace/school_competition/install/share/laser_shotting_car/launch\n'}
+[2.404423] (laser_shotting_car) StdoutLine: {'line': b'copying launch/all_nodes.launch.py -> /home/orangepi/ros2_workspace/school_competition/install/share/laser_shotting_car/launch\n'}
+[2.404849] (laser_shotting_car) StdoutLine: {'line': b'copying launch/uart.launch.py -> /home/orangepi/ros2_workspace/school_competition/install/share/laser_shotting_car/launch\n'}
+[2.405318] (laser_shotting_car) StdoutLine: {'line': b'running install_egg_info\n'}
+[2.405732] (laser_shotting_car) StdoutLine: {'line': b'Copying ../../build/laser_shotting_car/laser_shotting_car.egg-info to /home/orangepi/ros2_workspace/school_competition/install/lib/python3.10/site-packages/laser_shotting_car-0.0.0-py3.10.egg-info\n'}
+[2.406138] (laser_shotting_car) StdoutLine: {'line': b'running install_scripts\n'}
+[2.412261] (-) TimerEvent: {}
+[2.436571] (laser_shotting_car) StdoutLine: {'line': b'Installing camera_publisher script to /home/orangepi/ros2_workspace/school_competition/install/lib/laser_shotting_car\n'}
+[2.438027] (laser_shotting_car) StdoutLine: {'line': b'Installing circle_laser_detector script to /home/orangepi/ros2_workspace/school_competition/install/lib/laser_shotting_car\n'}
+[2.439887] (laser_shotting_car) StdoutLine: {'line': b'Installing lidar_processor script to /home/orangepi/ros2_workspace/school_competition/install/lib/laser_shotting_car\n'}
+[2.440559] (laser_shotting_car) StdoutLine: {'line': b'Installing main_controller script to /home/orangepi/ros2_workspace/school_competition/install/lib/laser_shotting_car\n'}
+[2.441442] (laser_shotting_car) StdoutLine: {'line': b'Installing yolov8_detector script to /home/orangepi/ros2_workspace/school_competition/install/lib/laser_shotting_car\n'}
+[2.442357] (laser_shotting_car) StdoutLine: {'line': b"writing list of installed files to '/home/orangepi/ros2_workspace/school_competition/build/laser_shotting_car/install.log'\n"}
+[2.477381] (base) StdoutLine: {'line': b'[ 70%] \x1b[32m\x1b[1mLinking CXX shared library libbase__rosidl_typesupport_fastrtps_c.so\x1b[0m\n'}
+[2.502821] (laser_shotting_car) CommandEnded: {'returncode': 0}
+[2.513979] (-) TimerEvent: {}
+[2.539392] (laser_shotting_car) JobEnded: {'identifier': 'laser_shotting_car', 'rc': 0}
+[2.554793] (base) StdoutLine: {'line': b'[ 70%] Built target base__rosidl_typesupport_fastrtps_cpp\n'}
+[2.593632] (car_t265) StdoutLine: {'line': b'running egg_info\n'}
+[2.594557] (car_t265) StdoutLine: {'line': b'creating ../../build/car_t265/car_t265.egg-info\n'}
+[2.595074] (car_t265) StdoutLine: {'line': b'writing ../../build/car_t265/car_t265.egg-info/PKG-INFO\n'}
+[2.595527] (car_t265) StdoutLine: {'line': b'writing dependency_links to ../../build/car_t265/car_t265.egg-info/dependency_links.txt\n'}
+[2.596095] (car_t265) StdoutLine: {'line': b'writing entry points to ../../build/car_t265/car_t265.egg-info/entry_points.txt\n'}
+[2.596632] (car_t265) StdoutLine: {'line': b'writing requirements to ../../build/car_t265/car_t265.egg-info/requires.txt\n'}
+[2.597023] (car_t265) StdoutLine: {'line': b'writing top-level names to ../../build/car_t265/car_t265.egg-info/top_level.txt\n'}
+[2.597413] (car_t265) StdoutLine: {'line': b"writing manifest file '../../build/car_t265/car_t265.egg-info/SOURCES.txt'\n"}
+[2.599609] (car_t265) StdoutLine: {'line': b"reading manifest file '../../build/car_t265/car_t265.egg-info/SOURCES.txt'\n"}
+[2.601250] (car_t265) StdoutLine: {'line': b"writing manifest file '../../build/car_t265/car_t265.egg-info/SOURCES.txt'\n"}
+[2.602127] (car_t265) StdoutLine: {'line': b'running build\n'}
+[2.602863] (car_t265) StdoutLine: {'line': b'running build_py\n'}
+[2.603404] (car_t265) StdoutLine: {'line': b'creating /home/orangepi/ros2_workspace/school_competition/build/car_t265/build\n'}
+[2.603980] (car_t265) StdoutLine: {'line': b'creating /home/orangepi/ros2_workspace/school_competition/build/car_t265/build/lib\n'}
+[2.604440] (car_t265) StdoutLine: {'line': b'creating /home/orangepi/ros2_workspace/school_competition/build/car_t265/build/lib/car_t265\n'}
+[2.604950] (car_t265) StdoutLine: {'line': b'copying car_t265/target_publisher.py -> /home/orangepi/ros2_workspace/school_competition/build/car_t265/build/lib/car_t265\n'}
+[2.605488] (car_t265) StdoutLine: {'line': b'copying car_t265/__init__.py -> /home/orangepi/ros2_workspace/school_competition/build/car_t265/build/lib/car_t265\n'}
+[2.605907] (car_t265) StdoutLine: {'line': b'copying car_t265/t265_Imu_pub.py -> /home/orangepi/ros2_workspace/school_competition/build/car_t265/build/lib/car_t265\n'}
+[2.606294] (car_t265) StdoutLine: {'line': b'copying car_t265/navigation_controller.py -> /home/orangepi/ros2_workspace/school_competition/build/car_t265/build/lib/car_t265\n'}
+[2.606893] (car_t265) StdoutLine: {'line': b'copying car_t265/t265_publisher.py -> /home/orangepi/ros2_workspace/school_competition/build/car_t265/build/lib/car_t265\n'}
+[2.607384] (car_t265) StdoutLine: {'line': b'running install\n'}
+[2.607928] (car_t265) StdoutLine: {'line': b'running install_lib\n'}
+[2.608423] (car_t265) StdoutLine: {'line': b'creating /home/orangepi/ros2_workspace/school_competition/install/lib/python3.10/site-packages/car_t265\n'}
+[2.608836] (car_t265) StdoutLine: {'line': b'copying /home/orangepi/ros2_workspace/school_competition/build/car_t265/build/lib/car_t265/target_publisher.py -> /home/orangepi/ros2_workspace/school_competition/install/lib/python3.10/site-packages/car_t265\n'}
+[2.609312] (car_t265) StdoutLine: {'line': b'copying /home/orangepi/ros2_workspace/school_competition/build/car_t265/build/lib/car_t265/__init__.py -> /home/orangepi/ros2_workspace/school_competition/install/lib/python3.10/site-packages/car_t265\n'}
+[2.609700] (car_t265) StdoutLine: {'line': b'copying /home/orangepi/ros2_workspace/school_competition/build/car_t265/build/lib/car_t265/t265_Imu_pub.py -> /home/orangepi/ros2_workspace/school_competition/install/lib/python3.10/site-packages/car_t265\n'}
+[2.610084] (car_t265) StdoutLine: {'line': b'copying /home/orangepi/ros2_workspace/school_competition/build/car_t265/build/lib/car_t265/navigation_controller.py -> /home/orangepi/ros2_workspace/school_competition/install/lib/python3.10/site-packages/car_t265\n'}
+[2.610478] (car_t265) StdoutLine: {'line': b'copying /home/orangepi/ros2_workspace/school_competition/build/car_t265/build/lib/car_t265/t265_publisher.py -> /home/orangepi/ros2_workspace/school_competition/install/lib/python3.10/site-packages/car_t265\n'}
+[2.610950] (car_t265) StdoutLine: {'line': b'byte-compiling /home/orangepi/ros2_workspace/school_competition/install/lib/python3.10/site-packages/car_t265/target_publisher.py to target_publisher.cpython-310.pyc\n'}
+[2.611333] (car_t265) StdoutLine: {'line': b'byte-compiling /home/orangepi/ros2_workspace/school_competition/install/lib/python3.10/site-packages/car_t265/__init__.py to __init__.cpython-310.pyc\n'}
+[2.611830] (car_t265) StdoutLine: {'line': b'byte-compiling /home/orangepi/ros2_workspace/school_competition/install/lib/python3.10/site-packages/car_t265/t265_Imu_pub.py to t265_Imu_pub.cpython-310.pyc\n'}
+[2.612417] (car_t265) StdoutLine: {'line': b'byte-compiling /home/orangepi/ros2_workspace/school_competition/install/lib/python3.10/site-packages/car_t265/navigation_controller.py to navigation_controller.cpython-310.pyc\n'}
+[2.613113] (car_t265) StdoutLine: {'line': b'byte-compiling /home/orangepi/ros2_workspace/school_competition/install/lib/python3.10/site-packages/car_t265/t265_publisher.py to t265_publisher.cpython-310.pyc\n'}
+[2.613595] (car_t265) StdoutLine: {'line': b'running install_data\n'}
+[2.613964] (-) TimerEvent: {}
+[2.614311] (car_t265) StdoutLine: {'line': b'copying resource/car_t265 -> /home/orangepi/ros2_workspace/school_competition/install/share/ament_index/resource_index/packages\n'}
+[2.614704] (car_t265) StdoutLine: {'line': b'copying package.xml -> /home/orangepi/ros2_workspace/school_competition/install/share/car_t265\n'}
+[2.615126] (car_t265) StdoutLine: {'line': b'creating /home/orangepi/ros2_workspace/school_competition/install/share/car_t265/launch\n'}
+[2.615552] (car_t265) StdoutLine: {'line': b'copying launch/navigation.launch.py -> /home/orangepi/ros2_workspace/school_competition/install/share/car_t265/launch\n'}
+[2.615939] (car_t265) StdoutLine: {'line': b'copying launch/t265_publisher.launch.py -> /home/orangepi/ros2_workspace/school_competition/install/share/car_t265/launch\n'}
+[2.616384] (car_t265) StdoutLine: {'line': b'copying launch/target_publisher.launch.py -> /home/orangepi/ros2_workspace/school_competition/install/share/car_t265/launch\n'}
+[2.616880] (car_t265) StdoutLine: {'line': b'copying launch/car_t265.launch.py -> /home/orangepi/ros2_workspace/school_competition/install/share/car_t265/launch\n'}
+[2.617269] (car_t265) StdoutLine: {'line': b'copying launch/uart_driver.launch.py -> /home/orangepi/ros2_workspace/school_competition/install/share/car_t265/launch\n'}
+[2.617654] (car_t265) StdoutLine: {'line': b'copying launch/t265_Imu_pub.launch.py -> /home/orangepi/ros2_workspace/school_competition/install/share/car_t265/launch\n'}
+[2.618109] (car_t265) StdoutLine: {'line': b'running install_egg_info\n'}
+[2.618530] (car_t265) StdoutLine: {'line': b'Copying ../../build/car_t265/car_t265.egg-info to /home/orangepi/ros2_workspace/school_competition/install/lib/python3.10/site-packages/car_t265-0.0.0-py3.10.egg-info\n'}
+[2.618920] (car_t265) StdoutLine: {'line': b'running install_scripts\n'}
+[2.649321] (car_t265) StdoutLine: {'line': b'Installing linear_test script to /home/orangepi/ros2_workspace/school_competition/install/lib/car_t265\n'}
+[2.650097] (car_t265) StdoutLine: {'line': b'Installing motor_controller script to /home/orangepi/ros2_workspace/school_competition/install/lib/car_t265\n'}
+[2.650665] (car_t265) StdoutLine: {'line': b'Installing navigation_controller script to /home/orangepi/ros2_workspace/school_competition/install/lib/car_t265\n'}
+[2.651061] (car_t265) StdoutLine: {'line': b'Installing t265_Imu_pub script to /home/orangepi/ros2_workspace/school_competition/install/lib/car_t265\n'}
+[2.651498] (car_t265) StdoutLine: {'line': b'Installing t265_publisher script to /home/orangepi/ros2_workspace/school_competition/install/lib/car_t265\n'}
+[2.651916] (car_t265) StdoutLine: {'line': b'Installing target_publisher script to /home/orangepi/ros2_workspace/school_competition/install/lib/car_t265\n'}
+[2.652300] (car_t265) StdoutLine: {'line': b'Installing uart_driver script to /home/orangepi/ros2_workspace/school_competition/install/lib/car_t265\n'}
+[2.652677] (car_t265) StdoutLine: {'line': b"writing list of installed files to '/home/orangepi/ros2_workspace/school_competition/build/car_t265/install.log'\n"}
+[2.654869] (base) StdoutLine: {'line': b'[ 70%] Built target base__rosidl_typesupport_fastrtps_c\n'}
+[2.707476] (car_t265) CommandEnded: {'returncode': 0}
+[2.714212] (base) StdoutLine: {'line': b'[ 70%] Built target base\n'}
+[2.716507] (-) TimerEvent: {}
+[2.738216] (car_t265) JobEnded: {'identifier': 'car_t265', 'rc': 0}
+[2.771260] (base) StdoutLine: {'line': b'[ 74%] \x1b[34m\x1b[1mGenerating Python code for ROS interfaces\x1b[0m\n'}
+[2.816598] (-) TimerEvent: {}
+[2.916964] (-) TimerEvent: {}
+[3.017391] (-) TimerEvent: {}
+[3.117742] (-) TimerEvent: {}
+[3.218082] (-) TimerEvent: {}
+[3.318028] (base) StdoutLine: {'line': b'[ 74%] Built target base__py\n'}
+[3.318280] (-) TimerEvent: {}
+[3.376043] (base) StdoutLine: {'line': b'[ 77%] \x1b[32mBuilding C object CMakeFiles/base__rosidl_generator_py.dir/rosidl_generator_py/base/srv/_control_s.c.o\x1b[0m\n'}
+[3.418368] (-) TimerEvent: {}
+[3.518697] (-) TimerEvent: {}
+[3.602085] (base) StdoutLine: {'line': b'[ 80%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/base/libbase__rosidl_generator_py.so\x1b[0m\n'}
+[3.618806] (-) TimerEvent: {}
+[3.709002] (base) StdoutLine: {'line': b'[ 80%] Built target base__rosidl_generator_py\n'}
+[3.718914] (-) TimerEvent: {}
+[3.743033] (base) StdoutLine: {'line': b'[ 83%] \x1b[32mBuilding C object CMakeFiles/base__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/base/_base_s.ep.rosidl_typesupport_c.c.o\x1b[0m\n'}
+[3.754351] (base) StdoutLine: {'line': b'[ 87%] \x1b[32mBuilding C object CMakeFiles/base__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/base/_base_s.ep.rosidl_typesupport_introspection_c.c.o\x1b[0m\n'}
+[3.766082] (base) StdoutLine: {'line': b'[ 90%] \x1b[32mBuilding C object CMakeFiles/base__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/base/_base_s.ep.rosidl_typesupport_fastrtps_c.c.o\x1b[0m\n'}
+[3.819032] (-) TimerEvent: {}
+[3.911361] (base) StdoutLine: {'line': b'[ 93%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/base/base_s__rosidl_typesupport_introspection_c.cpython-310-aarch64-linux-gnu.so\x1b[0m\n'}
+[3.919143] (-) TimerEvent: {}
+[3.925034] (base) StdoutLine: {'line': b'[ 96%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/base/base_s__rosidl_typesupport_c.cpython-310-aarch64-linux-gnu.so\x1b[0m\n'}
+[3.934124] (base) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/base/base_s__rosidl_typesupport_fastrtps_c.cpython-310-aarch64-linux-gnu.so\x1b[0m\n'}
+[3.991701] (base) StdoutLine: {'line': b'[100%] Built target base__rosidl_typesupport_introspection_c__pyext\n'}
+[3.996441] (base) StdoutLine: {'line': b'[100%] Built target base__rosidl_typesupport_c__pyext\n'}
+[4.019250] (-) TimerEvent: {}
+[4.037849] (base) StdoutLine: {'line': b'[100%] Built target base__rosidl_typesupport_fastrtps_c__pyext\n'}
+[4.072890] (base) CommandEnded: {'returncode': 0}
+[4.074576] (base) JobProgress: {'identifier': 'base', 'progress': 'install'}
+[4.098464] (base) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/orangepi/ros2_workspace/school_competition/build/base'], 'cwd': '/home/orangepi/ros2_workspace/school_competition/build/base', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('UMS_MOUNTPOINT', '/mnt/ums'), ('GST_V4L2_PREFERRED_FOURCC', 'NV12:YU12:NV16:YUY2'), ('LANGUAGE', 'en_US.UTF-8'), ('USER', 'root'), ('SSH_CLIENT', '192.168.61.141 53295 22'), ('XDG_SESSION_TYPE', 'tty'), ('GIT_ASKPASS', '/root/.vscode-server/cli/servers/Stable-2901c5ac6db8a986a5666c3af51ff804d05af0d4/server/extensions/git/dist/askpass.sh'), ('SHLVL', '1'), ('USB_FUNCS', 'adb'), ('LD_LIBRARY_PATH', '/root/lanhailidar_ros_ws/install/base/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('BROWSER', '/root/.vscode-server/cli/servers/Stable-2901c5ac6db8a986a5666c3af51ff804d05af0d4/server/bin/helpers/browser.sh'), ('MOTD_SHOWN', 'pam'), ('HOME', '/root'), ('TERM_PROGRAM_VERSION', '1.101.2'), ('VSCODE_IPC_HOOK_CLI', '/run/user/0/vscode-ipc-a46e235a-142f-4ae8-ad91-8a603a2fbffe.sock'), ('GST_INSPECT_NO_COLORS', '1'), ('GST_MPP_NO_RGA', '1'), ('ROS_PYTHON_VERSION', '3'), ('COGL_DRIVER', 'gles2'), ('VSCODE_GIT_ASKPASS_MAIN', '/root/.vscode-server/cli/servers/Stable-2901c5ac6db8a986a5666c3af51ff804d05af0d4/server/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/root/.vscode-server/cli/servers/Stable-2901c5ac6db8a986a5666c3af51ff804d05af0d4/server/node'), ('SSL_CERT_FILE', '/usr/lib/ssl/certs/ca-certificates.crt'), ('PYDEVD_DISABLE_FILE_VALIDATION', '1'), ('BUNDLED_DEBUGPY_PATH', '/root/.vscode-server/extensions/ms-python.debugpy-2025.8.0-linux-arm64/bundled/libs/debugpy'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/0/bus'), ('COLORTERM', 'truecolor'), ('COLCON_PREFIX_PATH', '/root/lanhailidar_ros_ws/install'), ('GST_V4L2SRC_MAX_RESOLUTION', '3840x2160'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'root'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('GST_GL_API', 'gles2'), ('XDG_SESSION_ID', '11'), ('GST_VIDEO_CONVERT_PREFERRED_FORMAT', 'NV12:NV16:I420:YUY2'), ('GST_V4L2SRC_RK_DEVICES', '_mainpath:_selfpath:_bypass:_scale'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/root/.vscode-server/cli/servers/Stable-2901c5ac6db8a986a5666c3af51ff804d05af0d4/server/bin/remote-cli:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/root/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand:/root/.vscode-server/extensions/ms-python.debugpy-2025.8.0-linux-arm64/bundled/scripts/noConfigScripts'), ('XDG_RUNTIME_DIR', '/run/user/0'), ('GST_GL_PLATFORM', 'egl'), ('GST_DEBUG_NO_COLOR', '1'), ('SSL_CERT_DIR', '/usr/lib/ssl/certs'), ('GST_V4L2SRC_DEFAULT_DEVICE', '/dev/video-camera0'), ('DISPLAY', ':0'), ('VSCODE_DEBUGPY_ADAPTER_ENDPOINTS', '/root/.vscode-server/extensions/ms-python.debugpy-2025.8.0-linux-arm64/.noConfigDebugAdapterEndpoints/endpoint-8abbe1c87ebc2a8c.txt'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/0/vscode-git-d3227a1384.sock'), ('TERM_PROGRAM', 'vscode'), ('GST_V4L2_USE_LIBV4L2', '1'), ('UMS_SIZE', '256M'), ('AMENT_PREFIX_PATH', '/root/lanhailidar_ros_ws/install/scan_subscriber:/root/lanhailidar_ros_ws/install/bluesea2:/root/lanhailidar_ros_ws/install/base:/opt/ros/humble'), ('LC_MESSAGES', 'en_US.UTF-8'), ('SHELL', '/bin/bash'), ('UMS_RO', '0'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('UMS_FSTYPE', 'vfat'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/home/orangepi/ros2_workspace/school_competition/build/base'), ('LC_ALL', 'en_US.UTF-8'), ('SSH_CONNECTION', '192.168.61.141 53295 192.168.61.126 22'), ('PYTHONPATH', '/root/lanhailidar_ros_ws/install/scan_subscriber/lib/python3.10/site-packages:/root/lanhailidar_ros_ws/install/base/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('UMS_MOUNT', '0'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/root/lanhailidar_ros_ws/install/bluesea2:/root/lanhailidar_ros_ws/install/base:/root/lanhailidar_ros_ws/install/scan_subscriber:/opt/ros/humble'), ('UMS_FILE', '/userdata/ums_shared.img')]), 'shell': False}
+[4.119332] (-) TimerEvent: {}
+[4.125594] (base) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[4.126340] (base) StdoutLine: {'line': b'-- Installing: /home/orangepi/ros2_workspace/school_competition/install/share/ament_index/resource_index/rosidl_interfaces/base\n'}
+[4.127376] (base) StdoutLine: {'line': b'-- Installing: /home/orangepi/ros2_workspace/school_competition/install/include/base/base\n'}
+[4.128074] (base) StdoutLine: {'line': b'-- Installing: /home/orangepi/ros2_workspace/school_competition/install/include/base/base/msg\n'}
+[4.128465] (base) StdoutLine: {'line': b'-- Installing: /home/orangepi/ros2_workspace/school_competition/install/include/base/base/msg/rosidl_generator_c__visibility_control.h\n'}
+[4.129167] (base) StdoutLine: {'line': b'-- Installing: /home/orangepi/ros2_workspace/school_competition/install/include/base/base/srv\n'}
+[4.129536] (base) StdoutLine: {'line': b'-- Installing: /home/orangepi/ros2_workspace/school_competition/install/include/base/base/srv/detail\n'}
+[4.129932] (base) StdoutLine: {'line': b'-- Installing: /home/orangepi/ros2_workspace/school_competition/install/include/base/base/srv/detail/control__type_support.h\n'}
+[4.130596] (base) StdoutLine: {'line': b'-- Installing: /home/orangepi/ros2_workspace/school_competition/install/include/base/base/srv/detail/control__struct.h\n'}
+[4.131229] (base) StdoutLine: {'line': b'-- Installing: /home/orangepi/ros2_workspace/school_competition/install/include/base/base/srv/detail/control__functions.c\n'}
+[4.132426] (base) StdoutLine: {'line': b'-- Installing: /home/orangepi/ros2_workspace/school_competition/install/include/base/base/srv/detail/control__functions.h\n'}
+[4.133189] (base) StdoutLine: {'line': b'-- Installing: /home/orangepi/ros2_workspace/school_competition/install/include/base/base/srv/control.h\n'}
+[4.134329] (base) StdoutLine: {'line': b'-- Installing: /home/orangepi/ros2_workspace/school_competition/install/share/base/environment/library_path.sh\n'}
+[4.135111] (base) StdoutLine: {'line': b'-- Installing: /home/orangepi/ros2_workspace/school_competition/install/share/base/environment/library_path.dsv\n'}
+[4.136292] (base) StdoutLine: {'line': b'-- Installing: /home/orangepi/ros2_workspace/school_competition/install/lib/libbase__rosidl_generator_c.so\n'}
+[4.138614] (base) StdoutLine: {'line': b'-- Set runtime path of "/home/orangepi/ros2_workspace/school_competition/install/lib/libbase__rosidl_generator_c.so" to ""\n'}
+[4.138765] (base) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/ros2_workspace/school_competition/install/include/base/base\n'}
+[4.138919] (base) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/ros2_workspace/school_competition/install/include/base/base/msg\n'}
+[4.139113] (base) StdoutLine: {'line': b'-- Installing: /home/orangepi/ros2_workspace/school_competition/install/include/base/base/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[4.139208] (base) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/ros2_workspace/school_competition/install/include/base/base/srv\n'}
+[4.139416] (base) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/ros2_workspace/school_competition/install/include/base/base/srv/detail\n'}
+[4.139507] (base) StdoutLine: {'line': b'-- Installing: /home/orangepi/ros2_workspace/school_competition/install/include/base/base/srv/detail/control__rosidl_typesupport_fastrtps_c.h\n'}
+[4.139589] (base) StdoutLine: {'line': b'-- Installing: /home/orangepi/ros2_workspace/school_competition/install/lib/libbase__rosidl_typesupport_fastrtps_c.so\n'}
+[4.139766] (base) StdoutLine: {'line': b'-- Set runtime path of "/home/orangepi/ros2_workspace/school_competition/install/lib/libbase__rosidl_typesupport_fastrtps_c.so" to ""\n'}
+[4.139970] (base) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/ros2_workspace/school_competition/install/include/base/base\n'}
+[4.140071] (base) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/ros2_workspace/school_competition/install/include/base/base/msg\n'}
+[4.140161] (base) StdoutLine: {'line': b'-- Installing: /home/orangepi/ros2_workspace/school_competition/install/include/base/base/msg/rosidl_generator_cpp__visibility_control.hpp\n'}
+[4.140356] (base) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/ros2_workspace/school_competition/install/include/base/base/srv\n'}
+[4.140529] (base) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/ros2_workspace/school_competition/install/include/base/base/srv/detail\n'}
+[4.140620] (base) StdoutLine: {'line': b'-- Installing: /home/orangepi/ros2_workspace/school_competition/install/include/base/base/srv/detail/control__traits.hpp\n'}
+[4.140709] (base) StdoutLine: {'line': b'-- Installing: /home/orangepi/ros2_workspace/school_competition/install/include/base/base/srv/detail/control__builder.hpp\n'}
+[4.140797] (base) StdoutLine: {'line': b'-- Installing: /home/orangepi/ros2_workspace/school_competition/install/include/base/base/srv/detail/control__struct.hpp\n'}
+[4.140959] (base) StdoutLine: {'line': b'-- Installing: /home/orangepi/ros2_workspace/school_competition/install/include/base/base/srv/detail/control__type_support.hpp\n'}
+[4.141248] (base) StdoutLine: {'line': b'-- Installing: /home/orangepi/ros2_workspace/school_competition/install/include/base/base/srv/control.hpp\n'}
+[4.141332] (base) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/ros2_workspace/school_competition/install/include/base/base\n'}
+[4.141411] (base) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/ros2_workspace/school_competition/install/include/base/base/msg\n'}
+[4.141487] (base) StdoutLine: {'line': b'-- Installing: /home/orangepi/ros2_workspace/school_competition/install/include/base/base/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[4.141563] (base) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/ros2_workspace/school_competition/install/include/base/base/srv\n'}
+[4.141748] (base) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/ros2_workspace/school_competition/install/include/base/base/srv/detail\n'}
+[4.141843] (base) StdoutLine: {'line': b'-- Installing: /home/orangepi/ros2_workspace/school_competition/install/include/base/base/srv/detail/control__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[4.141933] (base) StdoutLine: {'line': b'-- Installing: /home/orangepi/ros2_workspace/school_competition/install/include/base/base/srv/detail/dds_fastrtps\n'}
+[4.142025] (base) StdoutLine: {'line': b'-- Installing: /home/orangepi/ros2_workspace/school_competition/install/lib/libbase__rosidl_typesupport_fastrtps_cpp.so\n'}
+[4.142113] (base) StdoutLine: {'line': b'-- Set runtime path of "/home/orangepi/ros2_workspace/school_competition/install/lib/libbase__rosidl_typesupport_fastrtps_cpp.so" to ""\n'}
+[4.142200] (base) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/ros2_workspace/school_competition/install/include/base/base\n'}
+[4.142367] (base) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/ros2_workspace/school_competition/install/include/base/base/msg\n'}
+[4.142572] (base) StdoutLine: {'line': b'-- Installing: /home/orangepi/ros2_workspace/school_competition/install/include/base/base/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[4.142653] (base) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/ros2_workspace/school_competition/install/include/base/base/srv\n'}
+[4.142780] (base) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/ros2_workspace/school_competition/install/include/base/base/srv/detail\n'}
+[4.142919] (base) StdoutLine: {'line': b'-- Installing: /home/orangepi/ros2_workspace/school_competition/install/include/base/base/srv/detail/control__type_support.c\n'}
+[4.143002] (base) StdoutLine: {'line': b'-- Installing: /home/orangepi/ros2_workspace/school_competition/install/include/base/base/srv/detail/control__rosidl_typesupport_introspection_c.h\n'}
+[4.143080] (base) StdoutLine: {'line': b'-- Installing: /home/orangepi/ros2_workspace/school_competition/install/lib/libbase__rosidl_typesupport_introspection_c.so\n'}
+[4.143156] (base) StdoutLine: {'line': b'-- Set runtime path of "/home/orangepi/ros2_workspace/school_competition/install/lib/libbase__rosidl_typesupport_introspection_c.so" to ""\n'}
+[4.143292] (base) StdoutLine: {'line': b'-- Installing: /home/orangepi/ros2_workspace/school_competition/install/lib/libbase__rosidl_typesupport_c.so\n'}
+[4.143467] (base) StdoutLine: {'line': b'-- Set runtime path of "/home/orangepi/ros2_workspace/school_competition/install/lib/libbase__rosidl_typesupport_c.so" to ""\n'}
+[4.143564] (base) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/ros2_workspace/school_competition/install/include/base/base\n'}
+[4.143653] (base) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/ros2_workspace/school_competition/install/include/base/base/srv\n'}
+[4.143835] (base) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/ros2_workspace/school_competition/install/include/base/base/srv/detail\n'}
+[4.143995] (base) StdoutLine: {'line': b'-- Installing: /home/orangepi/ros2_workspace/school_competition/install/include/base/base/srv/detail/control__type_support.cpp\n'}
+[4.144076] (base) StdoutLine: {'line': b'-- Installing: /home/orangepi/ros2_workspace/school_competition/install/include/base/base/srv/detail/control__rosidl_typesupport_introspection_cpp.hpp\n'}
+[4.144209] (base) StdoutLine: {'line': b'-- Installing: /home/orangepi/ros2_workspace/school_competition/install/lib/libbase__rosidl_typesupport_introspection_cpp.so\n'}
+[4.144304] (base) StdoutLine: {'line': b'-- Set runtime path of "/home/orangepi/ros2_workspace/school_competition/install/lib/libbase__rosidl_typesupport_introspection_cpp.so" to ""\n'}
+[4.144473] (base) StdoutLine: {'line': b'-- Installing: /home/orangepi/ros2_workspace/school_competition/install/lib/libbase__rosidl_typesupport_cpp.so\n'}
+[4.144731] (base) StdoutLine: {'line': b'-- Set runtime path of "/home/orangepi/ros2_workspace/school_competition/install/lib/libbase__rosidl_typesupport_cpp.so" to ""\n'}
+[4.144881] (base) StdoutLine: {'line': b'-- Installing: /home/orangepi/ros2_workspace/school_competition/install/share/base/environment/pythonpath.sh\n'}
+[4.145037] (base) StdoutLine: {'line': b'-- Installing: /home/orangepi/ros2_workspace/school_competition/install/share/base/environment/pythonpath.dsv\n'}
+[4.145130] (base) StdoutLine: {'line': b'-- Installing: /home/orangepi/ros2_workspace/school_competition/install/local/lib/python3.10/dist-packages/base-0.0.0-py3.10.egg-info\n'}
+[4.145307] (base) StdoutLine: {'line': b'-- Installing: /home/orangepi/ros2_workspace/school_competition/install/local/lib/python3.10/dist-packages/base-0.0.0-py3.10.egg-info/PKG-INFO\n'}
+[4.145485] (base) StdoutLine: {'line': b'-- Installing: /home/orangepi/ros2_workspace/school_competition/install/local/lib/python3.10/dist-packages/base-0.0.0-py3.10.egg-info/dependency_links.txt\n'}
+[4.145656] (base) StdoutLine: {'line': b'-- Installing: /home/orangepi/ros2_workspace/school_competition/install/local/lib/python3.10/dist-packages/base-0.0.0-py3.10.egg-info/SOURCES.txt\n'}
+[4.145829] (base) StdoutLine: {'line': b'-- Installing: /home/orangepi/ros2_workspace/school_competition/install/local/lib/python3.10/dist-packages/base-0.0.0-py3.10.egg-info/top_level.txt\n'}
+[4.146034] (base) StdoutLine: {'line': b'-- Installing: /home/orangepi/ros2_workspace/school_competition/install/local/lib/python3.10/dist-packages/base\n'}
+[4.146132] (base) StdoutLine: {'line': b'-- Installing: /home/orangepi/ros2_workspace/school_competition/install/local/lib/python3.10/dist-packages/base/srv\n'}
+[4.146223] (base) StdoutLine: {'line': b'-- Installing: /home/orangepi/ros2_workspace/school_competition/install/local/lib/python3.10/dist-packages/base/srv/_control.py\n'}
+[4.146392] (base) StdoutLine: {'line': b'-- Installing: /home/orangepi/ros2_workspace/school_competition/install/local/lib/python3.10/dist-packages/base/srv/_control_s.c\n'}
+[4.146592] (base) StdoutLine: {'line': b'-- Installing: /home/orangepi/ros2_workspace/school_competition/install/local/lib/python3.10/dist-packages/base/srv/__init__.py\n'}
+[4.146688] (base) StdoutLine: {'line': b'-- Installing: /home/orangepi/ros2_workspace/school_competition/install/local/lib/python3.10/dist-packages/base/base_s__rosidl_typesupport_fastrtps_c.cpython-310-aarch64-linux-gnu.so\n'}
+[4.146779] (base) StdoutLine: {'line': b'-- Installing: /home/orangepi/ros2_workspace/school_competition/install/local/lib/python3.10/dist-packages/base/__init__.py\n'}
+[4.146945] (base) StdoutLine: {'line': b'-- Installing: /home/orangepi/ros2_workspace/school_competition/install/local/lib/python3.10/dist-packages/base/_base_s.ep.rosidl_typesupport_fastrtps_c.c\n'}
+[4.147153] (base) StdoutLine: {'line': b'-- Installing: /home/orangepi/ros2_workspace/school_competition/install/local/lib/python3.10/dist-packages/base/libbase__rosidl_generator_py.so\n'}
+[4.147249] (base) StdoutLine: {'line': b'-- Installing: /home/orangepi/ros2_workspace/school_competition/install/local/lib/python3.10/dist-packages/base/base_s__rosidl_typesupport_introspection_c.cpython-310-aarch64-linux-gnu.so\n'}
+[4.147413] (base) StdoutLine: {'line': b'-- Installing: /home/orangepi/ros2_workspace/school_competition/install/local/lib/python3.10/dist-packages/base/_base_s.ep.rosidl_typesupport_c.c\n'}
+[4.147505] (base) StdoutLine: {'line': b'-- Installing: /home/orangepi/ros2_workspace/school_competition/install/local/lib/python3.10/dist-packages/base/base_s__rosidl_typesupport_c.cpython-310-aarch64-linux-gnu.so\n'}
+[4.147657] (base) StdoutLine: {'line': b'-- Installing: /home/orangepi/ros2_workspace/school_competition/install/local/lib/python3.10/dist-packages/base/_base_s.ep.rosidl_typesupport_introspection_c.c\n'}
+[4.219429] (-) TimerEvent: {}
+[4.238868] (base) StdoutLine: {'line': b"Listing '/home/orangepi/ros2_workspace/school_competition/install/local/lib/python3.10/dist-packages/base'...\n"}
+[4.239132] (base) StdoutLine: {'line': b"Compiling '/home/orangepi/ros2_workspace/school_competition/install/local/lib/python3.10/dist-packages/base/__init__.py'...\n"}
+[4.239228] (base) StdoutLine: {'line': b"Listing '/home/orangepi/ros2_workspace/school_competition/install/local/lib/python3.10/dist-packages/base/srv'...\n"}
+[4.239310] (base) StdoutLine: {'line': b"Compiling '/home/orangepi/ros2_workspace/school_competition/install/local/lib/python3.10/dist-packages/base/srv/__init__.py'...\n"}
+[4.239388] (base) StdoutLine: {'line': b"Compiling '/home/orangepi/ros2_workspace/school_competition/install/local/lib/python3.10/dist-packages/base/srv/_control.py'...\n"}
+[4.248415] (base) StdoutLine: {'line': b'-- Installing: /home/orangepi/ros2_workspace/school_competition/install/local/lib/python3.10/dist-packages/base/base_s__rosidl_typesupport_fastrtps_c.cpython-310-aarch64-linux-gnu.so\n'}
+[4.248849] (base) StdoutLine: {'line': b'-- Set runtime path of "/home/orangepi/ros2_workspace/school_competition/install/local/lib/python3.10/dist-packages/base/base_s__rosidl_typesupport_fastrtps_c.cpython-310-aarch64-linux-gnu.so" to ""\n'}
+[4.249061] (base) StdoutLine: {'line': b'-- Installing: /home/orangepi/ros2_workspace/school_competition/install/local/lib/python3.10/dist-packages/base/base_s__rosidl_typesupport_introspection_c.cpython-310-aarch64-linux-gnu.so\n'}
+[4.249304] (base) StdoutLine: {'line': b'-- Set runtime path of "/home/orangepi/ros2_workspace/school_competition/install/local/lib/python3.10/dist-packages/base/base_s__rosidl_typesupport_introspection_c.cpython-310-aarch64-linux-gnu.so" to ""\n'}
+[4.249554] (base) StdoutLine: {'line': b'-- Installing: /home/orangepi/ros2_workspace/school_competition/install/local/lib/python3.10/dist-packages/base/base_s__rosidl_typesupport_c.cpython-310-aarch64-linux-gnu.so\n'}
+[4.249906] (base) StdoutLine: {'line': b'-- Set runtime path of "/home/orangepi/ros2_workspace/school_competition/install/local/lib/python3.10/dist-packages/base/base_s__rosidl_typesupport_c.cpython-310-aarch64-linux-gnu.so" to ""\n'}
+[4.250099] (base) StdoutLine: {'line': b'-- Installing: /home/orangepi/ros2_workspace/school_competition/install/lib/libbase__rosidl_generator_py.so\n'}
+[4.250442] (base) StdoutLine: {'line': b'-- Set runtime path of "/home/orangepi/ros2_workspace/school_competition/install/lib/libbase__rosidl_generator_py.so" to ""\n'}
+[4.250636] (base) StdoutLine: {'line': b'-- Installing: /home/orangepi/ros2_workspace/school_competition/install/share/base/srv/Control.idl\n'}
+[4.250820] (base) StdoutLine: {'line': b'-- Installing: /home/orangepi/ros2_workspace/school_competition/install/share/base/srv/Control.srv\n'}
+[4.250997] (base) StdoutLine: {'line': b'-- Installing: /home/orangepi/ros2_workspace/school_competition/install/share/base/srv/Control_Request.msg\n'}
+[4.251170] (base) StdoutLine: {'line': b'-- Installing: /home/orangepi/ros2_workspace/school_competition/install/share/base/srv/Control_Response.msg\n'}
+[4.251345] (base) StdoutLine: {'line': b'-- Installing: /home/orangepi/ros2_workspace/school_competition/install/share/ament_index/resource_index/package_run_dependencies/base\n'}
+[4.251520] (base) StdoutLine: {'line': b'-- Installing: /home/orangepi/ros2_workspace/school_competition/install/share/ament_index/resource_index/parent_prefix_path/base\n'}
+[4.251739] (base) StdoutLine: {'line': b'-- Installing: /home/orangepi/ros2_workspace/school_competition/install/share/base/environment/ament_prefix_path.sh\n'}
+[4.251879] (base) StdoutLine: {'line': b'-- Installing: /home/orangepi/ros2_workspace/school_competition/install/share/base/environment/ament_prefix_path.dsv\n'}
+[4.252012] (base) StdoutLine: {'line': b'-- Installing: /home/orangepi/ros2_workspace/school_competition/install/share/base/environment/path.sh\n'}
+[4.252098] (base) StdoutLine: {'line': b'-- Installing: /home/orangepi/ros2_workspace/school_competition/install/share/base/environment/path.dsv\n'}
+[4.252270] (base) StdoutLine: {'line': b'-- Installing: /home/orangepi/ros2_workspace/school_competition/install/share/base/local_setup.bash\n'}
+[4.252445] (base) StdoutLine: {'line': b'-- Installing: /home/orangepi/ros2_workspace/school_competition/install/share/base/local_setup.sh\n'}
+[4.252620] (base) StdoutLine: {'line': b'-- Installing: /home/orangepi/ros2_workspace/school_competition/install/share/base/local_setup.zsh\n'}
+[4.252793] (base) StdoutLine: {'line': b'-- Installing: /home/orangepi/ros2_workspace/school_competition/install/share/base/local_setup.dsv\n'}
+[4.252966] (base) StdoutLine: {'line': b'-- Installing: /home/orangepi/ros2_workspace/school_competition/install/share/base/package.dsv\n'}
+[4.253121] (base) StdoutLine: {'line': b'-- Installing: /home/orangepi/ros2_workspace/school_competition/install/share/ament_index/resource_index/packages/base\n'}
+[4.253302] (base) StdoutLine: {'line': b'-- Installing: /home/orangepi/ros2_workspace/school_competition/install/share/base/cmake/export_base__rosidl_generator_cExport.cmake\n'}
+[4.253485] (base) StdoutLine: {'line': b'-- Installing: /home/orangepi/ros2_workspace/school_competition/install/share/base/cmake/export_base__rosidl_generator_cExport-noconfig.cmake\n'}
+[4.253663] (base) StdoutLine: {'line': b'-- Installing: /home/orangepi/ros2_workspace/school_competition/install/share/base/cmake/export_base__rosidl_typesupport_fastrtps_cExport.cmake\n'}
+[4.253839] (base) StdoutLine: {'line': b'-- Installing: /home/orangepi/ros2_workspace/school_competition/install/share/base/cmake/export_base__rosidl_typesupport_fastrtps_cExport-noconfig.cmake\n'}
+[4.254014] (base) StdoutLine: {'line': b'-- Installing: /home/orangepi/ros2_workspace/school_competition/install/share/base/cmake/export_base__rosidl_generator_cppExport.cmake\n'}
+[4.254188] (base) StdoutLine: {'line': b'-- Installing: /home/orangepi/ros2_workspace/school_competition/install/share/base/cmake/export_base__rosidl_typesupport_fastrtps_cppExport.cmake\n'}
+[4.254362] (base) StdoutLine: {'line': b'-- Installing: /home/orangepi/ros2_workspace/school_competition/install/share/base/cmake/export_base__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake\n'}
+[4.254532] (base) StdoutLine: {'line': b'-- Installing: /home/orangepi/ros2_workspace/school_competition/install/share/base/cmake/base__rosidl_typesupport_introspection_cExport.cmake\n'}
+[4.254700] (base) StdoutLine: {'line': b'-- Installing: /home/orangepi/ros2_workspace/school_competition/install/share/base/cmake/base__rosidl_typesupport_introspection_cExport-noconfig.cmake\n'}
+[4.254868] (base) StdoutLine: {'line': b'-- Installing: /home/orangepi/ros2_workspace/school_competition/install/share/base/cmake/base__rosidl_typesupport_cExport.cmake\n'}
+[4.255019] (base) StdoutLine: {'line': b'-- Installing: /home/orangepi/ros2_workspace/school_competition/install/share/base/cmake/base__rosidl_typesupport_cExport-noconfig.cmake\n'}
+[4.255195] (base) StdoutLine: {'line': b'-- Installing: /home/orangepi/ros2_workspace/school_competition/install/share/base/cmake/base__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[4.255332] (base) StdoutLine: {'line': b'-- Installing: /home/orangepi/ros2_workspace/school_competition/install/share/base/cmake/base__rosidl_typesupport_introspection_cppExport-noconfig.cmake\n'}
+[4.255479] (base) StdoutLine: {'line': b'-- Installing: /home/orangepi/ros2_workspace/school_competition/install/share/base/cmake/base__rosidl_typesupport_cppExport.cmake\n'}
+[4.255645] (base) StdoutLine: {'line': b'-- Installing: /home/orangepi/ros2_workspace/school_competition/install/share/base/cmake/base__rosidl_typesupport_cppExport-noconfig.cmake\n'}
+[4.255978] (base) StdoutLine: {'line': b'-- Installing: /home/orangepi/ros2_workspace/school_competition/install/share/base/cmake/export_base__rosidl_generator_pyExport.cmake\n'}
+[4.256240] (base) StdoutLine: {'line': b'-- Installing: /home/orangepi/ros2_workspace/school_competition/install/share/base/cmake/export_base__rosidl_generator_pyExport-noconfig.cmake\n'}
+[4.256414] (base) StdoutLine: {'line': b'-- Installing: /home/orangepi/ros2_workspace/school_competition/install/share/base/cmake/rosidl_cmake-extras.cmake\n'}
+[4.256579] (base) StdoutLine: {'line': b'-- Installing: /home/orangepi/ros2_workspace/school_competition/install/share/base/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[4.256715] (base) StdoutLine: {'line': b'-- Installing: /home/orangepi/ros2_workspace/school_competition/install/share/base/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[4.256875] (base) StdoutLine: {'line': b'-- Installing: /home/orangepi/ros2_workspace/school_competition/install/share/base/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[4.257031] (base) StdoutLine: {'line': b'-- Installing: /home/orangepi/ros2_workspace/school_competition/install/share/base/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[4.257168] (base) StdoutLine: {'line': b'-- Installing: /home/orangepi/ros2_workspace/school_competition/install/share/base/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[4.257329] (base) StdoutLine: {'line': b'-- Installing: /home/orangepi/ros2_workspace/school_competition/install/share/base/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[4.257495] (base) StdoutLine: {'line': b'-- Installing: /home/orangepi/ros2_workspace/school_competition/install/share/base/cmake/baseConfig.cmake\n'}
+[4.257634] (base) StdoutLine: {'line': b'-- Installing: /home/orangepi/ros2_workspace/school_competition/install/share/base/cmake/baseConfig-version.cmake\n'}
+[4.257765] (base) StdoutLine: {'line': b'-- Installing: /home/orangepi/ros2_workspace/school_competition/install/share/base/package.xml\n'}
+[4.261764] (base) CommandEnded: {'returncode': 0}
+[4.319514] (-) TimerEvent: {}
+[4.336672] (base) JobEnded: {'identifier': 'base', 'rc': 0}
+[4.338066] (bluesea2) JobStarted: {'identifier': 'bluesea2'}
+[4.353477] (bluesea2) JobProgress: {'identifier': 'bluesea2', 'progress': 'cmake'}
+[4.354031] (bluesea2) Command: {'cmd': ['/usr/bin/cmake', '/home/orangepi/ros2_workspace/school_competition/src/lanhailidar_ros_ws/src/bluesea-ros2-main/bluesea-ros2', '-DCMAKE_INSTALL_PREFIX=/home/orangepi/ros2_workspace/school_competition/install'], 'cwd': '/home/orangepi/ros2_workspace/school_competition/build/bluesea2', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('UMS_MOUNTPOINT', '/mnt/ums'), ('GST_V4L2_PREFERRED_FOURCC', 'NV12:YU12:NV16:YUY2'), ('LANGUAGE', 'en_US.UTF-8'), ('USER', 'root'), ('SSH_CLIENT', '192.168.61.141 53295 22'), ('XDG_SESSION_TYPE', 'tty'), ('GIT_ASKPASS', '/root/.vscode-server/cli/servers/Stable-2901c5ac6db8a986a5666c3af51ff804d05af0d4/server/extensions/git/dist/askpass.sh'), ('SHLVL', '1'), ('USB_FUNCS', 'adb'), ('LD_LIBRARY_PATH', '/home/orangepi/ros2_workspace/school_competition/install/lib:/root/lanhailidar_ros_ws/install/base/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('BROWSER', '/root/.vscode-server/cli/servers/Stable-2901c5ac6db8a986a5666c3af51ff804d05af0d4/server/bin/helpers/browser.sh'), ('MOTD_SHOWN', 'pam'), ('HOME', '/root'), ('TERM_PROGRAM_VERSION', '1.101.2'), ('VSCODE_IPC_HOOK_CLI', '/run/user/0/vscode-ipc-a46e235a-142f-4ae8-ad91-8a603a2fbffe.sock'), ('GST_INSPECT_NO_COLORS', '1'), ('GST_MPP_NO_RGA', '1'), ('ROS_PYTHON_VERSION', '3'), ('COGL_DRIVER', 'gles2'), ('VSCODE_GIT_ASKPASS_MAIN', '/root/.vscode-server/cli/servers/Stable-2901c5ac6db8a986a5666c3af51ff804d05af0d4/server/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/root/.vscode-server/cli/servers/Stable-2901c5ac6db8a986a5666c3af51ff804d05af0d4/server/node'), ('SSL_CERT_FILE', '/usr/lib/ssl/certs/ca-certificates.crt'), ('PYDEVD_DISABLE_FILE_VALIDATION', '1'), ('BUNDLED_DEBUGPY_PATH', '/root/.vscode-server/extensions/ms-python.debugpy-2025.8.0-linux-arm64/bundled/libs/debugpy'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/0/bus'), ('COLORTERM', 'truecolor'), ('COLCON_PREFIX_PATH', '/root/lanhailidar_ros_ws/install'), ('GST_V4L2SRC_MAX_RESOLUTION', '3840x2160'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'root'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('GST_GL_API', 'gles2'), ('XDG_SESSION_ID', '11'), ('GST_VIDEO_CONVERT_PREFERRED_FORMAT', 'NV12:NV16:I420:YUY2'), ('GST_V4L2SRC_RK_DEVICES', '_mainpath:_selfpath:_bypass:_scale'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/root/.vscode-server/cli/servers/Stable-2901c5ac6db8a986a5666c3af51ff804d05af0d4/server/bin/remote-cli:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/root/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand:/root/.vscode-server/extensions/ms-python.debugpy-2025.8.0-linux-arm64/bundled/scripts/noConfigScripts'), ('XDG_RUNTIME_DIR', '/run/user/0'), ('GST_GL_PLATFORM', 'egl'), ('GST_DEBUG_NO_COLOR', '1'), ('SSL_CERT_DIR', '/usr/lib/ssl/certs'), ('GST_V4L2SRC_DEFAULT_DEVICE', '/dev/video-camera0'), ('DISPLAY', ':0'), ('VSCODE_DEBUGPY_ADAPTER_ENDPOINTS', '/root/.vscode-server/extensions/ms-python.debugpy-2025.8.0-linux-arm64/.noConfigDebugAdapterEndpoints/endpoint-8abbe1c87ebc2a8c.txt'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/0/vscode-git-d3227a1384.sock'), ('TERM_PROGRAM', 'vscode'), ('GST_V4L2_USE_LIBV4L2', '1'), ('UMS_SIZE', '256M'), ('AMENT_PREFIX_PATH', '/home/orangepi/ros2_workspace/school_competition/install:/root/lanhailidar_ros_ws/install/scan_subscriber:/root/lanhailidar_ros_ws/install/bluesea2:/root/lanhailidar_ros_ws/install/base:/opt/ros/humble'), ('LC_MESSAGES', 'en_US.UTF-8'), ('SHELL', '/bin/bash'), ('UMS_RO', '0'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('UMS_FSTYPE', 'vfat'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/home/orangepi/ros2_workspace/school_competition/build/bluesea2'), ('LC_ALL', 'en_US.UTF-8'), ('SSH_CONNECTION', '192.168.61.141 53295 192.168.61.126 22'), ('PYTHONPATH', '/home/orangepi/ros2_workspace/school_competition/install/local/lib/python3.10/dist-packages:/home/orangepi/ros2_workspace/school_competition/install/lib/python3.10/site-packages:/root/lanhailidar_ros_ws/install/scan_subscriber/lib/python3.10/site-packages:/root/lanhailidar_ros_ws/install/base/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('UMS_MOUNT', '0'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/orangepi/ros2_workspace/school_competition/install:/root/lanhailidar_ros_ws/install/bluesea2:/root/lanhailidar_ros_ws/install/base:/root/lanhailidar_ros_ws/install/scan_subscriber:/opt/ros/humble'), ('UMS_FILE', '/userdata/ums_shared.img')]), 'shell': False}
+[4.419750] (-) TimerEvent: {}
+[4.483128] (bluesea2) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[4.519930] (-) TimerEvent: {}
+[4.610756] (bluesea2) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[4.620114] (-) TimerEvent: {}
+[4.622506] (bluesea2) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[4.720358] (-) TimerEvent: {}
+[4.821172] (-) TimerEvent: {}
+[4.838582] (bluesea2) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[4.842457] (bluesea2) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[4.842751] (bluesea2) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[4.843238] (bluesea2) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[4.847594] (bluesea2) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[4.921255] (-) TimerEvent: {}
+[5.021631] (-) TimerEvent: {}
+[5.033682] (bluesea2) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[5.051690] (bluesea2) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[5.052042] (bluesea2) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[5.052613] (bluesea2) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[5.056251] (bluesea2) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.11 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[5.121703] (-) TimerEvent: {}
+[5.222032] (-) TimerEvent: {}
+[5.322363] (-) TimerEvent: {}
+[5.422699] (-) TimerEvent: {}
+[5.459292] (bluesea2) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter \n'}
+[5.522800] (-) TimerEvent: {}
+[5.623181] (-) TimerEvent: {}
+[5.702676] (bluesea2) StdoutLine: {'line': b'-- Found rclcpp: 16.0.12 (/opt/ros/humble/share/rclcpp/cmake)\n'}
+[5.723331] (-) TimerEvent: {}
+[5.823980] (-) TimerEvent: {}
+[5.826545] (bluesea2) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.6 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[5.834280] (bluesea2) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.6 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[5.846400] (bluesea2) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.6 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[5.865113] (bluesea2) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[5.889119] (bluesea2) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[5.924239] (-) TimerEvent: {}
+[6.024831] (-) TimerEvent: {}
+[6.081181] (bluesea2) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)\n'}
+[6.093898] (bluesea2) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 6.2.7 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)\n'}
+[6.124909] (-) TimerEvent: {}
+[6.225239] (-) TimerEvent: {}
+[6.325576] (-) TimerEvent: {}
+[6.425927] (-) TimerEvent: {}
+[6.522202] (bluesea2) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/aarch64-linux-gnu/libcrypto.so (found version "3.0.2")  \n'}
+[6.525992] (-) TimerEvent: {}
+[6.622713] (bluesea2) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/humble/include  \n'}
+[6.626091] (-) TimerEvent: {}
+[6.713518] (bluesea2) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[6.726212] (-) TimerEvent: {}
+[6.775547] (bluesea2) StdoutLine: {'line': b'-- Looking for pthread.h\n'}
+[6.826321] (-) TimerEvent: {}
+[6.926711] (-) TimerEvent: {}
+[7.016315] (bluesea2) StdoutLine: {'line': b'-- Looking for pthread.h - found\n'}
+[7.017317] (bluesea2) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD\n'}
+[7.026925] (-) TimerEvent: {}
+[7.127294] (-) TimerEvent: {}
+[7.227779] (-) TimerEvent: {}
+[7.246982] (bluesea2) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success\n'}
+[7.250833] (bluesea2) StdoutLine: {'line': b'-- Found Threads: TRUE  \n'}
+[7.327886] (-) TimerEvent: {}
+[7.428255] (-) TimerEvent: {}
+[7.504094] (bluesea2) StdoutLine: {'line': b'-- Found sensor_msgs: 4.8.0 (/opt/ros/humble/share/sensor_msgs/cmake)\n'}
+[7.528372] (-) TimerEvent: {}
+[7.570646] (bluesea2) StdoutLine: {'line': b'-- Found visualization_msgs: 4.8.0 (/opt/ros/humble/share/visualization_msgs/cmake)\n'}
+[7.615047] (bluesea2) StdoutLine: {'line': b'-- Found base: 0.0.0 (/home/orangepi/ros2_workspace/school_competition/install/share/base/cmake)\n'}
+[7.628453] (-) TimerEvent: {}
+[7.635926] (bluesea2) StdoutLine: {'line': b'-- Found std_srvs: 4.8.0 (/opt/ros/humble/share/std_srvs/cmake)\n'}
+[7.668596] (bluesea2) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.12.12 (/opt/ros/humble/share/ament_lint_auto/cmake)\n'}
+[7.728572] (-) TimerEvent: {}
+[7.779520] (bluesea2) StdoutLine: {'line': b'-- Configuring done\n'}
+[7.806566] (bluesea2) StdoutLine: {'line': b'-- Generating done\n'}
+[7.818796] (bluesea2) StdoutLine: {'line': b'-- Build files have been written to: /home/orangepi/ros2_workspace/school_competition/build/bluesea2\n'}
+[7.828644] (-) TimerEvent: {}
+[7.835928] (bluesea2) CommandEnded: {'returncode': 0}
+[7.836865] (bluesea2) JobProgress: {'identifier': 'bluesea2', 'progress': 'build'}
+[7.837397] (bluesea2) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/orangepi/ros2_workspace/school_competition/build/bluesea2', '--', '-j8', '-l8'], 'cwd': '/home/orangepi/ros2_workspace/school_competition/build/bluesea2', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('UMS_MOUNTPOINT', '/mnt/ums'), ('GST_V4L2_PREFERRED_FOURCC', 'NV12:YU12:NV16:YUY2'), ('LANGUAGE', 'en_US.UTF-8'), ('USER', 'root'), ('SSH_CLIENT', '192.168.61.141 53295 22'), ('XDG_SESSION_TYPE', 'tty'), ('GIT_ASKPASS', '/root/.vscode-server/cli/servers/Stable-2901c5ac6db8a986a5666c3af51ff804d05af0d4/server/extensions/git/dist/askpass.sh'), ('SHLVL', '1'), ('USB_FUNCS', 'adb'), ('LD_LIBRARY_PATH', '/home/orangepi/ros2_workspace/school_competition/install/lib:/root/lanhailidar_ros_ws/install/base/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('BROWSER', '/root/.vscode-server/cli/servers/Stable-2901c5ac6db8a986a5666c3af51ff804d05af0d4/server/bin/helpers/browser.sh'), ('MOTD_SHOWN', 'pam'), ('HOME', '/root'), ('TERM_PROGRAM_VERSION', '1.101.2'), ('VSCODE_IPC_HOOK_CLI', '/run/user/0/vscode-ipc-a46e235a-142f-4ae8-ad91-8a603a2fbffe.sock'), ('GST_INSPECT_NO_COLORS', '1'), ('GST_MPP_NO_RGA', '1'), ('ROS_PYTHON_VERSION', '3'), ('COGL_DRIVER', 'gles2'), ('VSCODE_GIT_ASKPASS_MAIN', '/root/.vscode-server/cli/servers/Stable-2901c5ac6db8a986a5666c3af51ff804d05af0d4/server/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/root/.vscode-server/cli/servers/Stable-2901c5ac6db8a986a5666c3af51ff804d05af0d4/server/node'), ('SSL_CERT_FILE', '/usr/lib/ssl/certs/ca-certificates.crt'), ('PYDEVD_DISABLE_FILE_VALIDATION', '1'), ('BUNDLED_DEBUGPY_PATH', '/root/.vscode-server/extensions/ms-python.debugpy-2025.8.0-linux-arm64/bundled/libs/debugpy'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/0/bus'), ('COLORTERM', 'truecolor'), ('COLCON_PREFIX_PATH', '/root/lanhailidar_ros_ws/install'), ('GST_V4L2SRC_MAX_RESOLUTION', '3840x2160'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'root'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('GST_GL_API', 'gles2'), ('XDG_SESSION_ID', '11'), ('GST_VIDEO_CONVERT_PREFERRED_FORMAT', 'NV12:NV16:I420:YUY2'), ('GST_V4L2SRC_RK_DEVICES', '_mainpath:_selfpath:_bypass:_scale'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/root/.vscode-server/cli/servers/Stable-2901c5ac6db8a986a5666c3af51ff804d05af0d4/server/bin/remote-cli:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/root/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand:/root/.vscode-server/extensions/ms-python.debugpy-2025.8.0-linux-arm64/bundled/scripts/noConfigScripts'), ('XDG_RUNTIME_DIR', '/run/user/0'), ('GST_GL_PLATFORM', 'egl'), ('GST_DEBUG_NO_COLOR', '1'), ('SSL_CERT_DIR', '/usr/lib/ssl/certs'), ('GST_V4L2SRC_DEFAULT_DEVICE', '/dev/video-camera0'), ('DISPLAY', ':0'), ('VSCODE_DEBUGPY_ADAPTER_ENDPOINTS', '/root/.vscode-server/extensions/ms-python.debugpy-2025.8.0-linux-arm64/.noConfigDebugAdapterEndpoints/endpoint-8abbe1c87ebc2a8c.txt'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/0/vscode-git-d3227a1384.sock'), ('TERM_PROGRAM', 'vscode'), ('GST_V4L2_USE_LIBV4L2', '1'), ('UMS_SIZE', '256M'), ('AMENT_PREFIX_PATH', '/home/orangepi/ros2_workspace/school_competition/install:/root/lanhailidar_ros_ws/install/scan_subscriber:/root/lanhailidar_ros_ws/install/bluesea2:/root/lanhailidar_ros_ws/install/base:/opt/ros/humble'), ('LC_MESSAGES', 'en_US.UTF-8'), ('SHELL', '/bin/bash'), ('UMS_RO', '0'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('UMS_FSTYPE', 'vfat'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/home/orangepi/ros2_workspace/school_competition/build/bluesea2'), ('LC_ALL', 'en_US.UTF-8'), ('SSH_CONNECTION', '192.168.61.141 53295 192.168.61.126 22'), ('PYTHONPATH', '/home/orangepi/ros2_workspace/school_competition/install/local/lib/python3.10/dist-packages:/home/orangepi/ros2_workspace/school_competition/install/lib/python3.10/site-packages:/root/lanhailidar_ros_ws/install/scan_subscriber/lib/python3.10/site-packages:/root/lanhailidar_ros_ws/install/base/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('UMS_MOUNT', '0'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/orangepi/ros2_workspace/school_competition/install:/root/lanhailidar_ros_ws/install/bluesea2:/root/lanhailidar_ros_ws/install/base:/root/lanhailidar_ros_ws/install/scan_subscriber:/opt/ros/humble'), ('UMS_FILE', '/userdata/ums_shared.img')]), 'shell': False}
+[7.928768] (-) TimerEvent: {}
+[7.955352] (bluesea2) StdoutLine: {'line': b'[ 15%] \x1b[32mBuilding CXX object CMakeFiles/bluesea2_node.dir/src/node.cpp.o\x1b[0m\n'}
+[7.955654] (bluesea2) StdoutLine: {'line': b'[ 15%] \x1b[32mBuilding CXX object CMakeFiles/bluesea2_node.dir/sdk/src/algorithmAPI.cpp.o\x1b[0m\n'}
+[7.957271] (bluesea2) StdoutLine: {'line': b'[ 23%] \x1b[32mBuilding CXX object CMakeFiles/bluesea2_node.dir/sdk/src/tcp_reader.cpp.o\x1b[0m\n'}
+[7.970587] (bluesea2) StdoutLine: {'line': b'[ 30%] \x1b[32mBuilding CXX object CMakeFiles/bluesea2_node.dir/sdk/src/bluesea.cpp.o\x1b[0m\n'}
+[7.973488] (bluesea2) StdoutLine: {'line': b'[ 38%] \x1b[32mBuilding CXX object CMakeFiles/bluesea2_node.dir/sdk/src/parser.cpp.o\x1b[0m\n'}
+[7.973869] (bluesea2) StdoutLine: {'line': b'[ 46%] \x1b[32mBuilding CXX object CMakeFiles/bluesea2_heart_check.dir/src/heart_check.cpp.o\x1b[0m\n'}
+[7.977079] (bluesea2) StdoutLine: {'line': b'[ 53%] \x1b[32mBuilding C object CMakeFiles/bluesea2_node.dir/sdk/src/uart.c.o\x1b[0m\n'}
+[7.993693] (bluesea2) StdoutLine: {'line': b'[ 61%] \x1b[32mBuilding CXX object CMakeFiles/bluesea2_client.dir/src/client.cpp.o\x1b[0m\n'}
+[8.028902] (-) TimerEvent: {}
+[8.129427] (-) TimerEvent: {}
+[8.230245] (-) TimerEvent: {}
+[8.330957] (-) TimerEvent: {}
+[8.365371] (bluesea2) StdoutLine: {'line': b'[ 69%] \x1b[32mBuilding CXX object CMakeFiles/bluesea2_node.dir/sdk/src/uart_reader.cpp.o\x1b[0m\n'}
+[8.431134] (-) TimerEvent: {}
+[8.532412] (-) TimerEvent: {}
+[8.633282] (-) TimerEvent: {}
+[8.734096] (-) TimerEvent: {}
+[8.835877] (-) TimerEvent: {}
+[8.937868] (-) TimerEvent: {}
+[9.038864] (-) TimerEvent: {}
+[9.139817] (-) TimerEvent: {}
+[9.240662] (-) TimerEvent: {}
+[9.331632] (bluesea2) StdoutLine: {'line': b'[ 76%] \x1b[32mBuilding CXX object CMakeFiles/bluesea2_node.dir/sdk/src/udp_reader.cpp.o\x1b[0m\n'}
+[9.340828] (-) TimerEvent: {}
+[9.441425] (-) TimerEvent: {}
+[9.542341] (-) TimerEvent: {}
+[9.643292] (-) TimerEvent: {}
+[9.744110] (-) TimerEvent: {}
+[9.845716] (-) TimerEvent: {}
+[9.946556] (-) TimerEvent: {}
+[10.047995] (-) TimerEvent: {}
+[10.149015] (-) TimerEvent: {}
+[10.249816] (-) TimerEvent: {}
+[10.350650] (-) TimerEvent: {}
+[10.451438] (-) TimerEvent: {}
+[10.552311] (-) TimerEvent: {}
+[10.653074] (-) TimerEvent: {}
+[10.753804] (-) TimerEvent: {}
+[10.854549] (-) TimerEvent: {}
+[10.955262] (-) TimerEvent: {}
+[11.055653] (-) TimerEvent: {}
+[11.156037] (-) TimerEvent: {}
+[11.256427] (-) TimerEvent: {}
+[11.356818] (-) TimerEvent: {}
+[11.457204] (-) TimerEvent: {}
+[11.557580] (-) TimerEvent: {}
+[11.657968] (-) TimerEvent: {}
+[11.758375] (-) TimerEvent: {}
+[11.859485] (-) TimerEvent: {}
+[11.959971] (-) TimerEvent: {}
+[12.060826] (-) TimerEvent: {}
+[12.161728] (-) TimerEvent: {}
+[12.262474] (-) TimerEvent: {}
+[12.363235] (-) TimerEvent: {}
+[12.464066] (-) TimerEvent: {}
+[12.564934] (-) TimerEvent: {}
+[12.665743] (-) TimerEvent: {}
+[12.766534] (-) TimerEvent: {}
+[12.867353] (-) TimerEvent: {}
+[12.968212] (-) TimerEvent: {}
+[13.069008] (-) TimerEvent: {}
+[13.169751] (-) TimerEvent: {}
+[13.270587] (-) TimerEvent: {}
+[13.371413] (-) TimerEvent: {}
+[13.472187] (-) TimerEvent: {}
+[13.572959] (-) TimerEvent: {}
+[13.673818] (-) TimerEvent: {}
+[13.774649] (-) TimerEvent: {}
+[13.875415] (-) TimerEvent: {}
+[13.976186] (-) TimerEvent: {}
+[14.076934] (-) TimerEvent: {}
+[14.177797] (-) TimerEvent: {}
+[14.278662] (-) TimerEvent: {}
+[14.379483] (-) TimerEvent: {}
+[14.480325] (-) TimerEvent: {}
+[14.581205] (-) TimerEvent: {}
+[14.669439] (bluesea2) StdoutLine: {'line': b'[ 84%] \x1b[32m\x1b[1mLinking CXX executable bluesea2_heart_check\x1b[0m\n'}
+[14.681424] (-) TimerEvent: {}
+[14.782027] (-) TimerEvent: {}
+[14.830697] (bluesea2) StdoutLine: {'line': b'[ 92%] \x1b[32m\x1b[1mLinking CXX executable bluesea2_client\x1b[0m\n'}
+[14.882150] (-) TimerEvent: {}
+[14.982863] (-) TimerEvent: {}
+[15.083735] (-) TimerEvent: {}
+[15.184555] (-) TimerEvent: {}
+[15.285356] (-) TimerEvent: {}
+[15.386366] (-) TimerEvent: {}
+[15.487251] (-) TimerEvent: {}
+[15.587989] (-) TimerEvent: {}
+[15.622932] (bluesea2) StdoutLine: {'line': b'[ 92%] Built target bluesea2_heart_check\n'}
+[15.630500] (bluesea2) StdoutLine: {'line': b'[ 92%] Built target bluesea2_client\n'}
+[15.688169] (-) TimerEvent: {}
+[15.788898] (-) TimerEvent: {}
+[15.889616] (-) TimerEvent: {}
+[15.990457] (-) TimerEvent: {}
+[16.091191] (-) TimerEvent: {}
+[16.191931] (-) TimerEvent: {}
+[16.292659] (-) TimerEvent: {}
+[16.393690] (-) TimerEvent: {}
+[16.494410] (-) TimerEvent: {}
+[16.595071] (-) TimerEvent: {}
+[16.695480] (-) TimerEvent: {}
+[16.795846] (-) TimerEvent: {}
+[16.896255] (-) TimerEvent: {}
+[16.996713] (-) TimerEvent: {}
+[17.097316] (-) TimerEvent: {}
+[17.198181] (-) TimerEvent: {}
+[17.298827] (-) TimerEvent: {}
+[17.399538] (-) TimerEvent: {}
+[17.500322] (-) TimerEvent: {}
+[17.600967] (-) TimerEvent: {}
+[17.701594] (-) TimerEvent: {}
+[17.802253] (-) TimerEvent: {}
+[17.902838] (-) TimerEvent: {}
+[18.003205] (-) TimerEvent: {}
+[18.103561] (-) TimerEvent: {}
+[18.203918] (-) TimerEvent: {}
+[18.304275] (-) TimerEvent: {}
+[18.404781] (-) TimerEvent: {}
+[18.429580] (bluesea2) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable bluesea2_node\x1b[0m\n'}
+[18.504863] (-) TimerEvent: {}
+[18.605248] (-) TimerEvent: {}
+[18.705634] (-) TimerEvent: {}
+[18.806035] (-) TimerEvent: {}
+[18.906404] (-) TimerEvent: {}
+[19.006784] (-) TimerEvent: {}
+[19.039753] (bluesea2) StdoutLine: {'line': b'[100%] Built target bluesea2_node\n'}
+[19.071230] (bluesea2) CommandEnded: {'returncode': 0}
+[19.072679] (bluesea2) JobProgress: {'identifier': 'bluesea2', 'progress': 'install'}
+[19.073599] (bluesea2) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/orangepi/ros2_workspace/school_competition/build/bluesea2'], 'cwd': '/home/orangepi/ros2_workspace/school_competition/build/bluesea2', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('UMS_MOUNTPOINT', '/mnt/ums'), ('GST_V4L2_PREFERRED_FOURCC', 'NV12:YU12:NV16:YUY2'), ('LANGUAGE', 'en_US.UTF-8'), ('USER', 'root'), ('SSH_CLIENT', '192.168.61.141 53295 22'), ('XDG_SESSION_TYPE', 'tty'), ('GIT_ASKPASS', '/root/.vscode-server/cli/servers/Stable-2901c5ac6db8a986a5666c3af51ff804d05af0d4/server/extensions/git/dist/askpass.sh'), ('SHLVL', '1'), ('USB_FUNCS', 'adb'), ('LD_LIBRARY_PATH', '/home/orangepi/ros2_workspace/school_competition/install/lib:/root/lanhailidar_ros_ws/install/base/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('BROWSER', '/root/.vscode-server/cli/servers/Stable-2901c5ac6db8a986a5666c3af51ff804d05af0d4/server/bin/helpers/browser.sh'), ('MOTD_SHOWN', 'pam'), ('HOME', '/root'), ('TERM_PROGRAM_VERSION', '1.101.2'), ('VSCODE_IPC_HOOK_CLI', '/run/user/0/vscode-ipc-a46e235a-142f-4ae8-ad91-8a603a2fbffe.sock'), ('GST_INSPECT_NO_COLORS', '1'), ('GST_MPP_NO_RGA', '1'), ('ROS_PYTHON_VERSION', '3'), ('COGL_DRIVER', 'gles2'), ('VSCODE_GIT_ASKPASS_MAIN', '/root/.vscode-server/cli/servers/Stable-2901c5ac6db8a986a5666c3af51ff804d05af0d4/server/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/root/.vscode-server/cli/servers/Stable-2901c5ac6db8a986a5666c3af51ff804d05af0d4/server/node'), ('SSL_CERT_FILE', '/usr/lib/ssl/certs/ca-certificates.crt'), ('PYDEVD_DISABLE_FILE_VALIDATION', '1'), ('BUNDLED_DEBUGPY_PATH', '/root/.vscode-server/extensions/ms-python.debugpy-2025.8.0-linux-arm64/bundled/libs/debugpy'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/0/bus'), ('COLORTERM', 'truecolor'), ('COLCON_PREFIX_PATH', '/root/lanhailidar_ros_ws/install'), ('GST_V4L2SRC_MAX_RESOLUTION', '3840x2160'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'root'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('GST_GL_API', 'gles2'), ('XDG_SESSION_ID', '11'), ('GST_VIDEO_CONVERT_PREFERRED_FORMAT', 'NV12:NV16:I420:YUY2'), ('GST_V4L2SRC_RK_DEVICES', '_mainpath:_selfpath:_bypass:_scale'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/root/.vscode-server/cli/servers/Stable-2901c5ac6db8a986a5666c3af51ff804d05af0d4/server/bin/remote-cli:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/root/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand:/root/.vscode-server/extensions/ms-python.debugpy-2025.8.0-linux-arm64/bundled/scripts/noConfigScripts'), ('XDG_RUNTIME_DIR', '/run/user/0'), ('GST_GL_PLATFORM', 'egl'), ('GST_DEBUG_NO_COLOR', '1'), ('SSL_CERT_DIR', '/usr/lib/ssl/certs'), ('GST_V4L2SRC_DEFAULT_DEVICE', '/dev/video-camera0'), ('DISPLAY', ':0'), ('VSCODE_DEBUGPY_ADAPTER_ENDPOINTS', '/root/.vscode-server/extensions/ms-python.debugpy-2025.8.0-linux-arm64/.noConfigDebugAdapterEndpoints/endpoint-8abbe1c87ebc2a8c.txt'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/0/vscode-git-d3227a1384.sock'), ('TERM_PROGRAM', 'vscode'), ('GST_V4L2_USE_LIBV4L2', '1'), ('UMS_SIZE', '256M'), ('AMENT_PREFIX_PATH', '/home/orangepi/ros2_workspace/school_competition/install:/root/lanhailidar_ros_ws/install/scan_subscriber:/root/lanhailidar_ros_ws/install/bluesea2:/root/lanhailidar_ros_ws/install/base:/opt/ros/humble'), ('LC_MESSAGES', 'en_US.UTF-8'), ('SHELL', '/bin/bash'), ('UMS_RO', '0'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('UMS_FSTYPE', 'vfat'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/home/orangepi/ros2_workspace/school_competition/build/bluesea2'), ('LC_ALL', 'en_US.UTF-8'), ('SSH_CONNECTION', '192.168.61.141 53295 192.168.61.126 22'), ('PYTHONPATH', '/home/orangepi/ros2_workspace/school_competition/install/local/lib/python3.10/dist-packages:/home/orangepi/ros2_workspace/school_competition/install/lib/python3.10/site-packages:/root/lanhailidar_ros_ws/install/scan_subscriber/lib/python3.10/site-packages:/root/lanhailidar_ros_ws/install/base/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('UMS_MOUNT', '0'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/orangepi/ros2_workspace/school_competition/install:/root/lanhailidar_ros_ws/install/bluesea2:/root/lanhailidar_ros_ws/install/base:/root/lanhailidar_ros_ws/install/scan_subscriber:/opt/ros/humble'), ('UMS_FILE', '/userdata/ums_shared.img')]), 'shell': False}
+[19.098284] (bluesea2) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[19.098771] (bluesea2) StdoutLine: {'line': b'-- Installing: /home/orangepi/ros2_workspace/school_competition/install/lib/bluesea2/bluesea2_node\n'}
+[19.104904] (bluesea2) StdoutLine: {'line': b'-- Set runtime path of "/home/orangepi/ros2_workspace/school_competition/install/lib/bluesea2/bluesea2_node" to ""\n'}
+[19.105438] (bluesea2) StdoutLine: {'line': b'-- Installing: /home/orangepi/ros2_workspace/school_competition/install/lib/bluesea2/bluesea2_client\n'}
+[19.106384] (bluesea2) StdoutLine: {'line': b'-- Set runtime path of "/home/orangepi/ros2_workspace/school_competition/install/lib/bluesea2/bluesea2_client" to ""\n'}
+[19.106724] (bluesea2) StdoutLine: {'line': b'-- Installing: /home/orangepi/ros2_workspace/school_competition/install/lib/bluesea2/bluesea2_heart_check\n'}
+[19.107018] (-) TimerEvent: {}
+[19.107918] (bluesea2) StdoutLine: {'line': b'-- Set runtime path of "/home/orangepi/ros2_workspace/school_competition/install/lib/bluesea2/bluesea2_heart_check" to ""\n'}
+[19.108484] (bluesea2) StdoutLine: {'line': b'-- Installing: /home/orangepi/ros2_workspace/school_competition/install/share/bluesea2/launch\n'}
+[19.108853] (bluesea2) StdoutLine: {'line': b'-- Installing: /home/orangepi/ros2_workspace/school_competition/install/share/bluesea2/launch/dual_udp_lidar.launch\n'}
+[19.109198] (bluesea2) StdoutLine: {'line': b'-- Installing: /home/orangepi/ros2_workspace/school_competition/install/share/bluesea2/launch/udp_lidar.launch\n'}
+[19.109531] (bluesea2) StdoutLine: {'line': b'-- Installing: /home/orangepi/ros2_workspace/school_competition/install/share/bluesea2/launch/vpc_lidar.launch\n'}
+[19.109933] (bluesea2) StdoutLine: {'line': b'-- Installing: /home/orangepi/ros2_workspace/school_competition/install/share/bluesea2/launch/LDS-U50C-S.launch\n'}
+[19.110298] (bluesea2) StdoutLine: {'line': b'-- Installing: /home/orangepi/ros2_workspace/school_competition/install/share/bluesea2/launch/heart_check.launch\n'}
+[19.110605] (bluesea2) StdoutLine: {'line': b'-- Installing: /home/orangepi/ros2_workspace/school_competition/install/share/bluesea2/launch/LDS-U80C-S.launch\n'}
+[19.110910] (bluesea2) StdoutLine: {'line': b'-- Installing: /home/orangepi/ros2_workspace/school_competition/install/share/bluesea2/launch/uart_lidar.launch\n'}
+[19.111222] (bluesea2) StdoutLine: {'line': b'-- Installing: /home/orangepi/ros2_workspace/school_competition/install/share/bluesea2/params\n'}
+[19.111517] (bluesea2) StdoutLine: {'line': b'-- Installing: /home/orangepi/ros2_workspace/school_competition/install/share/bluesea2/params/LDS-U80C-S.yaml\n'}
+[19.112001] (bluesea2) StdoutLine: {'line': b'-- Installing: /home/orangepi/ros2_workspace/school_competition/install/share/bluesea2/params/dual_udp_lidar.yaml\n'}
+[19.112362] (bluesea2) StdoutLine: {'line': b'-- Installing: /home/orangepi/ros2_workspace/school_competition/install/share/bluesea2/params/udp_lidar.yaml\n'}
+[19.112676] (bluesea2) StdoutLine: {'line': b'-- Installing: /home/orangepi/ros2_workspace/school_competition/install/share/bluesea2/params/vpc_lidar.yaml\n'}
+[19.113054] (bluesea2) StdoutLine: {'line': b'-- Installing: /home/orangepi/ros2_workspace/school_competition/install/share/bluesea2/params/uart_lidar.yaml\n'}
+[19.113410] (bluesea2) StdoutLine: {'line': b'-- Installing: /home/orangepi/ros2_workspace/school_competition/install/share/bluesea2/params/LDS-U50C-S.yaml\n'}
+[19.113754] (bluesea2) StdoutLine: {'line': b'-- Installing: /home/orangepi/ros2_workspace/school_competition/install/share/bluesea2/params/other\n'}
+[19.114051] (bluesea2) StdoutLine: {'line': b'-- Installing: /home/orangepi/ros2_workspace/school_competition/install/share/ament_index/resource_index/package_run_dependencies/bluesea2\n'}
+[19.114389] (bluesea2) StdoutLine: {'line': b'-- Installing: /home/orangepi/ros2_workspace/school_competition/install/share/ament_index/resource_index/parent_prefix_path/bluesea2\n'}
+[19.114722] (bluesea2) StdoutLine: {'line': b'-- Installing: /home/orangepi/ros2_workspace/school_competition/install/share/bluesea2/environment/ament_prefix_path.sh\n'}
+[19.115032] (bluesea2) StdoutLine: {'line': b'-- Installing: /home/orangepi/ros2_workspace/school_competition/install/share/bluesea2/environment/ament_prefix_path.dsv\n'}
+[19.115391] (bluesea2) StdoutLine: {'line': b'-- Installing: /home/orangepi/ros2_workspace/school_competition/install/share/bluesea2/environment/path.sh\n'}
+[19.116907] (bluesea2) StdoutLine: {'line': b'-- Installing: /home/orangepi/ros2_workspace/school_competition/install/share/bluesea2/environment/path.dsv\n'}
+[19.120378] (bluesea2) StdoutLine: {'line': b'-- Installing: /home/orangepi/ros2_workspace/school_competition/install/share/bluesea2/local_setup.bash\n'}
+[19.120569] (bluesea2) StdoutLine: {'line': b'-- Installing: /home/orangepi/ros2_workspace/school_competition/install/share/bluesea2/local_setup.sh\n'}
+[19.120710] (bluesea2) StdoutLine: {'line': b'-- Installing: /home/orangepi/ros2_workspace/school_competition/install/share/bluesea2/local_setup.zsh\n'}
+[19.120841] (bluesea2) StdoutLine: {'line': b'-- Installing: /home/orangepi/ros2_workspace/school_competition/install/share/bluesea2/local_setup.dsv\n'}
+[19.120967] (bluesea2) StdoutLine: {'line': b'-- Installing: /home/orangepi/ros2_workspace/school_competition/install/share/bluesea2/package.dsv\n'}
+[19.121093] (bluesea2) StdoutLine: {'line': b'-- Installing: /home/orangepi/ros2_workspace/school_competition/install/share/ament_index/resource_index/packages/bluesea2\n'}
+[19.121235] (bluesea2) StdoutLine: {'line': b'-- Installing: /home/orangepi/ros2_workspace/school_competition/install/share/bluesea2/cmake/bluesea2Config.cmake\n'}
+[19.121364] (bluesea2) StdoutLine: {'line': b'-- Installing: /home/orangepi/ros2_workspace/school_competition/install/share/bluesea2/cmake/bluesea2Config-version.cmake\n'}
+[19.121491] (bluesea2) StdoutLine: {'line': b'-- Installing: /home/orangepi/ros2_workspace/school_competition/install/share/bluesea2/package.xml\n'}
+[19.121616] (bluesea2) CommandEnded: {'returncode': 0}
+[19.190829] (bluesea2) JobEnded: {'identifier': 'bluesea2', 'rc': 0}
+[19.192038] (-) EventReactorShutdown: {}

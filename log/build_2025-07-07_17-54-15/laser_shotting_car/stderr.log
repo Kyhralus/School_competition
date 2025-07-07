@@ -1,0 +1,4 @@
+  File "/home/orangepi/ros2_workspace/school_competition/install/lib/python3.10/site-packages/laser_shotting_car/circle_laser_detector.py", line 255
+    break
+SyntaxError: 'break' outside loop
+

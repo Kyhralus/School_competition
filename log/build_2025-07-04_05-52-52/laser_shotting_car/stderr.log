@@ -1,0 +1,5 @@
+  File "/home/orangepi/ros2_workspace/school_competition/install/lib/python3.10/site-packages/laser_shotting_car/main_controller.py", line 87
+    send_msg.data = '@1,'+f"{msg.data.split(',')[1]},"+f"{msg.data.split(',')+'\r'}"
+                                                                                    ^
+SyntaxError: f-string expression part cannot include a backslash
+

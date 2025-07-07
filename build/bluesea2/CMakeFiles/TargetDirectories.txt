@@ -1,0 +1,12 @@
+/home/orangepi/ros2_workspace/school_competition/build/bluesea2/CMakeFiles/uninstall.dir
+/home/orangepi/ros2_workspace/school_competition/build/bluesea2/CMakeFiles/bluesea2_uninstall.dir
+/home/orangepi/ros2_workspace/school_competition/build/bluesea2/CMakeFiles/bluesea2_node.dir
+/home/orangepi/ros2_workspace/school_competition/build/bluesea2/CMakeFiles/bluesea2_client.dir
+/home/orangepi/ros2_workspace/school_competition/build/bluesea2/CMakeFiles/bluesea2_heart_check.dir
+/home/orangepi/ros2_workspace/school_competition/build/bluesea2/CMakeFiles/test.dir
+/home/orangepi/ros2_workspace/school_competition/build/bluesea2/CMakeFiles/edit_cache.dir
+/home/orangepi/ros2_workspace/school_competition/build/bluesea2/CMakeFiles/rebuild_cache.dir
+/home/orangepi/ros2_workspace/school_competition/build/bluesea2/CMakeFiles/list_install_components.dir
+/home/orangepi/ros2_workspace/school_competition/build/bluesea2/CMakeFiles/install.dir
+/home/orangepi/ros2_workspace/school_competition/build/bluesea2/CMakeFiles/install/local.dir
+/home/orangepi/ros2_workspace/school_competition/build/bluesea2/CMakeFiles/install/strip.dir

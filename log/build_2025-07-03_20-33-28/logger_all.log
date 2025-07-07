@@ -1,0 +1,418 @@
+[0.157s] [34mcolcon[0m [1;30mDEBUG[0m [32mCommand line arguments: ['/usr/bin/colcon', 'build', '--merge-install'][0m
+[0.157s] [34mcolcon[0m [1;30mDEBUG[0m [32mParsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=True, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=8, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x7faca4ecb0>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7fac98c040>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7fac98c040>>)[0m
+[0.378s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(colcon_meta) check parameters
+[0.378s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(recursive) check parameters
+[0.378s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(ignore) check parameters
+[0.378s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(path) check parameters
+[0.378s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(colcon_meta) discover
+[0.378s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(recursive) discover
+[0.379s] [34mcolcon.colcon_core.package_discovery[0m [1;30mINFO[0m Crawling recursively for packages in '/home/orangepi/ros2_workspace/school_competition'
+[0.379s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.379s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extension 'ignore'
+[0.379s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extension 'ignore_ament_install'
+[0.379s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extensions ['colcon_pkg']
+[0.379s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extension 'colcon_pkg'
+[0.379s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extensions ['colcon_meta']
+[0.379s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extension 'colcon_meta'
+[0.379s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extensions ['ros']
+[0.379s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extension 'ros'
+[0.396s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extensions ['cmake', 'python']
+[0.396s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extension 'cmake'
+[0.396s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extension 'python'
+[0.396s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extensions ['python_setup_py']
+[0.396s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extension 'python_setup_py'
+[0.396s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.396s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(build) by extension 'ignore'
+[0.397s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(build) ignored
+[0.397s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.397s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(install) by extension 'ignore'
+[0.397s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(install) ignored
+[0.397s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(launch) by extensions ['ignore', 'ignore_ament_install']
+[0.397s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(launch) by extension 'ignore'
+[0.397s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(launch) by extension 'ignore_ament_install'
+[0.397s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(launch) by extensions ['colcon_pkg']
+[0.397s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(launch) by extension 'colcon_pkg'
+[0.397s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(launch) by extensions ['colcon_meta']
+[0.397s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(launch) by extension 'colcon_meta'
+[0.397s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(launch) by extensions ['ros']
+[0.398s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(launch) by extension 'ros'
+[0.398s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(launch) by extensions ['cmake', 'python']
+[0.398s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(launch) by extension 'cmake'
+[0.398s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(launch) by extension 'python'
+[0.398s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(launch) by extensions ['python_setup_py']
+[0.398s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(launch) by extension 'python_setup_py'
+[0.398s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.398s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(log) by extension 'ignore'
+[0.398s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(log) ignored
+[0.398s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(script) by extensions ['ignore', 'ignore_ament_install']
+[0.398s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(script) by extension 'ignore'
+[0.398s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(script) by extension 'ignore_ament_install'
+[0.399s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(script) by extensions ['colcon_pkg']
+[0.399s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(script) by extension 'colcon_pkg'
+[0.399s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(script) by extensions ['colcon_meta']
+[0.399s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(script) by extension 'colcon_meta'
+[0.399s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(script) by extensions ['ros']
+[0.399s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(script) by extension 'ros'
+[0.399s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(script) by extensions ['cmake', 'python']
+[0.399s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(script) by extension 'cmake'
+[0.399s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(script) by extension 'python'
+[0.399s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(script) by extensions ['python_setup_py']
+[0.399s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(script) by extension 'python_setup_py'
+[0.399s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.399s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extension 'ignore'
+[0.399s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extension 'ignore_ament_install'
+[0.399s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extensions ['colcon_pkg']
+[0.399s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extension 'colcon_pkg'
+[0.399s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extensions ['colcon_meta']
+[0.399s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extension 'colcon_meta'
+[0.400s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extensions ['ros']
+[0.400s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extension 'ros'
+[0.400s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extensions ['cmake', 'python']
+[0.400s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extension 'cmake'
+[0.400s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extension 'python'
+[0.400s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extensions ['python_setup_py']
+[0.400s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extension 'python_setup_py'
+[0.400s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/car_t265) by extensions ['ignore', 'ignore_ament_install']
+[0.400s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/car_t265) by extension 'ignore'
+[0.400s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/car_t265) by extension 'ignore_ament_install'
+[0.400s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/car_t265) by extensions ['colcon_pkg']
+[0.400s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/car_t265) by extension 'colcon_pkg'
+[0.400s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/car_t265) by extensions ['colcon_meta']
+[0.400s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/car_t265) by extension 'colcon_meta'
+[0.400s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/car_t265) by extensions ['ros']
+[0.400s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/car_t265) by extension 'ros'
+[0.404s] [34mcolcon.colcon_core.package_identification[0m [1;30mDEBUG[0m [32mPackage 'src/car_t265' with type 'ros.ament_python' and name 'car_t265'[0m
+[0.405s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/lanhailidar_ros_ws) by extensions ['ignore', 'ignore_ament_install']
+[0.405s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/lanhailidar_ros_ws) by extension 'ignore'
+[0.405s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/lanhailidar_ros_ws) by extension 'ignore_ament_install'
+[0.405s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/lanhailidar_ros_ws) by extensions ['colcon_pkg']
+[0.405s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/lanhailidar_ros_ws) by extension 'colcon_pkg'
+[0.405s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/lanhailidar_ros_ws) by extensions ['colcon_meta']
+[0.405s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/lanhailidar_ros_ws) by extension 'colcon_meta'
+[0.405s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/lanhailidar_ros_ws) by extensions ['ros']
+[0.405s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/lanhailidar_ros_ws) by extension 'ros'
+[0.405s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/lanhailidar_ros_ws) by extensions ['cmake', 'python']
+[0.405s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/lanhailidar_ros_ws) by extension 'cmake'
+[0.405s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/lanhailidar_ros_ws) by extension 'python'
+[0.405s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/lanhailidar_ros_ws) by extensions ['python_setup_py']
+[0.405s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/lanhailidar_ros_ws) by extension 'python_setup_py'
+[0.406s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/lanhailidar_ros_ws/src) by extensions ['ignore', 'ignore_ament_install']
+[0.406s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/lanhailidar_ros_ws/src) by extension 'ignore'
+[0.406s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/lanhailidar_ros_ws/src) by extension 'ignore_ament_install'
+[0.406s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/lanhailidar_ros_ws/src) by extensions ['colcon_pkg']
+[0.406s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/lanhailidar_ros_ws/src) by extension 'colcon_pkg'
+[0.406s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/lanhailidar_ros_ws/src) by extensions ['colcon_meta']
+[0.406s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/lanhailidar_ros_ws/src) by extension 'colcon_meta'
+[0.406s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/lanhailidar_ros_ws/src) by extensions ['ros']
+[0.406s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/lanhailidar_ros_ws/src) by extension 'ros'
+[0.406s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/lanhailidar_ros_ws/src) by extensions ['cmake', 'python']
+[0.406s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/lanhailidar_ros_ws/src) by extension 'cmake'
+[0.406s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/lanhailidar_ros_ws/src) by extension 'python'
+[0.406s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/lanhailidar_ros_ws/src) by extensions ['python_setup_py']
+[0.407s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/lanhailidar_ros_ws/src) by extension 'python_setup_py'
+[0.407s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/lanhailidar_ros_ws/src/bluesea-ros2-main) by extensions ['ignore', 'ignore_ament_install']
+[0.407s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/lanhailidar_ros_ws/src/bluesea-ros2-main) by extension 'ignore'
+[0.407s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/lanhailidar_ros_ws/src/bluesea-ros2-main) by extension 'ignore_ament_install'
+[0.407s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/lanhailidar_ros_ws/src/bluesea-ros2-main) by extensions ['colcon_pkg']
+[0.407s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/lanhailidar_ros_ws/src/bluesea-ros2-main) by extension 'colcon_pkg'
+[0.407s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/lanhailidar_ros_ws/src/bluesea-ros2-main) by extensions ['colcon_meta']
+[0.407s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/lanhailidar_ros_ws/src/bluesea-ros2-main) by extension 'colcon_meta'
+[0.407s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/lanhailidar_ros_ws/src/bluesea-ros2-main) by extensions ['ros']
+[0.407s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/lanhailidar_ros_ws/src/bluesea-ros2-main) by extension 'ros'
+[0.407s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/lanhailidar_ros_ws/src/bluesea-ros2-main) by extensions ['cmake', 'python']
+[0.407s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/lanhailidar_ros_ws/src/bluesea-ros2-main) by extension 'cmake'
+[0.407s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/lanhailidar_ros_ws/src/bluesea-ros2-main) by extension 'python'
+[0.407s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/lanhailidar_ros_ws/src/bluesea-ros2-main) by extensions ['python_setup_py']
+[0.407s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/lanhailidar_ros_ws/src/bluesea-ros2-main) by extension 'python_setup_py'
+[0.408s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/lanhailidar_ros_ws/src/bluesea-ros2-main/base) by extensions ['ignore', 'ignore_ament_install']
+[0.408s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/lanhailidar_ros_ws/src/bluesea-ros2-main/base) by extension 'ignore'
+[0.408s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/lanhailidar_ros_ws/src/bluesea-ros2-main/base) by extension 'ignore_ament_install'
+[0.408s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/lanhailidar_ros_ws/src/bluesea-ros2-main/base) by extensions ['colcon_pkg']
+[0.408s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/lanhailidar_ros_ws/src/bluesea-ros2-main/base) by extension 'colcon_pkg'
+[0.408s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/lanhailidar_ros_ws/src/bluesea-ros2-main/base) by extensions ['colcon_meta']
+[0.408s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/lanhailidar_ros_ws/src/bluesea-ros2-main/base) by extension 'colcon_meta'
+[0.408s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/lanhailidar_ros_ws/src/bluesea-ros2-main/base) by extensions ['ros']
+[0.408s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/lanhailidar_ros_ws/src/bluesea-ros2-main/base) by extension 'ros'
+[0.409s] [34mcolcon.colcon_core.package_identification[0m [1;30mDEBUG[0m [32mPackage 'src/lanhailidar_ros_ws/src/bluesea-ros2-main/base' with type 'ros.ament_cmake' and name 'base'[0m
+[0.409s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/lanhailidar_ros_ws/src/bluesea-ros2-main/bluesea-ros2) by extensions ['ignore', 'ignore_ament_install']
+[0.409s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/lanhailidar_ros_ws/src/bluesea-ros2-main/bluesea-ros2) by extension 'ignore'
+[0.409s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/lanhailidar_ros_ws/src/bluesea-ros2-main/bluesea-ros2) by extension 'ignore_ament_install'
+[0.409s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/lanhailidar_ros_ws/src/bluesea-ros2-main/bluesea-ros2) by extensions ['colcon_pkg']
+[0.409s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/lanhailidar_ros_ws/src/bluesea-ros2-main/bluesea-ros2) by extension 'colcon_pkg'
+[0.409s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/lanhailidar_ros_ws/src/bluesea-ros2-main/bluesea-ros2) by extensions ['colcon_meta']
+[0.409s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/lanhailidar_ros_ws/src/bluesea-ros2-main/bluesea-ros2) by extension 'colcon_meta'
+[0.409s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/lanhailidar_ros_ws/src/bluesea-ros2-main/bluesea-ros2) by extensions ['ros']
+[0.409s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/lanhailidar_ros_ws/src/bluesea-ros2-main/bluesea-ros2) by extension 'ros'
+[0.411s] [34mcolcon.colcon_core.package_identification[0m [1;30mDEBUG[0m [32mPackage 'src/lanhailidar_ros_ws/src/bluesea-ros2-main/bluesea-ros2' with type 'ros.ament_cmake' and name 'bluesea2'[0m
+[0.411s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/laser_shotting_car) by extensions ['ignore', 'ignore_ament_install']
+[0.411s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/laser_shotting_car) by extension 'ignore'
+[0.411s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/laser_shotting_car) by extension 'ignore_ament_install'
+[0.411s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/laser_shotting_car) by extensions ['colcon_pkg']
+[0.411s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/laser_shotting_car) by extension 'colcon_pkg'
+[0.411s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/laser_shotting_car) by extensions ['colcon_meta']
+[0.411s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/laser_shotting_car) by extension 'colcon_meta'
+[0.411s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/laser_shotting_car) by extensions ['ros']
+[0.411s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/laser_shotting_car) by extension 'ros'
+[0.412s] [34mcolcon.colcon_core.package_identification[0m [1;30mDEBUG[0m [32mPackage 'src/laser_shotting_car' with type 'ros.ament_python' and name 'laser_shotting_car'[0m
+[0.413s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(recursive) using defaults
+[0.413s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(ignore) discover
+[0.413s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(ignore) using defaults
+[0.413s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(path) discover
+[0.413s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(path) using defaults
+[0.457s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'base' build argument 'cmake_args' from command line to 'None'
+[0.457s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'base' build argument 'cmake_target' from command line to 'None'
+[0.457s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'base' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.457s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'base' build argument 'cmake_clean_cache' from command line to 'False'
+[0.457s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'base' build argument 'cmake_clean_first' from command line to 'False'
+[0.457s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'base' build argument 'cmake_force_configure' from command line to 'False'
+[0.457s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'base' build argument 'ament_cmake_args' from command line to 'None'
+[0.457s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'base' build argument 'catkin_cmake_args' from command line to 'None'
+[0.457s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'base' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.458s] [34mcolcon.colcon_core.verb[0m [1;30mDEBUG[0m [32mBuilding package 'base' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/orangepi/ros2_workspace/school_competition/build/base', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/orangepi/ros2_workspace/school_competition/install', 'merge_install': True, 'path': '/home/orangepi/ros2_workspace/school_competition/src/lanhailidar_ros_ws/src/bluesea-ros2-main/base', 'symlink_install': False, 'test_result_base': None}[0m
+[0.458s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'car_t265' build argument 'cmake_args' from command line to 'None'
+[0.458s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'car_t265' build argument 'cmake_target' from command line to 'None'
+[0.458s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'car_t265' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.458s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'car_t265' build argument 'cmake_clean_cache' from command line to 'False'
+[0.458s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'car_t265' build argument 'cmake_clean_first' from command line to 'False'
+[0.458s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'car_t265' build argument 'cmake_force_configure' from command line to 'False'
+[0.458s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'car_t265' build argument 'ament_cmake_args' from command line to 'None'
+[0.458s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'car_t265' build argument 'catkin_cmake_args' from command line to 'None'
+[0.458s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'car_t265' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.458s] [34mcolcon.colcon_core.verb[0m [1;30mDEBUG[0m [32mBuilding package 'car_t265' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/orangepi/ros2_workspace/school_competition/build/car_t265', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/orangepi/ros2_workspace/school_competition/install', 'merge_install': True, 'path': '/home/orangepi/ros2_workspace/school_competition/src/car_t265', 'symlink_install': False, 'test_result_base': None}[0m
+[0.459s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'laser_shotting_car' build argument 'cmake_args' from command line to 'None'
+[0.459s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'laser_shotting_car' build argument 'cmake_target' from command line to 'None'
+[0.459s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'laser_shotting_car' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.459s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'laser_shotting_car' build argument 'cmake_clean_cache' from command line to 'False'
+[0.459s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'laser_shotting_car' build argument 'cmake_clean_first' from command line to 'False'
+[0.459s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'laser_shotting_car' build argument 'cmake_force_configure' from command line to 'False'
+[0.459s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'laser_shotting_car' build argument 'ament_cmake_args' from command line to 'None'
+[0.459s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'laser_shotting_car' build argument 'catkin_cmake_args' from command line to 'None'
+[0.459s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'laser_shotting_car' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.459s] [34mcolcon.colcon_core.verb[0m [1;30mDEBUG[0m [32mBuilding package 'laser_shotting_car' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/orangepi/ros2_workspace/school_competition/build/laser_shotting_car', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/orangepi/ros2_workspace/school_competition/install', 'merge_install': True, 'path': '/home/orangepi/ros2_workspace/school_competition/src/laser_shotting_car', 'symlink_install': False, 'test_result_base': None}[0m
+[0.460s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'bluesea2' build argument 'cmake_args' from command line to 'None'
+[0.460s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'bluesea2' build argument 'cmake_target' from command line to 'None'
+[0.460s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'bluesea2' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.460s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'bluesea2' build argument 'cmake_clean_cache' from command line to 'False'
+[0.460s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'bluesea2' build argument 'cmake_clean_first' from command line to 'False'
+[0.460s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'bluesea2' build argument 'cmake_force_configure' from command line to 'False'
+[0.460s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'bluesea2' build argument 'ament_cmake_args' from command line to 'None'
+[0.460s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'bluesea2' build argument 'catkin_cmake_args' from command line to 'None'
+[0.460s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'bluesea2' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.460s] [34mcolcon.colcon_core.verb[0m [1;30mDEBUG[0m [32mBuilding package 'bluesea2' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/orangepi/ros2_workspace/school_competition/build/bluesea2', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/orangepi/ros2_workspace/school_competition/install', 'merge_install': True, 'path': '/home/orangepi/ros2_workspace/school_competition/src/lanhailidar_ros_ws/src/bluesea-ros2-main/bluesea-ros2', 'symlink_install': False, 'test_result_base': None}[0m
+[0.460s] [34mcolcon.colcon_core.executor[0m [1;30mINFO[0m Executing jobs using 'parallel' executor
+[0.463s] [34mcolcon.colcon_parallel_executor.executor.parallel[0m [1;30mDEBUG[0m [32mrun_until_complete[0m
+[0.464s] [34mcolcon.colcon_ros.task.ament_cmake.build[0m [1;30mINFO[0m Building ROS package in '/home/orangepi/ros2_workspace/school_competition/src/lanhailidar_ros_ws/src/bluesea-ros2-main/base' with build type 'ament_cmake'
+[0.464s] [34mcolcon.colcon_cmake.task.cmake.build[0m [1;30mINFO[0m Building CMake package in '/home/orangepi/ros2_workspace/school_competition/src/lanhailidar_ros_ws/src/bluesea-ros2-main/base'
+[0.468s] [34mcolcon.colcon_core.plugin_system[0m [1;30mINFO[0m Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.468s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.468s] [34mcolcon.colcon_core.shell[0m [1;30mDEBUG[0m [32mSkip shell extension 'dsv' for command environment[0m
+[0.475s] [34mcolcon.colcon_ros.task.ament_python.build[0m [1;30mINFO[0m Building ROS package in '/home/orangepi/ros2_workspace/school_competition/src/car_t265' with build type 'ament_python'
+[0.476s] [34mcolcon.colcon_core.shell[0m [1;30mLevel 1[0m create_environment_hook('car_t265', 'ament_prefix_path')
+[0.476s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/orangepi/ros2_workspace/school_competition/install/share/car_t265/hook/ament_prefix_path.ps1'
+[0.484s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment descriptor '/home/orangepi/ros2_workspace/school_competition/install/share/car_t265/hook/ament_prefix_path.dsv'
+[0.485s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/orangepi/ros2_workspace/school_competition/install/share/car_t265/hook/ament_prefix_path.sh'
+[0.486s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.487s] [34mcolcon.colcon_core.shell[0m [1;30mDEBUG[0m [32mSkip shell extension 'dsv' for command environment[0m
+[0.492s] [34mcolcon.colcon_ros.task.ament_python.build[0m [1;30mINFO[0m Building ROS package in '/home/orangepi/ros2_workspace/school_competition/src/laser_shotting_car' with build type 'ament_python'
+[0.493s] [34mcolcon.colcon_core.shell[0m [1;30mLevel 1[0m create_environment_hook('laser_shotting_car', 'ament_prefix_path')
+[0.493s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/orangepi/ros2_workspace/school_competition/install/share/laser_shotting_car/hook/ament_prefix_path.ps1'
+[0.494s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment descriptor '/home/orangepi/ros2_workspace/school_competition/install/share/laser_shotting_car/hook/ament_prefix_path.dsv'
+[0.495s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/orangepi/ros2_workspace/school_competition/install/share/laser_shotting_car/hook/ament_prefix_path.sh'
+[0.497s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.497s] [34mcolcon.colcon_core.shell[0m [1;30mDEBUG[0m [32mSkip shell extension 'dsv' for command environment[0m
+[0.510s] [34mcolcon.colcon_core.event_handler.log_command[0m [1;30mDEBUG[0m [32mInvoking command in '/home/orangepi/ros2_workspace/school_competition/build/base': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/root/lanhailidar_ros_ws/install/scan_subscriber:/opt/ros/humble /usr/bin/cmake --build /home/orangepi/ros2_workspace/school_competition/build/base -- -j8 -l8[0m
+[0.970s] [34mcolcon.colcon_core.task.python.build[0m [1;30mINFO[0m Building Python package in '/home/orangepi/ros2_workspace/school_competition/src/car_t265'
+[0.970s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.970s] [34mcolcon.colcon_core.shell[0m [1;30mDEBUG[0m [32mSkip shell extension 'dsv' for command environment[0m
+[1.451s] [34mcolcon.colcon_core.task.python.build[0m [1;30mINFO[0m Building Python package in '/home/orangepi/ros2_workspace/school_competition/src/laser_shotting_car'
+[1.453s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.453s] [34mcolcon.colcon_core.shell[0m [1;30mDEBUG[0m [32mSkip shell extension 'dsv' for command environment[0m
+[1.485s] [34mcolcon.colcon_core.event_handler.log_command[0m [1;30mDEBUG[0m [32mInvoked command in '/home/orangepi/ros2_workspace/school_competition/build/base' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/root/lanhailidar_ros_ws/install/scan_subscriber:/opt/ros/humble /usr/bin/cmake --build /home/orangepi/ros2_workspace/school_competition/build/base -- -j8 -l8[0m
+[1.502s] [34mcolcon.colcon_core.event_handler.log_command[0m [1;30mDEBUG[0m [32mInvoking command in '/home/orangepi/ros2_workspace/school_competition/build/base': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/root/lanhailidar_ros_ws/install/scan_subscriber:/opt/ros/humble /usr/bin/cmake --install /home/orangepi/ros2_workspace/school_competition/build/base[0m
+[1.656s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m create_environment_scripts_only(base)
+[1.679s] [34mcolcon.colcon_core.event_handler.log_command[0m [1;30mDEBUG[0m [32mInvoked command in '/home/orangepi/ros2_workspace/school_competition/build/base' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/root/lanhailidar_ros_ws/install/scan_subscriber:/opt/ros/humble /usr/bin/cmake --install /home/orangepi/ros2_workspace/school_competition/build/base[0m
+[1.686s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/orangepi/ros2_workspace/school_competition/install' for CMake module files
+[1.691s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/orangepi/ros2_workspace/school_competition/install' for CMake config files
+[1.700s] [34mcolcon.colcon_core.shell[0m [1;30mLevel 1[0m create_environment_hook('base', 'cmake_prefix_path')
+[1.701s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/orangepi/ros2_workspace/school_competition/install/share/base/hook/cmake_prefix_path.ps1'
+[1.704s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment descriptor '/home/orangepi/ros2_workspace/school_competition/install/share/base/hook/cmake_prefix_path.dsv'
+[1.710s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/orangepi/ros2_workspace/school_competition/install/share/base/hook/cmake_prefix_path.sh'
+[1.714s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/orangepi/ros2_workspace/school_competition/install/lib'
+[1.715s] [34mcolcon.colcon_core.shell[0m [1;30mLevel 1[0m create_environment_hook('base', 'ld_library_path_lib')
+[1.717s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/orangepi/ros2_workspace/school_competition/install/share/base/hook/ld_library_path_lib.ps1'
+[1.719s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment descriptor '/home/orangepi/ros2_workspace/school_competition/install/share/base/hook/ld_library_path_lib.dsv'
+[1.721s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/orangepi/ros2_workspace/school_competition/install/share/base/hook/ld_library_path_lib.sh'
+[1.723s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/orangepi/ros2_workspace/school_competition/install/bin'
+[1.723s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/orangepi/ros2_workspace/school_competition/install/lib/pkgconfig/base.pc'
+[1.725s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/orangepi/ros2_workspace/school_competition/install/lib/python3.10/site-packages'
+[1.727s] [34mcolcon.colcon_core.shell[0m [1;30mLevel 1[0m create_environment_hook('base', 'pythonpath')
+[1.729s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/orangepi/ros2_workspace/school_competition/install/share/base/hook/pythonpath.ps1'
+[1.732s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment descriptor '/home/orangepi/ros2_workspace/school_competition/install/share/base/hook/pythonpath.dsv'
+[1.734s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/orangepi/ros2_workspace/school_competition/install/share/base/hook/pythonpath.sh'
+[1.737s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/orangepi/ros2_workspace/school_competition/install/bin'
+[1.739s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/orangepi/ros2_workspace/school_competition/install/share/base/package.ps1'
+[1.745s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package descriptor '/home/orangepi/ros2_workspace/school_competition/install/share/base/package.dsv'
+[1.751s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/orangepi/ros2_workspace/school_competition/install/share/base/package.sh'
+[1.758s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/orangepi/ros2_workspace/school_competition/install/share/base/package.bash'
+[1.769s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/orangepi/ros2_workspace/school_competition/install/share/base/package.zsh'
+[1.775s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m create_file_with_runtime_dependencies(/home/orangepi/ros2_workspace/school_competition/install/share/colcon-core/packages/base)
+[1.778s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m create_environment_scripts_only(base)
+[1.780s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/orangepi/ros2_workspace/school_competition/install' for CMake module files
+[1.785s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/orangepi/ros2_workspace/school_competition/install' for CMake config files
+[1.790s] [34mcolcon.colcon_core.shell[0m [1;30mLevel 1[0m create_environment_hook('base', 'cmake_prefix_path')
+[1.791s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/orangepi/ros2_workspace/school_competition/install/share/base/hook/cmake_prefix_path.ps1'
+[1.796s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment descriptor '/home/orangepi/ros2_workspace/school_competition/install/share/base/hook/cmake_prefix_path.dsv'
+[1.802s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/orangepi/ros2_workspace/school_competition/install/share/base/hook/cmake_prefix_path.sh'
+[1.803s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/orangepi/ros2_workspace/school_competition/install/lib'
+[1.803s] [34mcolcon.colcon_core.shell[0m [1;30mLevel 1[0m create_environment_hook('base', 'ld_library_path_lib')
+[1.804s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/orangepi/ros2_workspace/school_competition/install/share/base/hook/ld_library_path_lib.ps1'
+[1.805s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment descriptor '/home/orangepi/ros2_workspace/school_competition/install/share/base/hook/ld_library_path_lib.dsv'
+[1.806s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/orangepi/ros2_workspace/school_competition/install/share/base/hook/ld_library_path_lib.sh'
+[1.809s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/orangepi/ros2_workspace/school_competition/install/bin'
+[1.810s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/orangepi/ros2_workspace/school_competition/install/lib/pkgconfig/base.pc'
+[1.812s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/orangepi/ros2_workspace/school_competition/install/lib/python3.10/site-packages'
+[1.812s] [34mcolcon.colcon_core.shell[0m [1;30mLevel 1[0m create_environment_hook('base', 'pythonpath')
+[1.814s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/orangepi/ros2_workspace/school_competition/install/share/base/hook/pythonpath.ps1'
+[1.816s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment descriptor '/home/orangepi/ros2_workspace/school_competition/install/share/base/hook/pythonpath.dsv'
+[1.822s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/orangepi/ros2_workspace/school_competition/install/share/base/hook/pythonpath.sh'
+[1.827s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/orangepi/ros2_workspace/school_competition/install/bin'
+[1.830s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/orangepi/ros2_workspace/school_competition/install/share/base/package.ps1'
+[1.834s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package descriptor '/home/orangepi/ros2_workspace/school_competition/install/share/base/package.dsv'
+[1.839s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/orangepi/ros2_workspace/school_competition/install/share/base/package.sh'
+[1.840s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/orangepi/ros2_workspace/school_competition/install/share/base/package.bash'
+[1.843s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/orangepi/ros2_workspace/school_competition/install/share/base/package.zsh'
+[1.844s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m create_file_with_runtime_dependencies(/home/orangepi/ros2_workspace/school_competition/install/share/colcon-core/packages/base)
+[1.845s] [34mcolcon.colcon_ros.task.ament_cmake.build[0m [1;30mINFO[0m Building ROS package in '/home/orangepi/ros2_workspace/school_competition/src/lanhailidar_ros_ws/src/bluesea-ros2-main/bluesea-ros2' with build type 'ament_cmake'
+[1.846s] [34mcolcon.colcon_cmake.task.cmake.build[0m [1;30mINFO[0m Building CMake package in '/home/orangepi/ros2_workspace/school_competition/src/lanhailidar_ros_ws/src/bluesea-ros2-main/bluesea-ros2'
+[1.846s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.846s] [34mcolcon.colcon_core.shell[0m [1;30mDEBUG[0m [32mSkip shell extension 'dsv' for command environment[0m
+[1.914s] [34mcolcon.colcon_core.event_handler.log_command[0m [1;30mDEBUG[0m [32mInvoking command in '/home/orangepi/ros2_workspace/school_competition/build/bluesea2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/root/lanhailidar_ros_ws/install/scan_subscriber:/opt/ros/humble PYTHONPATH=/home/orangepi/ros2_workspace/school_competition/install/lib/python3.10/site-packages:/home/orangepi/ros2_workspace/school_competition/install/local/lib/python3.10/dist-packages:/root/lanhailidar_ros_ws/install/scan_subscriber/lib/python3.10/site-packages:/root/lanhailidar_ros_ws/install/base/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages /usr/bin/cmake --build /home/orangepi/ros2_workspace/school_competition/build/bluesea2 -- -j8 -l8[0m
+[2.091s] [34mcolcon.colcon_core.event_handler.log_command[0m [1;30mDEBUG[0m [32mInvoking command in '/home/orangepi/ros2_workspace/school_competition/src/laser_shotting_car': PYTHONPATH=/home/orangepi/ros2_workspace/school_competition/build/laser_shotting_car/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/orangepi/ros2_workspace/school_competition/install/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/laser_shotting_car build --build-base /home/orangepi/ros2_workspace/school_competition/build/laser_shotting_car/build install --record /home/orangepi/ros2_workspace/school_competition/build/laser_shotting_car/install.log --single-version-externally-managed install_data[0m
+[2.118s] [34mcolcon.colcon_core.event_handler.log_command[0m [1;30mDEBUG[0m [32mInvoking command in '/home/orangepi/ros2_workspace/school_competition/src/car_t265': PYTHONPATH=/home/orangepi/ros2_workspace/school_competition/build/car_t265/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/orangepi/ros2_workspace/school_competition/install/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/car_t265 build --build-base /home/orangepi/ros2_workspace/school_competition/build/car_t265/build install --record /home/orangepi/ros2_workspace/school_competition/build/car_t265/install.log --single-version-externally-managed install_data[0m
+[2.234s] [34mcolcon.colcon_core.event_handler.log_command[0m [1;30mDEBUG[0m [32mInvoked command in '/home/orangepi/ros2_workspace/school_competition/build/bluesea2' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/root/lanhailidar_ros_ws/install/scan_subscriber:/opt/ros/humble PYTHONPATH=/home/orangepi/ros2_workspace/school_competition/install/lib/python3.10/site-packages:/home/orangepi/ros2_workspace/school_competition/install/local/lib/python3.10/dist-packages:/root/lanhailidar_ros_ws/install/scan_subscriber/lib/python3.10/site-packages:/root/lanhailidar_ros_ws/install/base/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages /usr/bin/cmake --build /home/orangepi/ros2_workspace/school_competition/build/bluesea2 -- -j8 -l8[0m
+[2.237s] [34mcolcon.colcon_core.event_handler.log_command[0m [1;30mDEBUG[0m [32mInvoking command in '/home/orangepi/ros2_workspace/school_competition/build/bluesea2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/root/lanhailidar_ros_ws/install/scan_subscriber:/opt/ros/humble PYTHONPATH=/home/orangepi/ros2_workspace/school_competition/install/lib/python3.10/site-packages:/home/orangepi/ros2_workspace/school_competition/install/local/lib/python3.10/dist-packages:/root/lanhailidar_ros_ws/install/scan_subscriber/lib/python3.10/site-packages:/root/lanhailidar_ros_ws/install/base/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages /usr/bin/cmake --install /home/orangepi/ros2_workspace/school_competition/build/bluesea2[0m
+[2.252s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m create_environment_scripts_only(bluesea2)
+[2.255s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/orangepi/ros2_workspace/school_competition/install' for CMake module files
+[2.256s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/orangepi/ros2_workspace/school_competition/install' for CMake config files
+[2.258s] [34mcolcon.colcon_core.shell[0m [1;30mLevel 1[0m create_environment_hook('bluesea2', 'cmake_prefix_path')
+[2.258s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/orangepi/ros2_workspace/school_competition/install/share/bluesea2/hook/cmake_prefix_path.ps1'
+[2.259s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment descriptor '/home/orangepi/ros2_workspace/school_competition/install/share/bluesea2/hook/cmake_prefix_path.dsv'
+[2.255s] [34mcolcon.colcon_core.event_handler.log_command[0m [1;30mDEBUG[0m [32mInvoked command in '/home/orangepi/ros2_workspace/school_competition/build/bluesea2' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/root/lanhailidar_ros_ws/install/scan_subscriber:/opt/ros/humble PYTHONPATH=/home/orangepi/ros2_workspace/school_competition/install/lib/python3.10/site-packages:/home/orangepi/ros2_workspace/school_competition/install/local/lib/python3.10/dist-packages:/root/lanhailidar_ros_ws/install/scan_subscriber/lib/python3.10/site-packages:/root/lanhailidar_ros_ws/install/base/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages /usr/bin/cmake --install /home/orangepi/ros2_workspace/school_competition/build/bluesea2[0m
+[2.260s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/orangepi/ros2_workspace/school_competition/install/share/bluesea2/hook/cmake_prefix_path.sh'
+[2.264s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/orangepi/ros2_workspace/school_competition/install/lib'
+[2.264s] [34mcolcon.colcon_core.shell[0m [1;30mLevel 1[0m create_environment_hook('bluesea2', 'ld_library_path_lib')
+[2.265s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/orangepi/ros2_workspace/school_competition/install/share/bluesea2/hook/ld_library_path_lib.ps1'
+[2.266s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment descriptor '/home/orangepi/ros2_workspace/school_competition/install/share/bluesea2/hook/ld_library_path_lib.dsv'
+[2.267s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/orangepi/ros2_workspace/school_competition/install/share/bluesea2/hook/ld_library_path_lib.sh'
+[2.268s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/orangepi/ros2_workspace/school_competition/install/bin'
+[2.268s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/orangepi/ros2_workspace/school_competition/install/lib/pkgconfig/bluesea2.pc'
+[2.268s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/orangepi/ros2_workspace/school_competition/install/lib/python3.10/site-packages'
+[2.268s] [34mcolcon.colcon_core.shell[0m [1;30mLevel 1[0m create_environment_hook('bluesea2', 'pythonpath')
+[2.269s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/orangepi/ros2_workspace/school_competition/install/share/bluesea2/hook/pythonpath.ps1'
+[2.270s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment descriptor '/home/orangepi/ros2_workspace/school_competition/install/share/bluesea2/hook/pythonpath.dsv'
+[2.271s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/orangepi/ros2_workspace/school_competition/install/share/bluesea2/hook/pythonpath.sh'
+[2.274s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/orangepi/ros2_workspace/school_competition/install/bin'
+[2.276s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/orangepi/ros2_workspace/school_competition/install/share/bluesea2/package.ps1'
+[2.280s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package descriptor '/home/orangepi/ros2_workspace/school_competition/install/share/bluesea2/package.dsv'
+[2.283s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/orangepi/ros2_workspace/school_competition/install/share/bluesea2/package.sh'
+[2.287s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/orangepi/ros2_workspace/school_competition/install/share/bluesea2/package.bash'
+[2.289s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/orangepi/ros2_workspace/school_competition/install/share/bluesea2/package.zsh'
+[2.291s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m create_file_with_runtime_dependencies(/home/orangepi/ros2_workspace/school_competition/install/share/colcon-core/packages/bluesea2)
+[2.300s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m create_environment_scripts_only(bluesea2)
+[2.301s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/orangepi/ros2_workspace/school_competition/install' for CMake module files
+[2.301s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/orangepi/ros2_workspace/school_competition/install' for CMake config files
+[2.303s] [34mcolcon.colcon_core.shell[0m [1;30mLevel 1[0m create_environment_hook('bluesea2', 'cmake_prefix_path')
+[2.303s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/orangepi/ros2_workspace/school_competition/install/share/bluesea2/hook/cmake_prefix_path.ps1'
+[2.304s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment descriptor '/home/orangepi/ros2_workspace/school_competition/install/share/bluesea2/hook/cmake_prefix_path.dsv'
+[2.307s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/orangepi/ros2_workspace/school_competition/install/share/bluesea2/hook/cmake_prefix_path.sh'
+[2.309s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/orangepi/ros2_workspace/school_competition/install/lib'
+[2.309s] [34mcolcon.colcon_core.shell[0m [1;30mLevel 1[0m create_environment_hook('bluesea2', 'ld_library_path_lib')
+[2.309s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/orangepi/ros2_workspace/school_competition/install/share/bluesea2/hook/ld_library_path_lib.ps1'
+[2.310s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment descriptor '/home/orangepi/ros2_workspace/school_competition/install/share/bluesea2/hook/ld_library_path_lib.dsv'
+[2.311s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/orangepi/ros2_workspace/school_competition/install/share/bluesea2/hook/ld_library_path_lib.sh'
+[2.313s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/orangepi/ros2_workspace/school_competition/install/bin'
+[2.314s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/orangepi/ros2_workspace/school_competition/install/lib/pkgconfig/bluesea2.pc'
+[2.315s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/orangepi/ros2_workspace/school_competition/install/lib/python3.10/site-packages'
+[2.316s] [34mcolcon.colcon_core.shell[0m [1;30mLevel 1[0m create_environment_hook('bluesea2', 'pythonpath')
+[2.318s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/orangepi/ros2_workspace/school_competition/install/share/bluesea2/hook/pythonpath.ps1'
+[2.320s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment descriptor '/home/orangepi/ros2_workspace/school_competition/install/share/bluesea2/hook/pythonpath.dsv'
+[2.323s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/orangepi/ros2_workspace/school_competition/install/share/bluesea2/hook/pythonpath.sh'
+[2.334s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/orangepi/ros2_workspace/school_competition/install/bin'
+[2.337s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/orangepi/ros2_workspace/school_competition/install/share/bluesea2/package.ps1'
+[2.342s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package descriptor '/home/orangepi/ros2_workspace/school_competition/install/share/bluesea2/package.dsv'
+[2.348s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/orangepi/ros2_workspace/school_competition/install/share/bluesea2/package.sh'
+[2.352s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/orangepi/ros2_workspace/school_competition/install/share/bluesea2/package.bash'
+[2.355s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/orangepi/ros2_workspace/school_competition/install/share/bluesea2/package.zsh'
+[2.362s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m create_file_with_runtime_dependencies(/home/orangepi/ros2_workspace/school_competition/install/share/colcon-core/packages/bluesea2)
+[2.567s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/orangepi/ros2_workspace/school_competition/install' for CMake module files
+[2.568s] [34mcolcon.colcon_core.event_handler.log_command[0m [1;30mDEBUG[0m [32mInvoked command in '/home/orangepi/ros2_workspace/school_competition/src/laser_shotting_car' returned '0': PYTHONPATH=/home/orangepi/ros2_workspace/school_competition/build/laser_shotting_car/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/orangepi/ros2_workspace/school_competition/install/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/laser_shotting_car build --build-base /home/orangepi/ros2_workspace/school_competition/build/laser_shotting_car/build install --record /home/orangepi/ros2_workspace/school_competition/build/laser_shotting_car/install.log --single-version-externally-managed install_data[0m
+[2.568s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/orangepi/ros2_workspace/school_competition/install' for CMake config files
+[2.570s] [34mcolcon.colcon_core.shell[0m [1;30mLevel 1[0m create_environment_hook('laser_shotting_car', 'cmake_prefix_path')
+[2.570s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/orangepi/ros2_workspace/school_competition/install/share/laser_shotting_car/hook/cmake_prefix_path.ps1'
+[2.571s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment descriptor '/home/orangepi/ros2_workspace/school_competition/install/share/laser_shotting_car/hook/cmake_prefix_path.dsv'
+[2.578s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/orangepi/ros2_workspace/school_competition/install/share/laser_shotting_car/hook/cmake_prefix_path.sh'
+[2.579s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/orangepi/ros2_workspace/school_competition/install/lib'
+[2.580s] [34mcolcon.colcon_core.shell[0m [1;30mLevel 1[0m create_environment_hook('laser_shotting_car', 'ld_library_path_lib')
+[2.580s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/orangepi/ros2_workspace/school_competition/install/share/laser_shotting_car/hook/ld_library_path_lib.ps1'
+[2.599s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment descriptor '/home/orangepi/ros2_workspace/school_competition/install/share/laser_shotting_car/hook/ld_library_path_lib.dsv'
+[2.600s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/orangepi/ros2_workspace/school_competition/install/share/laser_shotting_car/hook/ld_library_path_lib.sh'
+[2.601s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/orangepi/ros2_workspace/school_competition/install/bin'
+[2.602s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/orangepi/ros2_workspace/school_competition/install/lib/pkgconfig/laser_shotting_car.pc'
+[2.602s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/orangepi/ros2_workspace/school_competition/install/lib/python3.10/site-packages'
+[2.602s] [34mcolcon.colcon_core.shell[0m [1;30mLevel 1[0m create_environment_hook('laser_shotting_car', 'pythonpath')
+[2.603s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/orangepi/ros2_workspace/school_competition/install/share/laser_shotting_car/hook/pythonpath.ps1'
+[2.604s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment descriptor '/home/orangepi/ros2_workspace/school_competition/install/share/laser_shotting_car/hook/pythonpath.dsv'
+[2.605s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/orangepi/ros2_workspace/school_competition/install/share/laser_shotting_car/hook/pythonpath.sh'
+[2.606s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/orangepi/ros2_workspace/school_competition/install/bin'
+[2.606s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m create_environment_scripts_only(laser_shotting_car)
+[2.607s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/orangepi/ros2_workspace/school_competition/install/share/laser_shotting_car/package.ps1'
+[2.608s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package descriptor '/home/orangepi/ros2_workspace/school_competition/install/share/laser_shotting_car/package.dsv'
+[2.609s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/orangepi/ros2_workspace/school_competition/install/share/laser_shotting_car/package.sh'
+[2.609s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/orangepi/ros2_workspace/school_competition/install/share/laser_shotting_car/package.bash'
+[2.610s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/orangepi/ros2_workspace/school_competition/install/share/laser_shotting_car/package.zsh'
+[2.611s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m create_file_with_runtime_dependencies(/home/orangepi/ros2_workspace/school_competition/install/share/colcon-core/packages/laser_shotting_car)
+[2.657s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/orangepi/ros2_workspace/school_competition/install' for CMake module files
+[2.658s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/orangepi/ros2_workspace/school_competition/install' for CMake config files
+[2.659s] [34mcolcon.colcon_core.event_handler.log_command[0m [1;30mDEBUG[0m [32mInvoked command in '/home/orangepi/ros2_workspace/school_competition/src/car_t265' returned '0': PYTHONPATH=/home/orangepi/ros2_workspace/school_competition/build/car_t265/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/orangepi/ros2_workspace/school_competition/install/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/car_t265 build --build-base /home/orangepi/ros2_workspace/school_competition/build/car_t265/build install --record /home/orangepi/ros2_workspace/school_competition/build/car_t265/install.log --single-version-externally-managed install_data[0m
+[2.661s] [34mcolcon.colcon_core.shell[0m [1;30mLevel 1[0m create_environment_hook('car_t265', 'cmake_prefix_path')
+[2.661s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/orangepi/ros2_workspace/school_competition/install/share/car_t265/hook/cmake_prefix_path.ps1'
+[2.662s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment descriptor '/home/orangepi/ros2_workspace/school_competition/install/share/car_t265/hook/cmake_prefix_path.dsv'
+[2.663s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/orangepi/ros2_workspace/school_competition/install/share/car_t265/hook/cmake_prefix_path.sh'
+[2.664s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/orangepi/ros2_workspace/school_competition/install/lib'
+[2.664s] [34mcolcon.colcon_core.shell[0m [1;30mLevel 1[0m create_environment_hook('car_t265', 'ld_library_path_lib')
+[2.664s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/orangepi/ros2_workspace/school_competition/install/share/car_t265/hook/ld_library_path_lib.ps1'
+[2.665s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment descriptor '/home/orangepi/ros2_workspace/school_competition/install/share/car_t265/hook/ld_library_path_lib.dsv'
+[2.665s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/orangepi/ros2_workspace/school_competition/install/share/car_t265/hook/ld_library_path_lib.sh'
+[2.665s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/orangepi/ros2_workspace/school_competition/install/bin'
+[2.666s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/orangepi/ros2_workspace/school_competition/install/lib/pkgconfig/car_t265.pc'
+[2.666s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/orangepi/ros2_workspace/school_competition/install/lib/python3.10/site-packages'
+[2.666s] [34mcolcon.colcon_core.shell[0m [1;30mLevel 1[0m create_environment_hook('car_t265', 'pythonpath')
+[2.666s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/orangepi/ros2_workspace/school_competition/install/share/car_t265/hook/pythonpath.ps1'
+[2.667s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment descriptor '/home/orangepi/ros2_workspace/school_competition/install/share/car_t265/hook/pythonpath.dsv'
+[2.667s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating environment hook '/home/orangepi/ros2_workspace/school_competition/install/share/car_t265/hook/pythonpath.sh'
+[2.668s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/orangepi/ros2_workspace/school_competition/install/bin'
+[2.668s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m create_environment_scripts_only(car_t265)
+[2.669s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/orangepi/ros2_workspace/school_competition/install/share/car_t265/package.ps1'
+[2.670s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package descriptor '/home/orangepi/ros2_workspace/school_competition/install/share/car_t265/package.dsv'
+[2.670s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/orangepi/ros2_workspace/school_competition/install/share/car_t265/package.sh'
+[2.671s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/orangepi/ros2_workspace/school_competition/install/share/car_t265/package.bash'
+[2.671s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/orangepi/ros2_workspace/school_competition/install/share/car_t265/package.zsh'
+[2.672s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m create_file_with_runtime_dependencies(/home/orangepi/ros2_workspace/school_competition/install/share/colcon-core/packages/car_t265)
+[2.672s] [34mcolcon.colcon_parallel_executor.executor.parallel[0m [1;30mDEBUG[0m [32mclosing loop[0m
+[2.673s] [34mcolcon.colcon_parallel_executor.executor.parallel[0m [1;30mDEBUG[0m [32mloop closed[0m
+[2.673s] [34mcolcon.colcon_parallel_executor.executor.parallel[0m [1;30mDEBUG[0m [32mrun_until_complete finished with '0'[0m
+[2.673s] [34mcolcon.colcon_core.event_reactor[0m [1;30mDEBUG[0m [32mjoining thread[0m
+[2.698s] [34mcolcon.colcon_core.plugin_system[0m [1;30mINFO[0m Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[2.699s] [34mcolcon.colcon_core.plugin_system[0m [1;30mINFO[0m Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[2.699s] [34mcolcon.colcon_notification.desktop_notification[0m [1;30mINFO[0m Sending desktop notification using 'notify2'
+[2.720s] [34mcolcon.colcon_core.event_reactor[0m [1;30mDEBUG[0m [32mjoined thread[0m
+[2.720s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix script '/home/orangepi/ros2_workspace/school_competition/install/local_setup.ps1'
+[2.722s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix util module '/home/orangepi/ros2_workspace/school_competition/install/_local_setup_util_ps1.py'
+[2.724s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix chain script '/home/orangepi/ros2_workspace/school_competition/install/setup.ps1'
+[2.730s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix script '/home/orangepi/ros2_workspace/school_competition/install/local_setup.sh'
+[2.732s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix util module '/home/orangepi/ros2_workspace/school_competition/install/_local_setup_util_sh.py'
+[2.733s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix chain script '/home/orangepi/ros2_workspace/school_competition/install/setup.sh'
+[2.735s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix script '/home/orangepi/ros2_workspace/school_competition/install/local_setup.bash'
+[2.736s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix chain script '/home/orangepi/ros2_workspace/school_competition/install/setup.bash'
+[2.738s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix script '/home/orangepi/ros2_workspace/school_competition/install/local_setup.zsh'
+[2.739s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix chain script '/home/orangepi/ros2_workspace/school_competition/install/setup.zsh'

@@ -1,0 +1,6 @@
+{
+  "package_name": "base",
+  "non_idl_tuples": [
+    "/home/orangepi/ros2_workspace/school_competition/src/lanhailidar_ros_ws/src/bluesea-ros2-main/base:srv/Control.srv"
+  ]
+}
