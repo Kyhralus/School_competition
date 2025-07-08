@@ -1,9 +1,10 @@
 import rclpy
 from rclpy.node import Node
+from std_srvs.srv import Empty  # 标准空请求服务
 from std_msgs.msg import String
 import time
 from typing import Union, Optional
-from periphery import PWM  # 导入periphery的PWM库
+from periphery import PWM
 
 class Servo:
     """ 舵机驱动类 """
@@ -80,7 +81,7 @@ class PID:
 
 
 class GimbalControlNode(Node):
-    """ 云台控制节点：订阅String类型误差话题，控制舵机 """
+    """ 云台控制节点：提供服务重置角度，接收误差话题控制舵机 """
     def __init__(self):
         super().__init__('gimbal_control_node')
         
@@ -95,7 +96,7 @@ class GimbalControlNode(Node):
                 ('pitch.pulse_max', 2.5),
                 ('pitch.angle_min', 30.0),
                 ('pitch.angle_max', 150.0),
-                ('pitch.reverse', False),
+                ('pitch.reverse', True),
                 
                 ('yaw.pwmchip', 4),
                 ('yaw.channel', 0),
@@ -106,12 +107,12 @@ class GimbalControlNode(Node):
                 ('yaw.angle_max', 150.0),
                 ('yaw.reverse', False),
                 
-                ('pid.pitch_p', 0.27),
-                ('pid.pitch_i', 0.001),
-                ('pid.pitch_d', 0.1),
-                ('pid.yaw_p', 0.27),
-                ('pid.yaw_i', 0.001),
-                ('pid.yaw_d', 0.1),
+                ('pid.pitch_p', 0.0027),
+                ('pid.pitch_i', 0.00),
+                ('pid.pitch_d', 0.0001),
+                ('pid.yaw_p', 0.0027),
+                ('pid.yaw_i', 0.00),
+                ('pid.yaw_d', 0.0001),
             ]
         )
         
@@ -156,13 +157,40 @@ class GimbalControlNode(Node):
         time.sleep(1)
         self.get_logger().info("Gimbal initialized.")
         
-        # 4. 订阅String类型误差话题
+        # 4. 创建服务（新增）
+        self.reset_service = self.create_service(
+            Empty,
+            'reset_gimbal',
+            self.reset_callback
+        )
+        
+        # 5. 保留订阅（可选，根据需求决定是否保留）
         self.error_sub = self.create_subscription(
             String,
             'gimbal_error',
             self.error_callback,
             10
         )
+    
+    def reset_callback(self, request, response):
+        """ 服务回调：重置云台角度到初始位置 """
+        try:
+            # 重置角度到初始位置
+            self.pitch_servo.set_angle(90.0)
+            self.yaw_servo.set_angle(90.0)
+            
+            # 重置PID控制器
+            self.pid_pitch.error_sum = 0.0
+            self.pid_pitch.last_error = 0.0
+            self.pid_yaw.error_sum = 0.0
+            self.pid_yaw.last_error = 0.0
+            
+            self.get_logger().info("Gimbal reset to initial position")
+            return response
+            
+        except Exception as e:
+            self.get_logger().error(f"Failed to reset gimbal: {e}")
+            return response
     
     def error_callback(self, msg: String) -> None:
         """ 解析String消息并更新云台 """

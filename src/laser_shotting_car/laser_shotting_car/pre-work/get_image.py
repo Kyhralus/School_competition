@@ -11,7 +11,7 @@ def capture_images():
             return
         
         # 尝试打开摄像头
-        cap = cv2.VideoCapture(0)
+        cap = cv2.VideoCapture(2)
         if not cap.isOpened():
             print("错误：无法打开摄像头")
             print("可能原因：")
@@ -36,7 +36,7 @@ def capture_images():
             if not ret:
                 print("无法获取帧")
                 break
-            # frame = cv2.circle(frame, (320, 240), 5, (0, 255, 255), -1)
+            frame = cv2.circle(frame, (160, 120), 3, (0, 255, 255), -1)
             cv2.imshow('Camera View', frame)
             
             key = cv2.waitKey(1)
@@ -61,7 +61,7 @@ def capture_images():
                         img_count += 1
                     else:
                         print(f"保存失败: {filename}")
-                    
+                    frame = cv2.circle(frame, (320, 240), 5, (0, 255, 255), -1)
                     cv2.imshow('Camera View', frame)
                     if cv2.waitKey(1) == 27:
                         break

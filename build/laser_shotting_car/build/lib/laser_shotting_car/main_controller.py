@@ -7,6 +7,7 @@ from geometry_msgs.msg import PoseStamped
 import math
 from tf_transformations import euler_from_quaternion
 import time
+from std_srvs.srv import Empty  # 新增：导入服务模块
 
 class MainController(Node):
     def __init__(self):
@@ -18,12 +19,9 @@ class MainController(Node):
         # 订阅各模块结果话题
         self.lidar_sub = self.create_subscription(String, 'lidar_result', self.lidar_result_callback, 10)
         self.yolov8_sub = self.create_subscription(String, 'yolov8_result', self.yolov8_result_callback, 10)
-        # self.line_tracking_sub = self.create_subscription(String, 'line_tracking_result', self.line_tracking_result_callback, 10)
         self.circle_laser_sub = self.create_subscription(String, 'circle_laser_result', self.circle_laser_result_callback, 10)
         self.t265_sub = self.create_subscription(PoseStamped, 't265_publisher/pose', self.t265_pose_callback, 10)
-        # 新增：订阅 target_position 话题
         self.target_sub = self.create_subscription(PoseStamped, 'target_position', self.target_callback, 10)
-        # 存储当前等待的指令
         self.current_command = None
 
         # 创建串口数据接收发布者
@@ -39,12 +37,21 @@ class MainController(Node):
         self.task_lists = ['00','r01','r02','05','r11','12','r15','r21','r25','r31','r35','r41','r45']
 
         # 坐标系
-        self.origin = (None,None, None) # 全局坐标系
-        self.cup_lidar = (None,None) # 杯子坐标系
-        self.cup_map = (None,None)  # 杯子全局坐标系
-        self.target = (None,None) # 目标坐标
-        self.roads = [(100,0),(100,-100),(0,-100),(0,0)] # 循环测试
+        self.origin = (None,None, None)
+        self.cup_lidar = (None,None)
+        self.cup_map = (None,None)
+        self.target = (None,None)
+        self.roads = [(100,0),(100,-100),(0,-100),(0,0)]
         self.target_index = 0
+
+        # 新增：创建云台重置服务客户端
+        self.gimbal_reset_client = self.create_client(Empty, 'reset_gimbal')
+        # 单次检查服务是否就绪
+        if not self.gimbal_reset_client.service_is_ready():
+            self.get_logger().warn("云台重置服务未就绪（启动时检查），后续调用可能失败")
+
+        # 新增：创建定时器
+        self.timer = self.create_timer(0.1, self.check_circle_laser_command)  # 每 0.1 秒检查一次
 
     def receive_serial_data(self):
         while rclpy.ok():
@@ -73,9 +80,6 @@ class MainController(Node):
         try:
             with self.ser_lock:
                 self.ser.write(msg.data.encode('utf-8'))
-            # if msg.data[-1] != '\r':
-            #     self.ser.write('\r'.encode('utf-8'))
-            # if msg.data[1] != '3':
             self.get_logger().info(f"发送数据到串口: {msg.data}")
         except Exception as e:
             self.get_logger().error(f"串口发送错误: {e}")
@@ -86,14 +90,12 @@ class MainController(Node):
             self.get_logger().info(f"------ 任务一：发送杯子位置 ------")
             self.get_logger().info(f"杯子的位置: {msg.data}")
             parts = msg.data.split(',')
-            # 检查分割后的列表长度，避免索引越界
             if len(parts) >= 5:
                 try:
                     self.cup_lidar = (int(parts[4]), int(parts[3]))
                     self.get_logger().info(f"杯子雷达位置: {self.cup_lidar}")
                     self.cup_map = (int(self.cup_lidar[0]), int(self.cup_lidar[1]))
                     self.get_logger().info(f"杯子地图位置: {self.cup_map}")
-                    # 确保分割后的列表有足够元素
                     if len(parts) >= 2:
                         send_msg = String()
                         send_msg.data = f"@1,{parts[1]},{parts[2]}\r"
@@ -143,21 +145,20 @@ class MainController(Node):
             self.current_command = None
 
     # ========== 任务三 ========
-
-
     def circle_laser_result_callback(self, msg):
-        if self.current_command == 'r41':  # 识别数字
-            self.get_logger().info(f"------ 任务四：激光打靶 ------")
-            self.get_logger().info(f"激光打靶误差: {msg.data}")
-            send_msg = String()
-            send_msg.data = msg.data
-            self.serial_send_callback(send_msg)
-        elif self.current_command == 'r45': #
-            self.get_logger().info(f"结束激光打靶")
-            self.current_command = None
+        # 此回调函数仅在接收到消息时触发，主逻辑移到定时器回调中
+        pass
 
+    def check_circle_laser_command(self):
+        # 从订阅的话题中获取最新消息，这里假设存在一个变量存储最新消息
+        # 实际使用中需要根据具体情况修改
+        if self.current_command == 'r41':  # 激光打靶前先重置云台角度
+            self.get_logger().info(f"------ 任务四：激光打靶，先重置云台角度 ------")
+            self.reset_gimbal_angle()  # 调用云台重置函数
+            self.current_command = None
+        
     def handle_special_command(self, command):
-            self.get_logger().warn("未知指令")
+        self.get_logger().warn("未知指令")
 
     def t265_pose_callback(self, msg: PoseStamped):
         # 保存坐标
@@ -182,9 +183,6 @@ class MainController(Node):
             yaw_deg = math.degrees(yaw)
             self.origin = (int(100*msg.pose.position.x),int(100*msg.pose.position.y),yaw_deg)
             self.get_logger().info(f"保存 C 点坐标: {self.origin}")
-            # send_msg = String()
-            # send_msg.data = '@3,' + f"{self.origin[0]}," + f"{self.origin[1]}" + '\r'
-            # self.serial_send_callback(send_msg)
             self.current_command = None
         if self.current_command == 'r01':
             msg = String()
@@ -234,14 +232,27 @@ class MainController(Node):
             self.serial_send_callback(send_msg)
             self.current_command = None
 
-        # 再处理目标点相同只发一次的逻辑
-        # if self.target != (msg.pose.position.x, msg.pose.position.y):
-        #     self.target = (msg.pose.position.x, msg.pose.position.y)
-        #     send_msg = String()
-        #     send_msg.data = f"@2,{msg.pose.position.x:.2f},{msg.pose.position.y:.2f}\r"
-        #     self.serial_send_callback(send_msg)
-
-
+    # 新增：云台重置函数
+    def reset_gimbal_angle(self):
+        """调用reset_gimbal服务重置云台角度"""
+        # 调用前检查服务是否就绪
+        if not self.gimbal_reset_client.service_is_ready():
+            self.get_logger().error("云台重置服务未就绪，无法执行重置操作")
+            return
+        
+        # 创建空请求并异步调用服务
+        req = Empty.Request()
+        future = self.gimbal_reset_client.call_async(req)
+        
+        # 处理响应的回调函数
+        def handle_reset_response(future):
+            try:
+                future.result()  # 获取响应（空响应）
+                self.get_logger().info("云台角度已成功重置")
+            except Exception as e:
+                self.get_logger().error(f"云台重置失败: {e}")
+        
+        future.add_done_callback(handle_reset_response)
 
     def destroy_node(self):
         self.ser.close()

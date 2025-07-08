@@ -329,8 +329,8 @@ class VisionTrackingNode(Node):
                 
                 # 归一化误差
                 width, height = frame.shape[1], frame.shape[0]
-                err_pitch = (laser_y - target_y) / height * 10  # pitch控制垂直方向
-                err_yaw = (laser_x - target_x) / width * 10    # yaw控制水平方向
+                err_pitch = (laser_y - target_y)   # pitch控制垂直方向
+                err_yaw = (laser_x - target_x)    # yaw控制水平方向
                 
                 # 发布误差消息（格式："pitch_error,yaw_error"）
                 msg = String()

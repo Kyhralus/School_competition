@@ -52,7 +52,7 @@ class LidarProcessor(Node):
                      np.isfinite(np.array(msg.ranges))
         valid_angles = angles_rad[valid_mask]                      # 目标角度范围和距离范围内，各点的角度
         valid_ranges = np.array(msg.ranges)[valid_mask]            # 目标角度范围和距离范围内，各点的距离
-        valid_intensities = np.array(msg.intensity)[valid_mask]    # 目标角度范围和距离范围内，各点的强度
+        valid_intensities = np.array(msg.intensities)[valid_mask]    # 目标角度范围和距离范围内，各点的强度
         
         if not valid_ranges.size:
             self.get_logger().warning("没有有效距离数据")
@@ -61,7 +61,7 @@ class LidarProcessor(Node):
         # 转换为笛卡尔坐标
         x = valid_ranges * np.cos(valid_angles)
         y = valid_ranges * np.sin(valid_angles)
-        points = np.column_stack((x, y))
+        points = np.column_stack((x, y))   # 将两个一维数组（x 和 y）按列合并为一个二维数组，每行为一个坐标点
 
         # 简单聚类处理
         clusters = []

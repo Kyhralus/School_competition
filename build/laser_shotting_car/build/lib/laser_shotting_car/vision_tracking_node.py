@@ -329,18 +329,18 @@ class VisionTrackingNode(Node):
                 
                 # 归一化误差
                 width, height = frame.shape[1], frame.shape[0]
-                err_pitch = (laser_y - target_y) / height * 10  # pitch控制垂直方向
-                err_roll = (laser_x - target_x) / width * 10    # roll控制水平方向
+                err_pitch = (laser_y - target_y)   # pitch控制垂直方向
+                err_yaw = (laser_x - target_x)    # yaw控制水平方向
                 
-                # 发布误差消息（格式："pitch_error,roll_error"）
+                # 发布误差消息（格式："pitch_error,yaw_error"）
                 msg = String()
-                msg.data = f"{err_pitch:.6f},{err_roll:.6f}"  # 保留6位小数
+                msg.data = f"{err_pitch:.6f},{err_yaw:.6f}"  # 保留6位小数
                 self.error_pub.publish(msg)
                 
                 # 可视化
                 cv2.circle(frame, laser_point, 2, (0, 255, 0), -1)
                 cv2.circle(frame, target_point, 2, (0, 255, 255), -1)
-                cv2.putText(frame, f"Error: ({err_pitch:.2f}, {err_roll:.2f})", 
+                cv2.putText(frame, f"Error: ({err_pitch:.2f}, {err_yaw:.2f})", 
                            (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 255, 0), 2)
             
             # 显示结果

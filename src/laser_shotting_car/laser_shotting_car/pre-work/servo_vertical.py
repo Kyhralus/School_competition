@@ -67,13 +67,19 @@ if __name__ == "__main__":
     servo = Servo(pwmchip=3, channel=0, freq=50)  # 根据实际pwmchip和通道修改
     print("初始化水平舵机")
     try:
-        for angle in range(0, 100, 1):
-            servo.set_angle(angle)
-            print(f"Set angle: {angle}")
-            time.sleep(1)
-        for angle in range(100, -1, -1):
-            servo.set_angle(angle)
-            print(f"Set angle: {angle}")
-            time.sleep(1)
+        # for angle in range(0, 100, 1):
+        #     servo.set_angle(angle)
+        #     print(f"Set angle: {angle}")
+        #     time.sleep(1)
+        # for angle in range(100, -1, -1):
+        #     servo.set_angle(angle)
+        #     print(f"Set angle: {angle}")
+        #     time.sleep(1)
+        servo.set_angle(180)
+        time.sleep(5)
     finally:
         servo.close()
+
+'''
+30 -- 130直立 --- 
+'''

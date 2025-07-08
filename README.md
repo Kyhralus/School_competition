@@ -45,4 +45,11 @@ ros2 run laser_shotting_car circle_laser_detector
 . install/setup.bash 
 ros2 run car_t265 t265_publisher
 . install/setup.bash
-ros2 run car_t265 target_publisher# School_competition
+ros2 run car_t265 target_publisher
+
+
+# 打靶
+. install/setup.bash
+ros2 run laser_shotting_car gimbal_control_node
+. install/setup.bash
+ros2 run laser_shotting_car vision_tracking_node
