@@ -31,7 +31,7 @@ from periphery import PWM
 import time
 
 class Servo:
-    def __init__(self, pwmchip=1, channel=0, freq=50, pulse_min=0.5, pulse_max=2.5):
+    def __init__(self, pwmchip=1, channel=0, freq=50, pulse_min=0.5, pulse_max=2.5, duty_cycle=0):
         """
         pwmchip: PWM控制器编号
         channel: PWM通道编号
@@ -46,6 +46,7 @@ class Servo:
         self.period = 1000.0 / freq  # ms
         self.pwm.frequency = freq
         self.pwm.polarity = "normal"
+        self.pwm.duty_cycle = duty_cycle
         self.pwm.enable()
 
     def angle_to_duty(self, angle):
@@ -56,6 +57,7 @@ class Servo:
     def set_angle(self, angle):
         duty = self.angle_to_duty(angle)
         self.pwm.duty_cycle = duty
+        print("duty:",duty)
 
     def close(self):
         self.pwm.duty_cycle = 0
@@ -65,11 +67,11 @@ if __name__ == "__main__":
     servo = Servo(pwmchip=3, channel=0, freq=50)  # 根据实际pwmchip和通道修改
     print("初始化水平舵机")
     try:
-        for angle in range(0, 181, 30):
+        for angle in range(0, 100, 1):
             servo.set_angle(angle)
             print(f"Set angle: {angle}")
             time.sleep(1)
-        for angle in range(180, -1, -30):
+        for angle in range(100, -1, -1):
             servo.set_angle(angle)
             print(f"Set angle: {angle}")
             time.sleep(1)

@@ -42,7 +42,7 @@ class LidarProcessor(Node):
         max_angle_rad = np.deg2rad(self.max_angle_deg)
 
         # 计算角度
-        angles_rad = msg.angle_min + np.arange(len(msg.ranges)) * msg.angle_increment
+        angles_rad = msg.angle_min + np.arange(len(msg.ranges)) * msg.angle_increment   # 角度数组
 
         # 数据预处理
         valid_mask = (np.array(msg.ranges) >= self.min_distance) & \
@@ -50,9 +50,10 @@ class LidarProcessor(Node):
                      (angles_rad >= min_angle_rad) & \
                      (angles_rad <= max_angle_rad) & \
                      np.isfinite(np.array(msg.ranges))
-        valid_ranges = np.array(msg.ranges)[valid_mask]
-        valid_angles = angles_rad[valid_mask]
-
+        valid_angles = angles_rad[valid_mask]                      # 目标角度范围和距离范围内，各点的角度
+        valid_ranges = np.array(msg.ranges)[valid_mask]            # 目标角度范围和距离范围内，各点的距离
+        valid_intensities = np.array(msg.intensity)[valid_mask]    # 目标角度范围和距离范围内，各点的强度
+        
         if not valid_ranges.size:
             self.get_logger().warning("没有有效距离数据")
             return

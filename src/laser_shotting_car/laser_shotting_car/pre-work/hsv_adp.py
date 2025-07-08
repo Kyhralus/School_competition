@@ -2,9 +2,9 @@ import cv2
 import numpy as np
 
 def create_trackbars():
-    """创建HSV阈值调节滑动条"""
+    """创建HSV阈值和曝光调节滑动条"""
     cv2.namedWindow("Trackbars")
-    cv2.resizeWindow("Trackbars", 640, 240)
+    cv2.resizeWindow("Trackbars", 640, 360)  # 增大窗口以容纳更多滑动条
     
     # 创建HSV下限滑动条
     cv2.createTrackbar("H_min", "Trackbars", 0, 179, lambda x: x)
@@ -23,9 +23,13 @@ def create_trackbars():
     # 创建面积阈值滑动条
     cv2.createTrackbar("Min Area", "Trackbars", 100, 5000, lambda x: x)
     cv2.createTrackbar("Max Area", "Trackbars", 5000, 50000, lambda x: x)
+    
+    # 创建曝光调节滑动条（新增）
+    cv2.createTrackbar("Brightness", "Trackbars", 0, 100, lambda x: x)  # 亮度调节
+    cv2.createTrackbar("Contrast", "Trackbars", 100, 200, lambda x: x)  # 对比度调节
 
 def get_trackbar_values():
-    """获取滑动条当前值"""
+    """获取所有滑动条当前值"""
     h_min = cv2.getTrackbarPos("H_min", "Trackbars")
     s_min = cv2.getTrackbarPos("S_min", "Trackbars")
     v_min = cv2.getTrackbarPos("V_min", "Trackbars")
@@ -37,7 +41,17 @@ def get_trackbar_values():
     min_area = cv2.getTrackbarPos("Min Area", "Trackbars")
     max_area = cv2.getTrackbarPos("Max Area", "Trackbars")
     
-    return (h_min, s_min, v_min), (h_max, s_max, v_max), erode, dilate, min_area, max_area
+    # 获取曝光调节值（新增）
+    brightness = cv2.getTrackbarPos("Brightness", "Trackbars") - 50  # 范围：-50到50
+    contrast = cv2.getTrackbarPos("Contrast", "Trackbars") / 100.0  # 范围：1.0到2.0
+    
+    return (h_min, s_min, v_min), (h_max, s_max, v_max), erode, dilate, min_area, max_area, brightness, contrast
+
+def adjust_exposure(frame, brightness=0, contrast=1.0):
+    """调整图像亮度和对比度"""
+    # 应用线性变换：result = contrast * frame + brightness
+    adjusted = cv2.convertScaleAbs(frame, alpha=contrast, beta=brightness)
+    return adjusted
 
 def track_color(frame, lower_hsv, upper_hsv, erode, dilate, min_area, max_area):
     """追踪指定颜色的色块"""
@@ -106,7 +120,7 @@ def main():
     # 创建滑动条
     create_trackbars()
     
-    print("程序启动，使用滑动条调整HSV阈值追踪颜色")
+    print("程序启动，使用滑动条调整HSV阈值和曝光参数")
     print("按'q'键退出程序")
     
     try:
@@ -117,22 +131,33 @@ def main():
                 print("无法获取图像")
                 break
             
-            # 获取滑动条值
-            lower_hsv, upper_hsv, erode, dilate, min_area, max_area = get_trackbar_values()
+            # 获取滑动条值（包含曝光参数）
+            lower_hsv, upper_hsv, erode, dilate, min_area, max_area, brightness, contrast = get_trackbar_values()
+            
+            # 调整曝光（新增）
+            adjusted_frame = adjust_exposure(frame, brightness, contrast)
             
             # 追踪颜色
             result_frame, mask, hsv, color_blobs = track_color(
-                frame, lower_hsv, upper_hsv, erode, dilate, min_area, max_area
+                adjusted_frame, lower_hsv, upper_hsv, erode, dilate, min_area, max_area
             )
             
-            # 显示图像
-            cv2.imshow("Original", result_frame)
+            # 显示原始帧和曝光调整后的帧（新增）
+            cv2.imshow("Original", frame)
+            cv2.imshow("Adjusted", adjusted_frame)
+            
+            # 显示HSV和掩码
             cv2.imshow("HSV", hsv)
             cv2.imshow("Mask", mask)
             
-            # 显示找到的色块数量
+            # 显示找到的色块数量和曝光参数（新增）
             cv2.putText(result_frame, f"Blobs: {len(color_blobs)}", (10, 30),
                        cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 255), 2)
+            cv2.putText(result_frame, f"Brightness: {brightness}, Contrast: {contrast:.2f}", 
+                       (10, 60), cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 0, 255), 2)
+            
+            # 显示结果
+            cv2.imshow("Result", result_frame)
             
             # 按'q'键退出
             if cv2.waitKey(1) & 0xFF == ord('q'):

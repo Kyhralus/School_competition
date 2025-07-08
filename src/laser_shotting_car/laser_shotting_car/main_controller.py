@@ -7,6 +7,7 @@ from geometry_msgs.msg import PoseStamped
 import math
 from tf_transformations import euler_from_quaternion
 import time
+from periphery import PWM
 
 class MainController(Node):
     def __init__(self):
@@ -147,14 +148,6 @@ class MainController(Node):
 
     def circle_laser_result_callback(self, msg):
         if self.current_command == 'r41':  # 识别数字
-            self.get_logger().info(f"------ 任务四：激光打靶 ------")
-            self.get_logger().info(f"激光打靶误差: {msg.data}")
-            send_msg = String()
-            send_msg.data = msg.data
-            self.serial_send_callback(send_msg)
-        elif self.current_command == 'r45': #
-            self.get_logger().info(f"结束激光打靶")
-            self.current_command = None
 
     def handle_special_command(self, command):
             self.get_logger().warn("未知指令")
