@@ -17,17 +17,7 @@ class Servo:
         angle_max: float = 180,
         reverse: bool = False
     ):
-        """
-        pwmchip: PWM控制器编号
-        channel: PWM通道编号（0或1）
-        freq: PWM频率(Hz)，舵机常用50Hz
-        pulse_min: 最小脉宽(ms)，对应angle_min角度
-        pulse_max: 最大脉宽(ms)，对应angle_max角度
-        angle_min: 舵机最小角度
-        angle_max: 舵机最大角度
-        reverse: 角度反转标志，True时角度增大对应脉宽减小
-        """
-        self.pwm = PWM(pwmchip, channel)
+        self.pwm = PWM(pwmchip, channel)  # 假设PWM类来自periphery库
         self.freq = freq
         self.pulse_min = pulse_min
         self.pulse_max = pulse_max
@@ -40,19 +30,20 @@ class Servo:
         self.pwm.frequency = freq
         self.pwm.duty_cycle = 0
         self.pwm.enable()
-        self._current_angle = angle_min
+        self._current_angle = angle_min  # 初始角度
     
     def angle_to_duty(self, angle: float) -> float:
         """角度转占空比，包含边界检查和反转逻辑"""
         angle = max(self.angle_min, min(self.angle_max, angle))
         if self.reverse:
             angle = self.angle_max + self.angle_min - angle
+        # 线性映射角度到脉宽
         pulse = self.pulse_min + (angle - self.angle_min) * (self.pulse_max - self.pulse_min) / (self.angle_max - self.angle_min)
-        return pulse / self.period
+        return pulse / self.period  # 脉宽/周期 = 占空比
     
     def set_angle(self, angle: float) -> None:
-        """设置舵机角度"""
-        angle = max(self.angle_min, min(self.angle_max, angle))
+        """设置舵机角度（带边界限制）"""
+        angle = max(self.angle_min, min(self.angle_max, angle))  # 限制角度范围
         duty = self.angle_to_duty(angle)
         self.pwm.duty_cycle = duty
         self._current_angle = angle
@@ -69,34 +60,25 @@ class Servo:
         print(f"Servo closed: pwmchip={self.pwm.chip}, channel={self.pwm.channel}")
 
 
+import time
+
 class PID:
     """增强型PID控制器类，支持位置式和增量式两种模式"""
     def __init__(self, kp: float = 0.0, ki: float = 0.0, kd: float = 0.0, 
-                 output_limits: tuple = (-1000, 1000),
-                 integral_limits: tuple = (0, 0),
-                 sample_time: float = 0.0,
-                 mode: str = 'position'):
-        """
-        初始化PID控制器
-        
-        参数:
-            kp, ki, kd: PID参数
-            output_limits: 输出限幅 (min, max)
-            integral_limits: 积分项限幅 (min, max)
-            sample_time: 采样时间(秒)，0表示使用实际时间差
-            mode: 'position' 或 'incremental'，分别对应位置式和增量式PID
-        """
+                 output_limits: tuple = (-5.0, 5.0),  # 支持负值
+                 integral_limits: tuple = (None, None),
+                 sample_time: float = 0.01,  # 采样时间（秒）
+                 mode: str = 'incremental'):  # 默认增量式
         self.kp = kp
         self.ki = ki
         self.kd = kd
-        
-        self.output_limits = output_limits
+        self.output_limits = output_limits  # 输出限幅（支持负值）
         self.integral_limits = integral_limits
         self.sample_time = sample_time
         self.mode = mode
         
         # 内部状态
-        self.error_sum = 0.0          # 误差累积和(用于位置式)
+        self.error_sum = 0.0          # 误差累积和
         self.last_error = 0.0         # 上一次误差
         self.prev_error = 0.0         # 上上次误差
         self.last_output = 0.0        # 上一次输出
@@ -120,7 +102,7 @@ class PID:
             return self._compute_incremental(error)
 
     def _compute_position(self, error: float) -> float:
-        """位置式PID计算"""
+        """位置式PID计算（输出：目标角度的绝对量）"""
         current_time = time.time()
         dt = current_time - self.last_time
         
@@ -128,7 +110,7 @@ class PID:
         if not self.initialized or dt <= 0 or dt > 1.0:
             self.last_time = current_time
             self.initialized = True
-            return 0.0
+            return self.last_output  # 返回上一次输出，避免跳变
         
         # 使用固定采样时间或实际时间差
         if self.sample_time > 0:
@@ -144,12 +126,12 @@ class PID:
         # 计算微分项
         derivative = (error - self.last_error) / dt
         
-        # 计算PID输出
+        # 计算PID输出（目标角度的绝对量）
         output = (self.kp * error + 
                   self.ki * self.error_sum + 
                   self.kd * derivative)
         
-        # 应用输出限幅
+        # 应用输出限幅（限制目标角度范围）
         if self.output_limits[0] is not None:
             output = max(self.output_limits[0], output)
         if self.output_limits[1] is not None:
@@ -163,69 +145,82 @@ class PID:
         return output
 
     def _compute_incremental(self, error: float) -> float:
-        """增量式PID计算"""
+        """增量式PID计算（输出：角度的增量，需累加至当前角度）"""
         current_time = time.time()
         dt = current_time - self.last_time
-        
+        print("增量式:error:",error)
         # 首次调用或时间差异常时初始化
         if not self.initialized or dt <= 0 or dt > 1.0:
             self.last_time = current_time
             self.last_error = error
             self.initialized = True
-            return 0.0
+            return 0.0  # 首次无增量
         
         # 使用固定采样时间或实际时间差
         if self.sample_time > 0:
             dt = self.sample_time
         
         # 计算误差增量
-        error_diff = error - self.last_error
-        prev_error_diff = self.last_error - self.prev_error
+        error_diff = error - self.last_error  # 当前误差 - 上一次误差
         
-        # 计算PID增量
+        # 计算PID增量（角度的调整量）
+        # 使用公式：Δu = Kp*(e(k)-e(k-1)) + Ki*e(k) + Kd*(e(k)-2e(k-1)+e(k-2))
         delta_output = (self.kp * error_diff + 
-                       self.ki * error * dt + 
-                       self.kd * prev_error_diff / dt)
-        
-        # 应用输出限幅（对增量进行限幅）
+                       self.ki * error + 
+                       self.kd * (error - 2*self.last_error + self.prev_error))
+        print("增量式delta:",delta_output)
+        # 应用增量限幅（限制单次调整角度）
         if self.output_limits[0] is not None:
-            delta_output = max(self.output_limits[0] - self.last_output, delta_output)
+            delta_output = max(self.output_limits[0], delta_output)
         if self.output_limits[1] is not None:
-            delta_output = min(self.output_limits[1] - self.last_output, delta_output)
-        
-        # 更新输出和误差状态
-        output = self.last_output + delta_output
+            delta_output = min(self.output_limits[1], delta_output)
+        print("增量式输出限幅:",delta_output)
+        # 更新状态（无需累积输出，增量由外部累加）
         self.prev_error = self.last_error
         self.last_error = error
-        self.last_output = output
         self.last_time = current_time
-        print(f"delta_output:{delta_output}, output:{output}")
         
-        return output
+        return delta_output  # 仅返回增量，外部需加至当前角度
 
 
 class Gimbal:
     """云台控制类 - 整合舵机和PID控制器"""
-    def __init__(self, pitch_servo: Servo, pitch_pid: PID, roll_servo: Servo, roll_pid: PID):
+    def __init__(self, pitch_servo, pitch_pid, yaw_servo, yaw_pid):
         self.pitch_servo = pitch_servo
-        self.roll_servo = roll_servo
+        self.yaw_servo = yaw_servo
         self.pid_pitch = pitch_pid
-        self.pid_roll = roll_pid
+        self.pid_yaw = yaw_pid
     
     def update(self, err_pitch: float, err_yaw: float) -> None:
-        """更新云台控制"""
+        """更新云台控制（根据PID模式自动适配逻辑）"""
+        prev_pitch = self.pitch_servo.get_angle()
+        prev_yaw = self.yaw_servo.get_angle()
+
         # 计算PID输出
         output_pitch = self.pid_pitch.compute(err_pitch)
-        output_roll = self.pid_roll.compute(err_yaw)
+        output_yaw = self.pid_yaw.compute(err_yaw)
         
-        # 更新舵机角度
-        new_pitch = self.pitch_servo.get_angle() + output_pitch
-        new_roll = self.roll_servo.get_angle() + output_roll
+        # 根据PID模式更新舵机角度
+        if self.pid_pitch.mode == 'incremental':
+            # 增量式：输出是角度增量，需累加至当前角度
+            new_pitch = self.pitch_servo.get_angle() + output_pitch
+            new_yaw = self.yaw_servo.get_angle() + output_yaw
+        else:
+            # 位置式：输出是目标角度的绝对量，直接设置
+            new_pitch = output_pitch
+            new_yaw = output_yaw
         
+        # 设置舵机角度（带边界限制）
         self.pitch_servo.set_angle(new_pitch)
-        self.roll_servo.set_angle(new_roll)
-        print(f"修改后的pitch:{new_pitch}, roll:{new_roll}")
-
+        self.yaw_servo.set_angle(new_yaw)
+        
+        # 打印详细控制信息
+        # print(
+        #     f"修正前角度 - pitch: {prev_pitch:.5f}°, yaw: {prev_yaw:.5f}° | "
+        #     f"误差 - pitch: {err_pitch:.5f}, yaw: {err_yaw:.5f} | "
+        #     f"修正量 - pitch: {output_pitch:.5f}°, yaw: {output_yaw:.5f}° | "
+        #     f"修正后角度 - pitch: {new_pitch:.5f}°, yaw: {new_yaw:.5f}°"
+        # )
 
 
     # ===== 步骤1：过滤出符合圆度超过0.8的圆，记作candidate_circles
@@ -280,7 +275,7 @@ def detect_deepest_inner_circle(frame: np.ndarray) -> tuple[np.ndarray, Optional
         area = cv2.contourArea(contour)
         
         # 检查父轮廓是否符合条件
-        if area < 200:  # 面积阈值可调整
+        if area < 120:  # 面积阈值可调整
             continue
             
         perimeter = cv2.arcLength(contour, True)
@@ -288,7 +283,7 @@ def detect_deepest_inner_circle(frame: np.ndarray) -> tuple[np.ndarray, Optional
             continue
             
         circularity = 4 * np.pi * area / (perimeter * perimeter)
-        if circularity >= 0.8:  # 圆度阈值可调整
+        if circularity >= 0.78:  # 圆度阈值可调整
             valid_parents.add(i)
 
     # 第二遍遍历：收集符合条件的父轮廓下的所有子轮廓，并筛选满足圆度的子轮廓
@@ -308,7 +303,7 @@ def detect_deepest_inner_circle(frame: np.ndarray) -> tuple[np.ndarray, Optional
                 circularity = 4 * np.pi * area / (perimeter * perimeter)
                 
                 # 仅当子轮廓满足圆度要求时加入候选
-                if area >= 200 and circularity >= 0.89:
+                if area >= 120 and circularity >= 0.78:
                     candidate_circles.append({
                         'index': child_idx,
                         'contour': contours[child_idx],
@@ -447,69 +442,73 @@ def detect_deepest_inner_circle(frame: np.ndarray) -> tuple[np.ndarray, Optional
 
 def detect_red_laser(
     frame: np.ndarray, 
-    min_area: int = 200,  # 对应截图里 Min Area (0100/5000)，这里用 100 ，可按需改
-    max_area: int = 1500,  # 对应截图里 Max Area (05000/50000)，这里用 5000 ，可按需改
-    erode_iter: int = 0,   # 对应截图里 Erode (00/10)，先设 0
-    dilate_iter: int = 3   # 对应截图里 Dilate (05/10)，先设 5
+    min_area: int = 50,
+    max_area: int = 1500,
+    erode_iter: int = 1,
+    dilate_iter: int = 2
 ) -> tuple[Optional[tuple[int, int]], np.ndarray]:
-    """
-    从输入图像中检测红色激光点，使用截图所示阈值。
-    
-    :param frame: 输入的BGR格式图像
-    :param min_area: 最小轮廓面积阈值，对应界面 Min Area
-    :param max_area: 最大轮廓面积阈值，对应界面 Max Area
-    :param erode_iter: 腐蚀操作迭代次数，对应界面 Erode
-    :param dilate_iter: 膨胀操作迭代次数，对应界面 Dilate
-    :return: 激光点的(x, y)坐标，如果未检测到则为None, 处理后的图像
-    """
+    """优先选择图像中间区域的激光点，兼顾面积和中心距离"""
     result_frame = frame.copy()
-    # 用截图里的阈值设置 HSV 上下限
-    # H_min (000/179), H_max (179/179)
-    # S_min (000/255), S_max (255/255)
-    # V_min (255/255), V_max (255/255)
-    lower_hsv = np.array([0, 0, 255])  
-    upper_hsv = np.array([179, 255, 255])
+    h, w = frame.shape[:2]  # 获取图像高度和宽度
+    center = (w // 2, h // 2)  # 图像中心点坐标（中间区域基准点）
     
+    # HSV阈值和形态学操作（保持不变）
+    lower_hsv = np.array([0, 0, 255])
+    upper_hsv = np.array([179, 255, 255])
     hsv = cv2.cvtColor(frame, cv2.COLOR_BGR2HSV)
     mask = cv2.inRange(hsv, lower_hsv, upper_hsv)
-    
-    # 形态学操作，根据界面滑块设置迭代次数
-    kernel = np.ones((3, 3), np.uint8)  # 核大小可根据需求调整，这里先保持 1x1
+    kernel = np.ones((3, 3), np.uint8)
     mask = cv2.morphologyEx(mask, cv2.MORPH_ERODE, kernel, iterations=erode_iter)
     mask = cv2.morphologyEx(mask, cv2.MORPH_DILATE, kernel, iterations=dilate_iter)
-    
     cv2.imshow("laser_mask", mask)
     cv2.waitKey(1)
     
     # 查找轮廓
     contours, _ = cv2.findContours(mask, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
     laser_point = None
-    laser_area = 0
+    best_score = -1  # 用于筛选最优激光点的分数（越高越好）
 
-    # 筛选符合条件的轮廓
+    # 筛选符合条件的轮廓（增加中心距离权重）
     for cnt in contours:
         area = cv2.contourArea(cnt)
+        # 1. 面积过滤（基础条件）
         if area < min_area or area > max_area:
             continue
         
-        print("激光面积：",area)
-        # 计算轮廓中心
+        # 2. 计算轮廓中心
         M = cv2.moments(cnt)
-        if M["m00"] != 0:
-            x = int(M["m10"] / M["m00"])
-            y = int(M["m01"] / M["m00"])
-            
-            # 如果激光点已被检测到，选择面积较大的
-            if laser_point is None or area > laser_area:
-                laser_point = (x, y)
-                laser_area = area
+        if M["m00"] == 0:
+            continue
+        x = int(M["m10"] / M["m00"])
+        y = int(M["m01"] / M["m00"])
+        
+        # 3. 计算距离图像中心的距离（归一化到0~1，值越小越近）
+        distance = np.sqrt((x - center[0])**2 + (y - center[1])** 2)
+        normalized_distance = distance / np.sqrt((w//2)**2 + (h//2)** 2)  # 归一化到[0,1]
+        
+        # 4. 计算评分（面积越大、距离中心越近，评分越高）
+        # 权重可调整：例如面积权重0.6，距离权重0.4
+        area_score = area / max_area  # 面积归一化到[0,1]
+        distance_score = 1 - normalized_distance  # 距离越近，分数越高（0~1）
+        score = 0.6 * area_score + 0.4 * distance_score  # 综合评分
+        
+        # 5. 更新最优激光点（评分更高的优先）
+        if score > best_score:
+            best_score = score
+            laser_point = (x, y)
+            # 可选：打印调试信息
+            print(f"激光候选 - 面积: {area:.1f}, 距离中心: {distance:.1f}, 评分: {score:.3f}")
 
-    # 标记激光点
+    # 标记最优激光点
     if laser_point:
         cv2.circle(result_frame, laser_point, 5, (0, 255, 0), -1)
         cv2.putText(result_frame, f"Laser: ({laser_point[0]}, {laser_point[1]})", 
                    (laser_point[0] + 10, laser_point[1] - 10), 
                    cv2.FONT_HERSHEY_SIMPLEX, 0.6, (0, 255, 0), 2)
+        # 标记图像中心（方便调试）
+        cv2.circle(result_frame, center, 3, (255, 0, 0), -1)
+        cv2.putText(result_frame, "Center", (center[0]+10, center[1]-10),
+                   cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255, 0, 0), 1)
 
     cv2.imshow("laser_result", result_frame)
     cv2.waitKey(1)
@@ -525,40 +524,33 @@ def main():
     cap.set(cv2.CAP_PROP_FRAME_WIDTH, width)
     cap.set(cv2.CAP_PROP_FRAME_HEIGHT, height)
     
-    # 初始化舵机（树莓派示例：PWM0通道0和1）
+  # 初始化舵机（假设硬件参数）
     pitch_servo = Servo(
-        pwmchip=3,
-        channel=0,
-        freq=50,
-        pulse_min=0.5,
-        pulse_max=2.5,
-        angle_min=30,
-        angle_max=150,
-        reverse=False  # 根据实际安装方向调整
+        pwmchip=3, channel=0, 
+        angle_min=0, angle_max=180, 
+        pulse_min=0.5, pulse_max=2.5,
+        reverse=True
+    )
+    yaw_servo = Servo(
+        pwmchip=4, channel=0, 
+        angle_min=0, angle_max=180, 
+        pulse_min=0.5, pulse_max=2.5
     )
     
-    roll_servo = Servo(
-        pwmchip=4,
-        channel=0,
-        freq=50,
-        pulse_min=0.5,
-        pulse_max=2.5,
-        angle_min=30,
-        angle_max=150,
-        reverse=False  # 根据实际安装方向调整
-    )
+    # 初始化增量式PID（输出为角度增量，限制单次±2度）
+    pitch_pid = PID(kp=0.03, ki=0.01, kd=0.01, 
+                   output_limits=(-1, 1),  # 单次最大调整2度
+                   mode='incremental')
+    yaw_pid = PID(kp=0.05, ki=0.01, kd=0.01, 
+                  output_limits=(-1.5, 1.5), 
+                  mode='incremental')
     
-    # 初始化PID控制器（根据实际情况调整参数）
-    # pitch_pid = PID(p=0.27, i=0.001, d=0.1)
-    # roll_pid = PID(p=0.27, i=0.001, d=0.1)
-    pitch_pid = PID(kp=0.0027, ki=0.00, kd=0.00001)
-    roll_pid = PID(kp=0.0027, ki=0.00, kd=0.00001)
     # 初始化云台
-    gimbal = Gimbal(pitch_servo, pitch_pid, roll_servo, roll_pid)
+    gimbal = Gimbal(pitch_servo, pitch_pid, yaw_servo, yaw_pid)
     
     # 初始位置
-    pitch_servo.set_angle(120)
-    roll_servo.set_angle(60)
+    pitch_servo.set_angle(140)
+    yaw_servo.set_angle(90)
     time.sleep(1)
     
     print("系统初始化完成，开始目标跟踪...")
@@ -603,15 +595,18 @@ def main():
                 print(f"靶心:({target_x},{target_y}), 激光:({laser_y},{laser_y})")
                 print(f"误差:x_err={err_x},t_err={err_y}")
                 # 更新云台控制
-                gimbal.update(err_y, err_x)  # pitch控制y轴，roll控制x轴
+                if abs(err_x) >= 5 or abs(err_y) >=5:
+                    gimbal.update(err_y, err_x)  # pitch控制y轴，roll控制x轴
+                else:
+                    print("打中靶心")
 
             elif not target_point and laser_point:
-                err_x = 0
-                err_y = 0
+                # err_x = 0
+                # err_y = 0
                 print("未检测到靶心")
             elif target_point and not laser_point:
-                err_x = 0
-                err_y = 0
+                # err_x = 0
+                # err_y = 0
                 print("未检测到激光")
 
             # 显示FPS
@@ -638,7 +633,7 @@ def main():
         cap.release()
         cv2.destroyAllWindows()
         pitch_servo.close()
-        roll_servo.close()
+        yaw_servo.close()
         print("资源已释放，程序退出")
 
 

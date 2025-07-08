@@ -11,6 +11,7 @@ setup.py
 ../../build/laser_shotting_car/laser_shotting_car.egg-info/zip-safe
 laser_shotting_car/__init__.py
 laser_shotting_car/camera_publisher.py
+laser_shotting_car/circle_detect.py
 laser_shotting_car/circle_detect1.py
 laser_shotting_car/circle_laser_detector.py
 laser_shotting_car/func.py
@@ -19,6 +20,7 @@ laser_shotting_car/gray_thred.py
 laser_shotting_car/lidar_processor.py
 laser_shotting_car/main_controller.py
 laser_shotting_car/rknnpool.py
+laser_shotting_car/servo_vertical.py
 laser_shotting_car/vision_tracking_node.py
 laser_shotting_car/yolov8_detector.py
 launch/all_nodes.launch.py

@@ -1,6 +1,8 @@
+/home/orangepi/ros2_workspace/school_competition/install/lib/python3.10/site-packages/laser_shotting_car/circle_detect.py
 /home/orangepi/ros2_workspace/school_competition/install/lib/python3.10/site-packages/laser_shotting_car/gimbal_control_node.py
 /home/orangepi/ros2_workspace/school_competition/install/lib/python3.10/site-packages/laser_shotting_car/camera_publisher.py
 /home/orangepi/ros2_workspace/school_competition/install/lib/python3.10/site-packages/laser_shotting_car/func.py
+/home/orangepi/ros2_workspace/school_competition/install/lib/python3.10/site-packages/laser_shotting_car/servo_vertical.py
 /home/orangepi/ros2_workspace/school_competition/install/lib/python3.10/site-packages/laser_shotting_car/circle_detect1.py
 /home/orangepi/ros2_workspace/school_competition/install/lib/python3.10/site-packages/laser_shotting_car/__init__.py
 /home/orangepi/ros2_workspace/school_competition/install/lib/python3.10/site-packages/laser_shotting_car/circle_laser_detector.py
@@ -10,9 +12,11 @@
 /home/orangepi/ros2_workspace/school_competition/install/lib/python3.10/site-packages/laser_shotting_car/rknnpool.py
 /home/orangepi/ros2_workspace/school_competition/install/lib/python3.10/site-packages/laser_shotting_car/main_controller.py
 /home/orangepi/ros2_workspace/school_competition/install/lib/python3.10/site-packages/laser_shotting_car/yolov8_detector.py
+/home/orangepi/ros2_workspace/school_competition/install/lib/python3.10/site-packages/laser_shotting_car/__pycache__/circle_detect.cpython-310.pyc
 /home/orangepi/ros2_workspace/school_competition/install/lib/python3.10/site-packages/laser_shotting_car/__pycache__/gimbal_control_node.cpython-310.pyc
 /home/orangepi/ros2_workspace/school_competition/install/lib/python3.10/site-packages/laser_shotting_car/__pycache__/camera_publisher.cpython-310.pyc
 /home/orangepi/ros2_workspace/school_competition/install/lib/python3.10/site-packages/laser_shotting_car/__pycache__/func.cpython-310.pyc
+/home/orangepi/ros2_workspace/school_competition/install/lib/python3.10/site-packages/laser_shotting_car/__pycache__/servo_vertical.cpython-310.pyc
 /home/orangepi/ros2_workspace/school_competition/install/lib/python3.10/site-packages/laser_shotting_car/__pycache__/circle_detect1.cpython-310.pyc
 /home/orangepi/ros2_workspace/school_competition/install/lib/python3.10/site-packages/laser_shotting_car/__pycache__/__init__.cpython-310.pyc
 /home/orangepi/ros2_workspace/school_competition/install/lib/python3.10/site-packages/laser_shotting_car/__pycache__/circle_laser_detector.cpython-310.pyc

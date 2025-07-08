@@ -1,0 +1,28 @@
+[1.458s] Invoking command in '/home/orangepi/ros2_workspace/school_competition/src/laser_shotting_car': PYTHONPATH=/home/orangepi/ros2_workspace/school_competition/build/laser_shotting_car/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/orangepi/ros2_workspace/school_competition/install/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/laser_shotting_car build --build-base /home/orangepi/ros2_workspace/school_competition/build/laser_shotting_car/build install --record /home/orangepi/ros2_workspace/school_competition/build/laser_shotting_car/install.log --single-version-externally-managed install_data
+[1.799s] running egg_info
+[1.800s] writing ../../build/laser_shotting_car/laser_shotting_car.egg-info/PKG-INFO
+[1.801s] writing dependency_links to ../../build/laser_shotting_car/laser_shotting_car.egg-info/dependency_links.txt
+[1.808s] writing entry points to ../../build/laser_shotting_car/laser_shotting_car.egg-info/entry_points.txt
+[1.810s] writing requirements to ../../build/laser_shotting_car/laser_shotting_car.egg-info/requires.txt
+[1.812s] writing top-level names to ../../build/laser_shotting_car/laser_shotting_car.egg-info/top_level.txt
+[1.812s] reading manifest file '../../build/laser_shotting_car/laser_shotting_car.egg-info/SOURCES.txt'
+[1.814s] writing manifest file '../../build/laser_shotting_car/laser_shotting_car.egg-info/SOURCES.txt'
+[1.814s] running build
+[1.814s] running build_py
+[1.815s] running install
+[1.815s] running install_lib
+[1.819s] running install_data
+[1.820s] running install_egg_info
+[1.821s] removing '/home/orangepi/ros2_workspace/school_competition/install/lib/python3.10/site-packages/laser_shotting_car-0.0.0-py3.10.egg-info' (and everything under it)
+[1.821s] Copying ../../build/laser_shotting_car/laser_shotting_car.egg-info to /home/orangepi/ros2_workspace/school_competition/install/lib/python3.10/site-packages/laser_shotting_car-0.0.0-py3.10.egg-info
+[1.822s] running install_scripts
+[1.852s] Installing camera_publisher script to /home/orangepi/ros2_workspace/school_competition/install/lib/laser_shotting_car
+[1.853s] Installing circle_detect1 script to /home/orangepi/ros2_workspace/school_competition/install/lib/laser_shotting_car
+[1.858s] Installing circle_laser_detector script to /home/orangepi/ros2_workspace/school_competition/install/lib/laser_shotting_car
+[1.859s] Installing gimbal_control_node script to /home/orangepi/ros2_workspace/school_competition/install/lib/laser_shotting_car
+[1.861s] Installing lidar_processor script to /home/orangepi/ros2_workspace/school_competition/install/lib/laser_shotting_car
+[1.862s] Installing main_controller script to /home/orangepi/ros2_workspace/school_competition/install/lib/laser_shotting_car
+[1.863s] Installing vision_tracking_node script to /home/orangepi/ros2_workspace/school_competition/install/lib/laser_shotting_car
+[1.864s] Installing yolov8_detector script to /home/orangepi/ros2_workspace/school_competition/install/lib/laser_shotting_car
+[1.868s] writing list of installed files to '/home/orangepi/ros2_workspace/school_competition/build/laser_shotting_car/install.log'
+[1.924s] Invoked command in '/home/orangepi/ros2_workspace/school_competition/src/laser_shotting_car' returned '0': PYTHONPATH=/home/orangepi/ros2_workspace/school_competition/build/laser_shotting_car/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/orangepi/ros2_workspace/school_competition/install/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/laser_shotting_car build --build-base /home/orangepi/ros2_workspace/school_competition/build/laser_shotting_car/build install --record /home/orangepi/ros2_workspace/school_competition/build/laser_shotting_car/install.log --single-version-externally-managed install_data

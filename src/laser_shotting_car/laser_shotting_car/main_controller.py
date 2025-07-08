@@ -19,7 +19,7 @@ class MainController(Node):
         # 订阅各模块结果话题
         self.lidar_sub = self.create_subscription(String, 'lidar_result', self.lidar_result_callback, 10)
         self.yolov8_sub = self.create_subscription(String, 'yolov8_result', self.yolov8_result_callback, 10)
-        self.circle_laser_sub = self.create_subscription(String, 'circle_laser_result', self.circle_laser_result_callback, 10)
+        self.circle_laser_sub = self.create_subscription(String, 'gimbal_error', self.gimbal_error_callback, 10)
         self.t265_sub = self.create_subscription(PoseStamped, 't265_publisher/pose', self.t265_pose_callback, 10)
         self.target_sub = self.create_subscription(PoseStamped, 'target_position', self.target_callback, 10)
         self.current_command = None
@@ -49,6 +49,12 @@ class MainController(Node):
         # 单次检查服务是否就绪
         if not self.gimbal_reset_client.service_is_ready():
             self.get_logger().warn("云台重置服务未就绪（启动时检查），后续调用可能失败")
+
+        # 新增：创建云台重置服务客户端
+        self.gimbal_set_client = self.create_client(Empty, 'set_gimbal')
+        # 单次检查服务是否就绪
+        if not self.gimbal_set_client.service_is_ready():
+            self.get_logger().warn("云台设置服务未就绪")
 
         # 新增：创建定时器
         self.timer = self.create_timer(0.1, self.check_circle_laser_command)  # 每 0.1 秒检查一次
@@ -106,6 +112,10 @@ class MainController(Node):
                     self.get_logger().error("解析杯子位置数据失败，可能包含非数字内容")
             else:
                 self.get_logger().error("消息分割后元素不足，无法获取杯子位置")
+            
+            self.reset_gimbal_angle()  # 调用云台重置函数
+            self.get_logger().info(f"------ 任务重置 ------")
+
             self.current_command = None
 
         if self.current_command == 'r12':  # 只发一次
@@ -145,17 +155,37 @@ class MainController(Node):
             self.current_command = None
 
     # ========== 任务三 ========
-    def circle_laser_result_callback(self, msg):
+    def gimbal_error_callback(self, msg):
         # 此回调函数仅在接收到消息时触发，主逻辑移到定时器回调中
-        pass
+        try:
+            # 拆分消息并转换为浮点数
+            err_pitch_str, err_yaw_str = msg.data.split(',')
+            err_pitch = float(err_pitch_str)
+            err_yaw = float(err_yaw_str)
+            
+            # 数值比较（判断误差是否在0.5以内）
+            if abs(err_pitch) <= 5 and abs(err_yaw) <= 5:
+                self.get_logger().info(f"------ 接收到激光打靶结果: {msg.data} ------")
+                self.get_logger().info("打靶成功")
+                # 发送消息（简化赋值）
+                send_msg = String()
+                send_msg.data = "@4\r"  # 注意String消息需赋值给data字段
+                self.serial_send_callback(send_msg)
+
+        except (ValueError, IndexError) as e:
+            # 处理格式错误（如拆分失败、转换失败）
+            self.get_logger().error(f"激光打靶结果消息格式错误: {str(e)}, 消息内容: {msg.data}")
 
     def check_circle_laser_command(self):
         # 从订阅的话题中获取最新消息，这里假设存在一个变量存储最新消息
         # 实际使用中需要根据具体情况修改
         if self.current_command == 'r41':  # 激光打靶前先重置云台角度
             self.get_logger().info(f"------ 任务四：激光打靶，先重置云台角度 ------")
-            self.reset_gimbal_angle()  # 调用云台重置函数
+            self.set_gimbal_angle()  # 调用云台重置函数
             self.current_command = None
+        # if self.current_command == 'r11':
+        #     self.get_logger().info(f"------ 任务重置 ------")
+        #     self.reset_gimbal_angle()  # 调用云台重置函数
         
     def handle_special_command(self, command):
         self.get_logger().warn("未知指令")
@@ -233,13 +263,31 @@ class MainController(Node):
             self.current_command = None
 
     # 新增：云台重置函数
+    def set_gimbal_angle(self):
+        """调用set_gimbal服务设置云台角度"""
+        # 调用前检查服务是否就绪
+        if not self.gimbal_set_client.service_is_ready():
+            self.get_logger().error("云台设置服务未就绪")
+            return
+        # 创建空请求并异步调用服务
+        req = Empty.Request()
+        future = self.gimbal_set_client.call_async(req)
+        # 处理响应的回调函数
+        def handle_set_response(future):
+            try:
+                future.result()  # 获取响应（空响应）
+                self.get_logger().info("打靶角度设置成功")
+            except Exception as e:
+                self.get_logger().error(f"打靶角度设置成功: {e}")
+        
+        future.add_done_callback(handle_set_response)
+
     def reset_gimbal_angle(self):
         """调用reset_gimbal服务重置云台角度"""
         # 调用前检查服务是否就绪
         if not self.gimbal_reset_client.service_is_ready():
             self.get_logger().error("云台重置服务未就绪，无法执行重置操作")
             return
-        
         # 创建空请求并异步调用服务
         req = Empty.Request()
         future = self.gimbal_reset_client.call_async(req)
