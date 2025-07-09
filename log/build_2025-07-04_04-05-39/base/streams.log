@@ -1,2 +1,0 @@
-[0.051s] Invoking command in '/home/orangepi/ros2_workspace/school_competition/build/base': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/root/lanhailidar_ros_ws/install/scan_subscriber:/opt/ros/humble /usr/bin/cmake --build /home/orangepi/ros2_workspace/school_competition/build/base -- -j8 -l8
-[0.180s] gmake: *** [Makefile:146: all] Interrupt

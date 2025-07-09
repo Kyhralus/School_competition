@@ -1,0 +1,98 @@
+[0.022s] Invoking command in '/home/orangepi/ros2_workspace/school_competition/build/bluesea2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/root/lanhailidar_ros_ws/install/scan_subscriber:/opt/ros/humble PYTHONPATH=/home/orangepi/ros2_workspace/school_competition/install/lib/python3.10/site-packages:/home/orangepi/ros2_workspace/school_competition/install/local/lib/python3.10/dist-packages:/root/lanhailidar_ros_ws/install/scan_subscriber/lib/python3.10/site-packages:/root/lanhailidar_ros_ws/install/base/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages /usr/bin/cmake /home/orangepi/ros2_workspace/school_competition/src/lanhailidar_ros_ws/src/bluesea-ros2-main/bluesea-ros2 -DCMAKE_INSTALL_PREFIX=/home/orangepi/ros2_workspace/school_competition/install
+[0.153s] -- The C compiler identification is GNU 11.4.0
+[0.268s] -- The CXX compiler identification is GNU 11.4.0
+[0.277s] -- Detecting C compiler ABI info
+[0.476s] -- Detecting C compiler ABI info - done
+[0.514s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.515s] -- Detecting C compile features
+[0.517s] -- Detecting C compile features - done
+[0.526s] -- Detecting CXX compiler ABI info
+[0.744s] -- Detecting CXX compiler ABI info - done
+[0.784s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.785s] -- Detecting CXX compile features
+[0.787s] -- Detecting CXX compile features - done
+[0.797s] -- Found ament_cmake: 1.3.11 (/opt/ros/humble/share/ament_cmake/cmake)
+[1.156s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[1.374s] -- Found rclcpp: 16.0.12 (/opt/ros/humble/share/rclcpp/cmake)
+[1.480s] -- Found rosidl_generator_c: 3.1.6 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[1.488s] -- Found rosidl_adapter: 3.1.6 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[1.501s] -- Found rosidl_generator_cpp: 3.1.6 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[1.520s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.546s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.693s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[1.707s] -- Found rmw_fastrtps_cpp: 6.2.7 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[2.043s] -- Found OpenSSL: /usr/lib/aarch64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[2.119s] -- Found FastRTPS: /opt/ros/humble/include  
+[2.209s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[2.268s] -- Looking for pthread.h
+[2.484s] -- Looking for pthread.h - found
+[2.484s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[2.702s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[2.706s] -- Found Threads: TRUE  
+[2.882s] -- Found sensor_msgs: 4.8.0 (/opt/ros/humble/share/sensor_msgs/cmake)
+[2.956s] -- Found visualization_msgs: 4.8.0 (/opt/ros/humble/share/visualization_msgs/cmake)
+[3.008s] -- Found base: 0.0.0 (/home/orangepi/ros2_workspace/school_competition/install/share/base/cmake)
+[3.029s] -- Found std_srvs: 4.8.0 (/opt/ros/humble/share/std_srvs/cmake)
+[3.067s] -- Found ament_lint_auto: 0.12.12 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[3.171s] -- Configuring done
+[3.210s] -- Generating done
+[3.223s] -- Build files have been written to: /home/orangepi/ros2_workspace/school_competition/build/bluesea2
+[3.243s] Invoked command in '/home/orangepi/ros2_workspace/school_competition/build/bluesea2' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/root/lanhailidar_ros_ws/install/scan_subscriber:/opt/ros/humble PYTHONPATH=/home/orangepi/ros2_workspace/school_competition/install/lib/python3.10/site-packages:/home/orangepi/ros2_workspace/school_competition/install/local/lib/python3.10/dist-packages:/root/lanhailidar_ros_ws/install/scan_subscriber/lib/python3.10/site-packages:/root/lanhailidar_ros_ws/install/base/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages /usr/bin/cmake /home/orangepi/ros2_workspace/school_competition/src/lanhailidar_ros_ws/src/bluesea-ros2-main/bluesea-ros2 -DCMAKE_INSTALL_PREFIX=/home/orangepi/ros2_workspace/school_competition/install
+[3.248s] Invoking command in '/home/orangepi/ros2_workspace/school_competition/build/bluesea2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/root/lanhailidar_ros_ws/install/scan_subscriber:/opt/ros/humble PYTHONPATH=/home/orangepi/ros2_workspace/school_competition/install/lib/python3.10/site-packages:/home/orangepi/ros2_workspace/school_competition/install/local/lib/python3.10/dist-packages:/root/lanhailidar_ros_ws/install/scan_subscriber/lib/python3.10/site-packages:/root/lanhailidar_ros_ws/install/base/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages /usr/bin/cmake --build /home/orangepi/ros2_workspace/school_competition/build/bluesea2 -- -j8 -l8
+[3.339s] [  7%] [32mBuilding CXX object CMakeFiles/bluesea2_heart_check.dir/src/heart_check.cpp.o[0m
+[3.341s] [ 15%] [32mBuilding CXX object CMakeFiles/bluesea2_node.dir/sdk/src/algorithmAPI.cpp.o[0m
+[3.349s] [ 23%] [32mBuilding CXX object CMakeFiles/bluesea2_node.dir/src/node.cpp.o[0m
+[3.352s] [ 30%] [32mBuilding CXX object CMakeFiles/bluesea2_node.dir/sdk/src/tcp_reader.cpp.o[0m
+[3.374s] [ 38%] [32mBuilding CXX object CMakeFiles/bluesea2_node.dir/sdk/src/parser.cpp.o[0m
+[3.376s] [ 46%] [32mBuilding CXX object CMakeFiles/bluesea2_client.dir/src/client.cpp.o[0m
+[3.382s] [ 53%] [32mBuilding CXX object CMakeFiles/bluesea2_node.dir/sdk/src/bluesea.cpp.o[0m
+[3.390s] [ 61%] [32mBuilding C object CMakeFiles/bluesea2_node.dir/sdk/src/uart.c.o[0m
+[3.555s] [ 69%] [32mBuilding CXX object CMakeFiles/bluesea2_node.dir/sdk/src/uart_reader.cpp.o[0m
+[4.580s] [ 76%] [32mBuilding CXX object CMakeFiles/bluesea2_node.dir/sdk/src/udp_reader.cpp.o[0m
+[10.812s] [ 84%] [32m[1mLinking CXX executable bluesea2_client[0m
+[10.813s] [ 92%] [32m[1mLinking CXX executable bluesea2_heart_check[0m
+[11.402s] [ 92%] Built target bluesea2_heart_check
+[11.410s] [ 92%] Built target bluesea2_client
+[14.876s] [100%] [32m[1mLinking CXX executable bluesea2_node[0m
+[15.478s] [100%] Built target bluesea2_node
+[15.503s] Invoked command in '/home/orangepi/ros2_workspace/school_competition/build/bluesea2' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/root/lanhailidar_ros_ws/install/scan_subscriber:/opt/ros/humble PYTHONPATH=/home/orangepi/ros2_workspace/school_competition/install/lib/python3.10/site-packages:/home/orangepi/ros2_workspace/school_competition/install/local/lib/python3.10/dist-packages:/root/lanhailidar_ros_ws/install/scan_subscriber/lib/python3.10/site-packages:/root/lanhailidar_ros_ws/install/base/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages /usr/bin/cmake --build /home/orangepi/ros2_workspace/school_competition/build/bluesea2 -- -j8 -l8
+[15.507s] Invoking command in '/home/orangepi/ros2_workspace/school_competition/build/bluesea2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/root/lanhailidar_ros_ws/install/scan_subscriber:/opt/ros/humble PYTHONPATH=/home/orangepi/ros2_workspace/school_competition/install/lib/python3.10/site-packages:/home/orangepi/ros2_workspace/school_competition/install/local/lib/python3.10/dist-packages:/root/lanhailidar_ros_ws/install/scan_subscriber/lib/python3.10/site-packages:/root/lanhailidar_ros_ws/install/base/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages /usr/bin/cmake --install /home/orangepi/ros2_workspace/school_competition/build/bluesea2
+[15.533s] -- Install configuration: ""
+[15.533s] -- Installing: /home/orangepi/ros2_workspace/school_competition/install/lib/bluesea2/bluesea2_node
+[15.540s] -- Set runtime path of "/home/orangepi/ros2_workspace/school_competition/install/lib/bluesea2/bluesea2_node" to ""
+[15.541s] -- Installing: /home/orangepi/ros2_workspace/school_competition/install/lib/bluesea2/bluesea2_client
+[15.541s] -- Set runtime path of "/home/orangepi/ros2_workspace/school_competition/install/lib/bluesea2/bluesea2_client" to ""
+[15.542s] -- Installing: /home/orangepi/ros2_workspace/school_competition/install/lib/bluesea2/bluesea2_heart_check
+[15.543s] -- Set runtime path of "/home/orangepi/ros2_workspace/school_competition/install/lib/bluesea2/bluesea2_heart_check" to ""
+[15.544s] -- Installing: /home/orangepi/ros2_workspace/school_competition/install/share/bluesea2/launch
+[15.545s] -- Installing: /home/orangepi/ros2_workspace/school_competition/install/share/bluesea2/launch/dual_udp_lidar.launch
+[15.545s] -- Installing: /home/orangepi/ros2_workspace/school_competition/install/share/bluesea2/launch/udp_lidar.launch
+[15.546s] -- Installing: /home/orangepi/ros2_workspace/school_competition/install/share/bluesea2/launch/vpc_lidar.launch
+[15.546s] -- Installing: /home/orangepi/ros2_workspace/school_competition/install/share/bluesea2/launch/LDS-U50C-S.launch
+[15.547s] -- Installing: /home/orangepi/ros2_workspace/school_competition/install/share/bluesea2/launch/heart_check.launch
+[15.547s] -- Installing: /home/orangepi/ros2_workspace/school_competition/install/share/bluesea2/launch/LDS-U80C-S.launch
+[15.548s] -- Installing: /home/orangepi/ros2_workspace/school_competition/install/share/bluesea2/launch/uart_lidar.launch
+[15.548s] -- Installing: /home/orangepi/ros2_workspace/school_competition/install/share/bluesea2/params
+[15.548s] -- Installing: /home/orangepi/ros2_workspace/school_competition/install/share/bluesea2/params/LDS-U80C-S.yaml
+[15.549s] -- Installing: /home/orangepi/ros2_workspace/school_competition/install/share/bluesea2/params/dual_udp_lidar.yaml
+[15.550s] -- Installing: /home/orangepi/ros2_workspace/school_competition/install/share/bluesea2/params/udp_lidar.yaml
+[15.552s] -- Installing: /home/orangepi/ros2_workspace/school_competition/install/share/bluesea2/params/vpc_lidar.yaml
+[15.552s] -- Installing: /home/orangepi/ros2_workspace/school_competition/install/share/bluesea2/params/uart_lidar.yaml
+[15.552s] -- Installing: /home/orangepi/ros2_workspace/school_competition/install/share/bluesea2/params/LDS-U50C-S.yaml
+[15.553s] -- Installing: /home/orangepi/ros2_workspace/school_competition/install/share/bluesea2/params/other
+[15.553s] -- Installing: /home/orangepi/ros2_workspace/school_competition/install/share/ament_index/resource_index/package_run_dependencies/bluesea2
+[15.553s] -- Installing: /home/orangepi/ros2_workspace/school_competition/install/share/ament_index/resource_index/parent_prefix_path/bluesea2
+[15.554s] -- Installing: /home/orangepi/ros2_workspace/school_competition/install/share/bluesea2/environment/ament_prefix_path.sh
+[15.554s] -- Installing: /home/orangepi/ros2_workspace/school_competition/install/share/bluesea2/environment/ament_prefix_path.dsv
+[15.554s] -- Installing: /home/orangepi/ros2_workspace/school_competition/install/share/bluesea2/environment/path.sh
+[15.554s] -- Installing: /home/orangepi/ros2_workspace/school_competition/install/share/bluesea2/environment/path.dsv
+[15.555s] -- Installing: /home/orangepi/ros2_workspace/school_competition/install/share/bluesea2/local_setup.bash
+[15.555s] -- Installing: /home/orangepi/ros2_workspace/school_competition/install/share/bluesea2/local_setup.sh
+[15.555s] -- Installing: /home/orangepi/ros2_workspace/school_competition/install/share/bluesea2/local_setup.zsh
+[15.555s] -- Installing: /home/orangepi/ros2_workspace/school_competition/install/share/bluesea2/local_setup.dsv
+[15.556s] -- Installing: /home/orangepi/ros2_workspace/school_competition/install/share/bluesea2/package.dsv
+[15.556s] -- Installing: /home/orangepi/ros2_workspace/school_competition/install/share/ament_index/resource_index/packages/bluesea2
+[15.558s] -- Installing: /home/orangepi/ros2_workspace/school_competition/install/share/bluesea2/cmake/bluesea2Config.cmake
+[15.559s] -- Installing: /home/orangepi/ros2_workspace/school_competition/install/share/bluesea2/cmake/bluesea2Config-version.cmake
+[15.559s] -- Installing: /home/orangepi/ros2_workspace/school_competition/install/share/bluesea2/package.xml
+[15.559s] Invoked command in '/home/orangepi/ros2_workspace/school_competition/build/bluesea2' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/root/lanhailidar_ros_ws/install/scan_subscriber:/opt/ros/humble PYTHONPATH=/home/orangepi/ros2_workspace/school_competition/install/lib/python3.10/site-packages:/home/orangepi/ros2_workspace/school_competition/install/local/lib/python3.10/dist-packages:/root/lanhailidar_ros_ws/install/scan_subscriber/lib/python3.10/site-packages:/root/lanhailidar_ros_ws/install/base/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages /usr/bin/cmake --install /home/orangepi/ros2_workspace/school_competition/build/bluesea2

@@ -1,1 +1,0 @@
-Invoking command in '/home/orangepi/ros2_workspace/school_competition/build/base': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/root/lanhailidar_ros_ws/install/scan_subscriber:/opt/ros/humble /usr/bin/cmake /home/orangepi/ros2_workspace/school_competition/src/lanhailidar_ros_ws/src/bluesea-ros2-main/base -DCMAKE_INSTALL_PREFIX=/home/orangepi/ros2_workspace/school_competition/install

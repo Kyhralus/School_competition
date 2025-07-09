@@ -3,7 +3,6 @@ from rclpy.node import Node
 from std_srvs.srv import Empty  # 标准空请求服务
 from std_msgs.msg import String
 import time
-from typing import Union, Optional
 from periphery import PWM
 
 class Servo:
@@ -31,6 +30,7 @@ class Servo:
         # 初始化PWM
         self.pwm.frequency = freq
         self.pwm.duty_cycle = 0
+
         self.pwm.enable()
         self._current_angle = angle_min  # 初始角度
     
@@ -224,7 +224,6 @@ class Gimbal:
         #     f"修正后角度 - pitch: {new_pitch:.5f}°, yaw: {new_yaw:.5f}°"
         # )
 
-
 class GimbalControlNode(Node):
     """ 云台控制节点：提供服务重置角度，接收误差话题控制舵机 """
     def __init__(self):
@@ -253,11 +252,10 @@ class GimbalControlNode(Node):
                 ('yaw.reverse', False),
                 
                 ('pid.pitch_kp', 0.03),
-                ('pid.pitch_ki', 0.01),
+                ('pid.pitch_ki', 0.008),
                 ('pid.pitch_kd', 0.01),
                 ('pid.pitch_output_limits', (-1, 1)),
                 ('pid.mode', 'incremental'),  # PID模式：'position' 或 'incremental'
-
 
 
                 ('pid.yaw_kp', 0.05),
@@ -313,7 +311,7 @@ class GimbalControlNode(Node):
         time.sleep(1)
         self.get_logger().info("Gimbal initialized.")
         
-        # 4. 创建服务（新增）
+        # 4. 创建服务
         self.set_service = self.create_service(
             Empty,
             'set_gimbal',
@@ -325,7 +323,7 @@ class GimbalControlNode(Node):
             self.reset_callback
         )
         
-        # 5. 保留订阅（可选，根据需求决定是否保留）
+        # 5. 误差消息话题订阅
         self.error_sub = self.create_subscription(
             String,
             'gimbal_error',
